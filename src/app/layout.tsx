@@ -1,4 +1,11 @@
-import "./globals.css"
+// Third-party imports
+
+// Global imports
+import { StyledComponentsRegistry } from "@/components/utils"
+
+// Local imports
+
+////////////////////////////////////////////////////////////////////////////////
 
 export const metadata = {
 	title: "Create Next App",
@@ -11,8 +18,10 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en">
-			<body>{children}</body>
-		</html>
+		<StyledComponentsRegistry>
+			<html lang="en">
+				<body>{children}</body>
+			</html>
+		</StyledComponentsRegistry>
 	)
 }
