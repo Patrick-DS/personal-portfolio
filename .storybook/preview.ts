@@ -1,11 +1,14 @@
 import type { Preview } from "@storybook/react"
 import { withThemeFromJSXProvider } from "@storybook/addon-styling"
-import { GlobalStyles, themes } from "@/styles"
+import { ThemeProvider } from "styled-components"
+import { GlobalStyles, themeManager, ThemeNames } from "@/styles"
 
 export const decorators = [
 	withThemeFromJSXProvider({
 		GlobalStyles,
-		themes,
+		themes: themeManager.themes,
+		defaultTheme: ThemeNames.LIGHT,
+		Provider: ThemeProvider,
 	})
 ]
 
