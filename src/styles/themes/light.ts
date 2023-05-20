@@ -1,11 +1,11 @@
 const lightTheme = {
     colors: {
         text: "#000000",
-        white: "#dddddd",
-        lightGray: "#aaaaaa",
+        white: "#222222",
+        lightGray: "#666666",
         gray: "#888888",
-        darkGray: "#222222",
-        black: "#000000"
+        darkGray: "#dddddd",
+        black: "#ffffff"
     },
 }
 
