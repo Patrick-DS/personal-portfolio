@@ -7,19 +7,17 @@ import breakpoints from "./breakpoints"
 
 ////////////////////////////////////////////////////////////////////////////////
 
-const CommonThemeValues = {
-    devices: {
-        availableOnMobileOnly: `
+const devices = {
+	availableOnMobileOnly: `
 			@media (min-width: ${breakpoints.medium}) {
 				display: none !important;
 			}
 		`,
-        availableOnDesktopOnly: `
+	availableOnDesktopOnly: `
 			@media (max-width: ${breakpoints.medium}) {
 				display: none !important;
 			}
 		`
-    }
 }
 
-export default CommonThemeValues
+export default devices
