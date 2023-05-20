@@ -9,7 +9,7 @@ export const decorators = [
 		themes: themeManager.themes,
 		defaultTheme: ThemeNames.LIGHT,
 		Provider: ThemeProvider,
-	})
+	}),
 ]
 
 const preview: Preview = {
@@ -18,10 +18,10 @@ const preview: Preview = {
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
-				date: /Date$/
-			}
-		}
-	}
+				date: /Date$/,
+			},
+		},
+	},
 }
 
 export default preview

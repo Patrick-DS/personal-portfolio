@@ -7,14 +7,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 interface RouterPaths {
-    [key: string]: string
+	[key: string]: string
 }
 
 const routerPaths: RouterPaths = {
-    home: "/",
-    cv: "/cv",
-    projects: "/projects",
-    contact: "/contact"
+	home: "/",
+	cv: "/cv",
+	projects: "/projects",
+	contact: "/contact",
 }
 
 export default routerPaths
