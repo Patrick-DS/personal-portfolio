@@ -11,8 +11,8 @@ import Header from "./Header"
 export const Default = () => <Header />
 
 const storyOptions: Meta<typeof Header> = {
-    title: "Layout/Header",
-    component: Header,
+	title: "Layout/Header",
+	component: Header,
 }
 
 export default storyOptions
