@@ -1,7 +1,7 @@
 "use client"
 // Third-party imports
-import React, { useState } from "react"
-import type { FC } from "react"
+import { useState } from "react"
+import type { FC, ReactNode } from "react"
 import { useServerInsertedHTML } from "next/navigation"
 import {
 	ServerStyleSheet,
@@ -17,7 +17,7 @@ import { GlobalStyles, themeManager } from "@/styles"
 ////////////////////////////////////////////////////////////////////////////////
 
 interface RegistryProps {
-	children: React.ReactNode
+	children: ReactNode
 }
 
 const StyledComponentsRegistry: FC<RegistryProps> = ({ children }) => {
