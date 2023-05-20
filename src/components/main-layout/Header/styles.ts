@@ -10,7 +10,7 @@ import Link from "next/link"
 
 export const NavBar = styled.div`
 	/* Positioning */
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 
