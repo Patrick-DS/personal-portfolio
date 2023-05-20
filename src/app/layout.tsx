@@ -2,6 +2,7 @@
 
 // Global imports
 import { StyledComponentsRegistry } from "@/components/utils"
+import { Header } from "@/components/main-layout"
 
 // Local imports
 
@@ -21,6 +22,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body>
 				<StyledComponentsRegistry>
+					<Header />
 					{children}
 				</StyledComponentsRegistry>
 			</body>
