@@ -6,7 +6,7 @@ import { useServerInsertedHTML } from 'next/navigation'
 import { ServerStyleSheet, StyleSheetManager, ThemeProvider } from 'styled-components'
 
 // Global imports
-import { GlobalStyles, themes } from '@/styles'
+import { GlobalStyles, themeManager } from '@/styles'
 
 // Local imports
 
@@ -30,13 +30,13 @@ const StyledComponentsRegistry: FC<RegistryProps> = ({ children }) => {
     return (typeof window === 'undefined') ? (
         <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
             <GlobalStyles />
-            <ThemeProvider theme={themes.selectedTheme}>
+            <ThemeProvider theme={themeManager.selectedTheme}>
                 {children}
             </ThemeProvider>
         </StyleSheetManager>
     ) : (
         <>
-            <ThemeProvider theme={themes.selectedTheme}>
+            <ThemeProvider theme={themeManager.selectedTheme}>
                 {children}
             </ThemeProvider>
         </>

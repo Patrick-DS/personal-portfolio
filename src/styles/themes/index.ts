@@ -5,17 +5,24 @@ import { default as CommonTheme } from "./common"
 const LightTheme = { ...CommonTheme, ...Light }
 const DarkTheme = { ...CommonTheme, ...Dark }
 
-const defaultTheme = LightTheme
+export enum ThemeNames {
+    LIGHT = "Light",
+    DARK = "Dark",
+}
 
-type ThemeName = "Light" | "Dark"
+const defaultThemeName = ThemeNames.LIGHT
 
-const themes = {
-    Light: LightTheme,
-    Dark: DarkTheme,
-    selectedTheme: defaultTheme,
-    selectTheme: (themeName: ThemeName) => {
-        themes.selectedTheme = themes[themeName]
+export const themes = {
+    [ThemeNames.LIGHT]: LightTheme,
+    [ThemeNames.DARK]: DarkTheme,
+}
+
+const themeManager = {
+    themes,
+    selectedTheme: themes[defaultThemeName],
+    selectTheme: (themeName: ThemeNames) => {
+        themeManager.selectedTheme = themes[themeName]
     }
 }
 
-export default themes
+export default themeManager
