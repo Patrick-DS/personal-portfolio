@@ -1,7 +1,6 @@
 "use client"
 // Third-party imports
-import React from "react"
-import Link from "next/link"
+import type { FC } from "react"
 
 // Global imports
 import { routerPaths } from "@/constants"
@@ -16,7 +15,7 @@ import { NavBar, NavItem, StyledLink } from "./styles"
  * @category Generic
  * @description The website's header for all pages.
  */
-const Header = () => (
+const Header: FC<{}> = () => (
     <NavBar>
         <NavItem direction="left">
             <StyledLink href={routerPaths.home}>
