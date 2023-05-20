@@ -3,9 +3,10 @@
 import React, { useState } from 'react'
 import type { FC } from "react"
 import { useServerInsertedHTML } from 'next/navigation'
-import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
+import { ServerStyleSheet, StyleSheetManager, ThemeProvider } from 'styled-components'
 
 // Global imports
+import { GlobalStyles, themes } from '@/styles'
 
 // Local imports
 
@@ -28,10 +29,17 @@ const StyledComponentsRegistry: FC<RegistryProps> = ({ children }) => {
 
     return (typeof window === 'undefined') ? (
         <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
-            {children}
+            <GlobalStyles />
+            <ThemeProvider theme={themes.selectedTheme}>
+                {children}
+            </ThemeProvider>
         </StyleSheetManager>
     ) : (
-        <>{children}</>
+        <>
+            <ThemeProvider theme={themes.selectedTheme}>
+                {children}
+            </ThemeProvider>
+        </>
     )
 }
 

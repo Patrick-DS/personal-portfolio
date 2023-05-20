@@ -8,6 +8,9 @@ import styled from "styled-components"
 ////////////////////////////////////////////////////////////////////////////////
 
 export const TestComponent = styled.div`
-	color: red;
+	color: ${({ theme }) => {
+        console.log("THEME", theme)
+        return theme?.colors?.text || "red"
+    }};
     font-size: 100px;
 `

@@ -18,10 +18,12 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<StyledComponentsRegistry>
-			<html lang="en">
-				<body>{children}</body>
-			</html>
-		</StyledComponentsRegistry>
+		<html lang="en">
+			<body>
+				<StyledComponentsRegistry>
+					{children}
+				</StyledComponentsRegistry>
+			</body>
+		</html>
 	)
 }
