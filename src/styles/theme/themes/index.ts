@@ -14,11 +14,11 @@ export const LightTheme: Theme = { ...CommonTheme, ...Light }
 export const DarkTheme: Theme = { ...CommonTheme, ...Dark }
 
 export enum ThemeNames {
-    LIGHT = "Light",
-    DARK = "Dark",
+	LIGHT = "Light",
+	DARK = "Dark",
 }
 
 export const themes = {
-    [ThemeNames.LIGHT]: LightTheme,
-    [ThemeNames.DARK]: DarkTheme,
+	[ThemeNames.LIGHT]: LightTheme,
+	[ThemeNames.DARK]: DarkTheme,
 }

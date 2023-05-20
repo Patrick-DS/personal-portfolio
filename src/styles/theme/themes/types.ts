@@ -1,4 +1,3 @@
-
 // Third-party imports
 
 // Global imports
@@ -10,16 +9,16 @@ import devices from "./common/devices"
 ////////////////////////////////////////////////////////////////////////////////
 
 interface Colors {
-    text: string,
-    white: string,
-    lightGray: string,
-    gray: string,
-    darkGray: string,
-    black: string,
+	text: string
+	white: string
+	lightGray: string
+	gray: string
+	darkGray: string
+	black: string
 }
 
 export interface Theme {
-    colors: Colors
-    breakpoints: typeof breakpoints
-    devices: typeof devices
+	colors: Colors
+	breakpoints: typeof breakpoints
+	devices: typeof devices
 }

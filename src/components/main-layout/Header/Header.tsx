@@ -16,28 +16,20 @@ import { NavBar, NavItem, StyledLink } from "./styles"
  * @description The website's header for all pages.
  */
 const Header: FC<{}> = () => (
-    <NavBar>
-        <NavItem direction="left">
-            <StyledLink href={routerPaths.home}>
-                Patrick Da Silva
-            </StyledLink>
-        </NavItem>
-        <NavItem direction="right">
-            <StyledLink href={routerPaths.contact}>
-                Contact
-            </StyledLink>
-        </NavItem>
-        <NavItem direction="right">
-            <StyledLink href={routerPaths.cv}>
-                CV
-            </StyledLink>
-        </NavItem>
-        <NavItem direction="right">
-            <StyledLink href={routerPaths.projects}>
-                Projects
-            </StyledLink>
-        </NavItem>
-    </NavBar>
+	<NavBar>
+		<NavItem direction="left">
+			<StyledLink href={routerPaths.home}>Patrick Da Silva</StyledLink>
+		</NavItem>
+		<NavItem direction="right">
+			<StyledLink href={routerPaths.contact}>Contact</StyledLink>
+		</NavItem>
+		<NavItem direction="right">
+			<StyledLink href={routerPaths.cv}>CV</StyledLink>
+		</NavItem>
+		<NavItem direction="right">
+			<StyledLink href={routerPaths.projects}>Projects</StyledLink>
+		</NavItem>
+	</NavBar>
 )
 
 export default Header

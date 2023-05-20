@@ -29,7 +29,8 @@
 		"src/**/*.ts",
 		"src/**/*.tsx",
 		".next/types/**/*.ts",
-		".storybook/**/*.ts"
-, ".storybook/webpack.config.js"	],
+		".storybook/**/*.ts",
+		".storybook/webpack.config.js"
+	],
 	"exclude": ["node_modules"]
 }

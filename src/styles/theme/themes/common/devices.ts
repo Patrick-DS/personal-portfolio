@@ -9,15 +9,15 @@ import breakpoints from "./breakpoints"
 
 const devices = {
 	availableOnMobileOnly: `
-			@media (min-width: ${breakpoints.medium}) {
-				display: none !important;
-			}
-		`,
+		@media (min-width: ${breakpoints.medium}) {
+			display: none !important;
+		}
+	`,
 	availableOnDesktopOnly: `
-			@media (max-width: ${breakpoints.medium}) {
-				display: none !important;
-			}
-		`
+		@media (max-width: ${breakpoints.medium}) {
+			display: none !important;
+		}
+	`,
 }
 
 export default devices
