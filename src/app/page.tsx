@@ -54,6 +54,7 @@ const Home = () => (
 				className={styles.card}
 				target="_blank"
 				rel="noopener noreferrer"
+				key="1"
 			>
 				<h2>
 					Docs <span>-&gt;</span>
@@ -69,6 +70,7 @@ const Home = () => (
 				className={styles.card}
 				target="_blank"
 				rel="noopener noreferrer"
+				key="2"
 			>
 				<h2>
 					Learn <span>-&gt;</span>
@@ -84,6 +86,7 @@ const Home = () => (
 				className={styles.card}
 				target="_blank"
 				rel="noopener noreferrer"
+				key="3"
 			>
 				<h2>
 					Templates <span>-&gt;</span>
@@ -96,6 +99,7 @@ const Home = () => (
 				className={styles.card}
 				target="_blank"
 				rel="noopener noreferrer"
+				key="4"
 			>
 				<h2>
 					Deploy <span>-&gt;</span>
