@@ -13,4 +13,6 @@ const CommonValues = {
 	devices,
 }
 
+export { breakpoints, devices }
+
 export default CommonValues

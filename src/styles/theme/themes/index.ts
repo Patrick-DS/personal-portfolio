@@ -6,19 +6,16 @@
 import { default as Light } from "./light"
 import { default as Dark } from "./dark"
 import { default as CommonTheme } from "./common"
+import { ThemeNames } from "./types"
 import type { Theme } from "./types"
 
 ////////////////////////////////////////////////////////////////////////////////
 
-export const LightTheme: Theme = { ...CommonTheme, ...Light }
-export const DarkTheme: Theme = { ...CommonTheme, ...Dark }
+export type { Theme } 
 
-export enum ThemeNames {
-	LIGHT = "Light",
-	DARK = "Dark",
+export const themes: {[key in ThemeNames]: Theme} = {
+	[ThemeNames.LIGHT]: { ...CommonTheme, ...Light },
+	[ThemeNames.DARK]: { ...CommonTheme, ...Dark },
 }
 
-export const themes = {
-	[ThemeNames.LIGHT]: LightTheme,
-	[ThemeNames.DARK]: DarkTheme,
-}
+export { ThemeNames }

@@ -1,14 +1,21 @@
 // Third-party imports
 import React from "react"
-// import { useTheme } from "styled-components"
+import { DefaultTheme, useTheme } from "styled-components"
 
 // Global imports
+import { ThemeNames } from "@/styles"
 
 // Local imports
 import { StyledBackground } from "./styles"
-import websiteBackground from "./website-background.jpg"
+import websiteBackgroundLight from "./website-background-light.jpg"
+import websiteBackgroundDark from "./website-background-dark.jpg"
 
 ////////////////////////////////////////////////////////////////////////////////
+
+const websiteBackground = {
+	[ThemeNames.LIGHT]: websiteBackgroundLight,
+	[ThemeNames.DARK]: websiteBackgroundDark,
+}
 
 /**
  * @function Background
@@ -17,9 +24,15 @@ import websiteBackground from "./website-background.jpg"
  * @description Renders the background image on all website pages.
  */
 const Background = () => {
+	// Hooks
+	const theme = useTheme()
+
+	// Variables
+	const themeName = theme?.themeName || ThemeNames.LIGHT
+
 	// Props
 	const styledBackgroundProps = {
-		src: websiteBackground,
+		src: websiteBackground[themeName],
 		alt: "Decorative background",
 		fill: true,
 	}
