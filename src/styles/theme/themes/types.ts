@@ -12,6 +12,9 @@ export enum ThemeNames {
 }
 
 export interface Colors {
+	headerText: string
+	headerTextHovered: string
+	headerTextActive: string
 	text: string
 	white: string
 	lightGray: string

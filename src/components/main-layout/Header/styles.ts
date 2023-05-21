@@ -27,33 +27,40 @@ export const NavBar = styled.div`
 	box-shadow: 0px 0px 10px 5px ${({ theme }) => theme.colors.black};
 `
 
-export const NavItem = styled.div<{ direction: any }>`
+export const NavItem = styled.span`
 	/* Positioning */
-	position: relative;
-	float: ${({ direction }) => direction};
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: 0px 15px;
 
-	/* Dimensions */
-	height: 100%;
-	min-width: 90px;
 
 	/* Color */
-	color: ${({ theme }) => theme.colors.gray};
+	color: ${({ theme }) => theme.colors.headerText};
 	${({ theme }) => theme.devices.availableOnDesktopOnly}
 `
 
-export const StyledLink = styled(Link)`
+interface StyledLinkProps {
+	direction: "left" | "right"
+}
+
+export const StyledLink = styled(Link)<StyledLinkProps>`
+	/* Positioning */
+	float: ${({ direction }) => direction};
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+
+	/* Dimensions */
+	min-width: 90px;
+	height: 100%;
+
 	/* Color */
 	&:link,
 	&:visited,
 	&:active {
-		color: ${({ theme }) => theme.colors.gray} !important;
+		color: ${({ theme }) => theme.colors.headerTextActive} !important;
 	}
 
 	&:hover {
-		color: ${({ theme }) => theme.colors.white};
+		color: ${({ theme }) => theme.colors.headerTextHovered};
 	}
 `

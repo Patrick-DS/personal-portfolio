@@ -10,6 +10,9 @@ import { ThemeNames } from "./types"
 const darkTheme = {
 	themeName: ThemeNames.DARK,
 	colors: {
+		headerText: "#FFF",
+		headerTextHovered: "#FFF",
+		headerTextActive: "#FFF",
 		text: "#000000",
 		white: "#dddddd",
 		lightGray: "#aaaaaa",

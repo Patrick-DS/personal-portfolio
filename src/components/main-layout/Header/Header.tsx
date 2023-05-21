@@ -17,18 +17,26 @@ import { NavBar, NavItem, StyledLink } from "./styles"
  */
 const Header: FC<{}> = () => (
 	<NavBar>
-		<NavItem direction="left">
-			<StyledLink href={routerPaths.home}>Patrick Da Silva</StyledLink>
-		</NavItem>
-		<NavItem direction="right">
-			<StyledLink href={routerPaths.contact}>Contact</StyledLink>
-		</NavItem>
-		<NavItem direction="right">
-			<StyledLink href={routerPaths.cv}>CV</StyledLink>
-		</NavItem>
-		<NavItem direction="right">
-			<StyledLink href={routerPaths.projects}>Projects</StyledLink>
-		</NavItem>
+		<StyledLink href={routerPaths.home} direction="left">
+			<NavItem>
+					Patrick Da Silva
+			</NavItem>
+		</StyledLink>
+		<StyledLink href={routerPaths.contact} direction="right">
+			<NavItem>
+					Contact
+			</NavItem>
+		</StyledLink>
+		<StyledLink href={routerPaths.cv} direction="right">
+			<NavItem>
+					CV
+			</NavItem>
+		</StyledLink>
+		<StyledLink href={routerPaths.projects} direction="right">
+			<NavItem>
+					Projects
+			</NavItem>
+		</StyledLink>
 	</NavBar>
 )
 

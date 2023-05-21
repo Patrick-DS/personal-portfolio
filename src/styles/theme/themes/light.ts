@@ -10,6 +10,9 @@ import { ThemeNames } from "./types"
 const lightTheme = {
 	themeName: ThemeNames.LIGHT,
 	colors: {
+		headerText: "#000",
+		headerTextHovered: "#000",
+		headerTextActive: "#000",
 		text: "#000000",
 		white: "#222222",
 		lightGray: "#666666",
