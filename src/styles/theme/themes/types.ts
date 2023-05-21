@@ -15,6 +15,7 @@ export interface Colors {
 	headerText: string
 	headerTextHovered: string
 	headerTextActive: string
+	headerBackground: string
 	text: string
 	white: string
 	lightGray: string

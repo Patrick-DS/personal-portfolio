@@ -20,7 +20,7 @@ export const NavBar = styled.div`
 	height: 50px;
 
 	/* Color */
-	background: ${({ theme }) => theme.colors.darkGray};
+	background: ${({ theme }) => theme.colors.headerBackground};
 
 	/* Border */
 	border-bottom: 1px solid ${({ theme }) => theme.colors.black};
@@ -30,7 +30,7 @@ export const NavBar = styled.div`
 export const NavItem = styled.span`
 	/* Positioning */
 	padding: 0px 15px;
-	
+
 	/* Color */
 	color: ${({ theme }) => theme.colors.headerText};
 	${({ theme }) => theme.devices.availableOnDesktopOnly}
