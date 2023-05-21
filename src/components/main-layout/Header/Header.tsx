@@ -12,7 +12,8 @@ import { NavBar, NavItem, StyledLink } from "./styles"
 
 /**
  * @function Header
- * @category Generic
+ * @category Components
+ * @subcategory Main Layout
  * @description The website's header for all pages.
  */
 const Header: FC<{}> = () => (
