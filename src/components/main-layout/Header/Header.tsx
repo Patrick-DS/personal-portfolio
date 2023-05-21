@@ -3,9 +3,9 @@
 import type { FC } from "react"
 
 // Global imports
-import { routerPaths } from "@/constants"
 
 // Local imports
+import headerContent from "./content"
 import { NavBar, NavItem, StyledLink } from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -17,26 +17,13 @@ import { NavBar, NavItem, StyledLink } from "./styles"
  */
 const Header: FC<{}> = () => (
 	<NavBar>
-		<StyledLink href={routerPaths.home} direction="left">
-			<NavItem>
-					Patrick Da Silva
-			</NavItem>
-		</StyledLink>
-		<StyledLink href={routerPaths.contact} direction="right">
-			<NavItem>
-					Contact
-			</NavItem>
-		</StyledLink>
-		<StyledLink href={routerPaths.cv} direction="right">
-			<NavItem>
-					CV
-			</NavItem>
-		</StyledLink>
-		<StyledLink href={routerPaths.projects} direction="right">
-			<NavItem>
-					Projects
-			</NavItem>
-		</StyledLink>
+		{headerContent.map(({linkId, direction, href, displayText}) => (
+			<StyledLink key={linkId} href={href} direction={direction}>
+				<NavItem>
+					{displayText}
+				</NavItem>
+			</StyledLink>
+		))}
 	</NavBar>
 )
 
