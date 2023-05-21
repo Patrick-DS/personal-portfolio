@@ -1,4 +1,31 @@
 {
 	"editor.formatOnSave": true,
-	"editor.formatOnPaste": true
+	"editor.formatOnPaste": true,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.renderWhitespace": "none",
+	"[javascript]": {
+		"editor.tabSize": 4
+	},
+	"[json]": {
+		"editor.tabSize": 4
+	},
+	"[html]": {
+		"editor.tabSize": 4
+	},
+	"[css]": {
+		"editor.tabSize": 2
+	},
+	"files.watcherExclude": {
+		"**/.next": true,
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/docs/**/*": true,
+		"**/node_modules/*/**": true,
+		"**/yarn-error.log": true
+	},
+	"workbench.colorTheme": "One Dark Pro Monokai Darker",
+	"workbench.editor.showTabs": true
 }
