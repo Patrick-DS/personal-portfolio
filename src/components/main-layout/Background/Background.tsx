@@ -1,5 +1,6 @@
 // Third-party imports
 import React from "react"
+// import { useTheme } from "styled-components"
 
 // Global imports
 
@@ -12,21 +13,20 @@ import websiteBackground from "./website-background.jpg"
 /**
  * @function Background
  * @category Components
- * @subcategory ?
- * @description ?
- * @param {?} param? - ?
+ * @subcategory Layout
+ * @description Renders the background image on all website pages.
  */
-const Background = () => (
-	<StyledBackground
-		src={websiteBackground}
-		fill
-		style={{
-			objectFit: "cover",
-			backgroundRepeat: "no-repeat",
-			backgroundPosition: "center",
-		}}
-		alt="Decorative background"
-	/>
-)
+const Background = () => {
+	// Props
+	const styledBackgroundProps = {
+		src: websiteBackground,
+		alt: "Decorative background",
+		fill: true,
+	}
+
+	return (
+		<StyledBackground {...styledBackgroundProps} />
+	)
+}
 
 export default Background
