@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 
 // Global imports
 import { StyledComponentsRegistry } from "@/components/utils"
-import { Header } from "@/components/main-layout"
+import { Header, Background } from "@/components/main-layout"
 
 // Local imports
 
@@ -39,6 +39,7 @@ const Layout: FC<LayoutProps> = ({ children }) => (
 		<body>
 			<StyledComponentsRegistry>
 				<Header />
+				<Background />
 				{children}
 			</StyledComponentsRegistry>
 		</body>

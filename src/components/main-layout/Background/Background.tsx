@@ -1,3 +1,4 @@
+"use client"
 // Third-party imports
 import React from "react"
 import { DefaultTheme, useTheme } from "styled-components"

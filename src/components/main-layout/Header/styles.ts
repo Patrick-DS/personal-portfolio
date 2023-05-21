@@ -30,8 +30,7 @@ export const NavBar = styled.div`
 export const NavItem = styled.span`
 	/* Positioning */
 	padding: 0px 15px;
-
-
+	
 	/* Color */
 	color: ${({ theme }) => theme.colors.headerText};
 	${({ theme }) => theme.devices.availableOnDesktopOnly}
@@ -63,4 +62,7 @@ export const StyledLink = styled(Link)<StyledLinkProps>`
 	&:hover {
 		color: ${({ theme }) => theme.colors.headerTextHovered};
 	}
+
+	/* Text */
+	text-decoration: none;
 `
