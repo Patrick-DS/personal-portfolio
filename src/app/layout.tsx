@@ -1,4 +1,5 @@
 // Third-party imports
+import type { FC, ReactNode } from "react"
 import type { Metadata } from "next"
 
 // Global imports
@@ -24,19 +25,24 @@ export const metadata: Metadata = {
 	},
 }
 
-export default function RootLayout({
-	children,
-}: {
-	children: React.ReactNode
-}) {
-	return (
-		<html lang="en">
-			<body>
-				<StyledComponentsRegistry>
-					<Header />
-					{children}
-				</StyledComponentsRegistry>
-			</body>
-		</html>
-	)
+interface LayoutProps {
+	children: ReactNode
 }
+
+/**
+ * @function Layout
+ * @category App
+ * @description Main layout of the website.
+ */
+const Layout: FC<LayoutProps> = ({ children }) => (
+	<html lang="en">
+		<body>
+			<StyledComponentsRegistry>
+				<Header />
+				{children}
+			</StyledComponentsRegistry>
+		</body>
+	</html>
+)
+
+export default Layout
