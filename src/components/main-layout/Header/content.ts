@@ -19,7 +19,7 @@ const headerContent: LinkProps[] = [
 		"linkId": 1,
 		"direction": "left",
 		"href": routerPaths.home,
-		"displayText": "Patrick Da Silva"
+		"displayText": "Home"
 	},
 	{
 		"linkId": 2,
