@@ -1,14 +1,13 @@
 // Third-party imports
 import Image from "next/image"
-import { useTheme } from "styled-components"
 
 // Global imports
 import { ThemeNames } from "@/styles"
 import { useThemeManager } from "@/contexts"
 
 // Local imports
-import darkThemeLogo from "./dark-theme-logo.png"
-import lightThemeLogo from "./light-theme-logo.png"
+import darkThemeLogo from "./icons/dark-theme-logo.png"
+import lightThemeLogo from "./icons/light-theme-logo.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
