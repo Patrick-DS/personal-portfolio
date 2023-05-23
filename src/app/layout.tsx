@@ -1,6 +1,7 @@
 // Third-party imports
 import type { FC, ReactNode } from "react"
 import type { Metadata } from "next"
+import { Albert_Sans } from "next/font/google"
 
 // Global imports
 import { StyledComponentsRegistry } from "@/components/utils"
@@ -25,6 +26,8 @@ export const metadata: Metadata = {
 	},
 }
 
+const globalFont = Albert_Sans({ subsets: ["latin"] })
+
 interface LayoutProps {
 	children: ReactNode
 }
@@ -36,7 +39,7 @@ interface LayoutProps {
  */
 const Layout: FC<LayoutProps> = ({ children }) => (
 	<html lang="en">
-		<body>
+		<body className={globalFont.className}>
 			<StyledComponentsRegistry>
 				<Header />
 				<Background />
