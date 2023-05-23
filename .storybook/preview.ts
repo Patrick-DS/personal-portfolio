@@ -1,12 +1,19 @@
+// Third-party imports
 import type { Preview } from "@storybook/react"
 import { withThemeFromJSXProvider } from "@storybook/addon-styling"
+
+// Global imports
 import { ThemeProvider } from "styled-components"
-import { GlobalStyles, themeManager, ThemeNames } from "@/styles"
+import { GlobalStyles, themes, ThemeNames } from "@/styles"
+
+// Local imports
+
+////////////////////////////////////////////////////////////////////////////////
 
 export const decorators = [
 	withThemeFromJSXProvider({
 		GlobalStyles,
-		themes: themeManager.themes,
+		themes,
 		defaultTheme: ThemeNames.LIGHT,
 		Provider: ThemeProvider,
 	}),
@@ -14,6 +21,7 @@ export const decorators = [
 
 const preview: Preview = {
 	parameters: {
+		layout: "centered",
 		actions: { argTypesRegex: "^on[A-Z].*" },
 		controls: {
 			matchers: {

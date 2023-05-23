@@ -7,10 +7,18 @@ import styled from "styled-components"
 
 ////////////////////////////////////////////////////////////////////////////////
 
-export const TestComponent = styled.div`
-	color: ${({ theme }) => {
-		console.log("THEME", theme)
-		return theme?.colors?.text || "red"
-	}};
-	font-size: 100px;
+export const StyledMain = styled.main`
+	/* Positioning */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	/* Dimensions */
+	width: 100%;
+	max-width: 1200px;
+	height: 100%;
+	min-height: 100vh;
+	margin: ${({ theme }) => theme.dimensions.header.height} auto 0 auto;
+
+
 `

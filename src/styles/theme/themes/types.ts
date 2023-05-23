@@ -1,24 +1,42 @@
 // Third-party imports
 
 // Global imports
-import breakpoints from "./common/breakpoints"
-import devices from "./common/devices"
 
 // Local imports
 
 ////////////////////////////////////////////////////////////////////////////////
 
-interface Colors {
-	text: string
-	white: string
-	lightGray: string
-	gray: string
-	darkGray: string
-	black: string
+export enum ThemeNames {
+	LIGHT = "Light",
+	DARK = "Dark",
 }
 
-export interface Theme {
-	colors: Colors
-	breakpoints: typeof breakpoints
-	devices: typeof devices
+export interface Colors {
+	header: {
+		text: {
+			default: string
+			hovered: string
+			active: string
+		},
+		container: {
+			background: string
+			border: string
+		},
+	},
+	footer: {
+		text: {
+			default: string
+			hovered: string
+			active: string
+		},
+		container: {
+			background: string
+			border: string
+		},
+	},
+	// white: string
+	// lightGray: string
+	// gray: string
+	// darkGray: string
+	// black: string
 }
