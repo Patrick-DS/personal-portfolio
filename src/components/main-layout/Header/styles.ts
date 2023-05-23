@@ -8,7 +8,7 @@ import Link from "next/link"
 
 ////////////////////////////////////////////////////////////////////////////////
 
-export const NavBar = styled.div`
+export const NavBar = styled.header`
 	/* Positioning */
 	position: fixed;
 	top: 0;
