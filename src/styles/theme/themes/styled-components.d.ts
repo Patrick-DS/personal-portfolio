@@ -4,8 +4,7 @@ import 'styled-components'
 // Global imports
 
 // Local imports
-import { breakpoints, devices } from "./common/breakpoints"
-import devices from "./common/devices"
+import { breakpoints, devices, dimensions } from "./common"
 import type { ThemeNames, Colors } from "./types"
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -17,5 +16,6 @@ declare module 'styled-components' {
 		colors: Colors
 		breakpoints: typeof breakpoints
 		devices: typeof devices
+		dimensions: typeof dimensions
 	}
 }

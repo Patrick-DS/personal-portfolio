@@ -16,8 +16,8 @@ export const NavBar = styled.header`
 
 	/* Dimensions */
 	width: 100vw;
-	min-height: 50px;
-	height: 50px;
+	min-height: ${({ theme }) => theme.dimensions.header.height};
+	height: ${({ theme }) => theme.dimensions.header.height};
 	padding: 0px 15px;
 
 	/* Color */
