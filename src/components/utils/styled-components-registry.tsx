@@ -6,11 +6,11 @@ import { useServerInsertedHTML } from "next/navigation"
 import {
 	ServerStyleSheet,
 	StyleSheetManager,
-	ThemeProvider,
 } from "styled-components"
 
 // Global imports
-import { GlobalStyles, themeManager } from "@/styles"
+import { CustomThemeProvider } from "@/contexts"
+import { ThemeNames } from "@/styles"
 
 // Local imports
 
@@ -33,16 +33,15 @@ const StyledComponentsRegistry: FC<RegistryProps> = ({ children }) => {
 
 	return typeof window === "undefined" ? (
 		<StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
-			<GlobalStyles />
-			<ThemeProvider theme={themeManager.selectedTheme}>
+			<CustomThemeProvider defaultThemeName={ThemeNames.DARK}>
 				{children}
-			</ThemeProvider>
+			</CustomThemeProvider>
 		</StyleSheetManager>
 	) : (
 		<>
-			<ThemeProvider theme={themeManager.selectedTheme}>
+			<CustomThemeProvider defaultThemeName={ThemeNames.DARK}>
 				{children}
-			</ThemeProvider>
+			</CustomThemeProvider>
 		</>
 	)
 }
