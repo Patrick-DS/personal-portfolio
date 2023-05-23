@@ -3,9 +3,10 @@
 import type { FC } from "react"
 
 // Global imports
+import ThemeToggler from "@/components/main-layout/ThemeToggler"
 
 // Local imports
-import headerContent from "./content"
+import headerContent from "./links"
 import { NavBar, NavItem, StyledLink } from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -18,12 +19,15 @@ import { NavBar, NavItem, StyledLink } from "./styles"
  */
 const Header: FC<{}> = () => (
 	<NavBar>
-		{headerContent.map(({linkId, direction, href, displayText}) => (
-			<StyledLink key={linkId} href={href} direction={direction}>
-				<NavItem>
-					{displayText}
-				</NavItem>
-			</StyledLink>
+		<NavItem direction="right" paddingX="10px">
+			<ThemeToggler />
+		</NavItem>
+		{headerContent.map(({itemId, direction, href, displayText}) => (
+			<NavItem key={itemId} direction={direction}>
+				<StyledLink href={href}>
+						{displayText}
+				</StyledLink>
+			</NavItem>
 		))}
 	</NavBar>
 )

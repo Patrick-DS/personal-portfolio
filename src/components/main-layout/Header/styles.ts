@@ -28,29 +28,38 @@ export const NavBar = styled.header`
 	box-shadow: 0px 0px 10px 5px ${({ theme }) => theme.colors.black};
 `
 
-export const NavItem = styled.span`
-	/* Positioning */
-	padding: 0px 15px;
+interface StyledLinkProps {
+	direction: "left" | "right"
+	paddingX?: string
+}
+
+export const NavItem = styled.span<StyledLinkProps>`
+	/* Positioning */	
+	float: ${({ direction }) => direction};
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	${({paddingX}) => paddingX ? `padding: 0px ${paddingX}` : ""};
+
+	/* Dimensions */
+	height: 100%;
 
 	/* Color */
 	color: ${({ theme }) => theme.colors.headerText};
 	${({ theme }) => theme.devices.availableOnDesktopOnly}
 `
 
-interface StyledLinkProps {
-	direction: "left" | "right"
-}
-
-export const StyledLink = styled(Link)<StyledLinkProps>`
+export const StyledLink = styled(Link)`
 	/* Positioning */
-	float: ${({ direction }) => direction};
 	display: flex;
 	position: relative;
 	justify-content: center;
 	align-items: center;
+	padding: 0px 10px;
 
 	/* Dimensions */
-	min-width: 90px;
+	width: 100%;
 	height: 100%;
 
 	/* Color */

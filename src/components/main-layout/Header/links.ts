@@ -8,7 +8,7 @@ import { routerPaths } from "@/constants"
 ////////////////////////////////////////////////////////////////////////////////
 
 interface LinkProps {
-	linkId: number
+	itemId: number
 	direction: "left" | "right"
 	href: string
 	displayText: string
@@ -16,25 +16,25 @@ interface LinkProps {
 
 const headerContent: LinkProps[] = [
 	{
-		"linkId": 1,
+		"itemId": 1,
 		"direction": "left",
 		"href": routerPaths.home,
 		"displayText": "Home"
 	},
 	{
-		"linkId": 2,
+		"itemId": 2,
 		"direction": "right",
 		"href": routerPaths.contact,
 		"displayText": "Contact"
 	},	
 	{
-		"linkId": 3,
+		"itemId": 3,
 		"direction": "right",
 		"href": routerPaths.cv,
 		"displayText": "CV"
 	},	
 	{
-		"linkId": 4,
+		"itemId": 4,
 		"direction": "right",
 		"href": routerPaths.projects,
 		"displayText": "Projects"
