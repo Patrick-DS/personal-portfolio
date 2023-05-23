@@ -33,6 +33,9 @@ const lightTheme = {
 			},
 		},
 		shadowbox: {
+			text: {
+				default: "#000000",
+			},
 			container: {
 				background: "#FFFFFFCC",
 				border: "#FFFFFF",

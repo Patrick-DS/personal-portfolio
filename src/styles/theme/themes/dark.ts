@@ -33,6 +33,9 @@ const darkTheme = {
 			},
 		},
 		shadowbox: {
+			text: {
+				default: "#FFFFFF",
+			},
 			container: {
 				background: "#00000086",
 				border: "#000000",

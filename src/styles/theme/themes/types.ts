@@ -35,6 +35,9 @@ export interface Colors {
 		},
 	},
 	shadowbox: {
+		text: {
+			default: string,
+		},
 		container: {
 			background: string,
 			border: string,
