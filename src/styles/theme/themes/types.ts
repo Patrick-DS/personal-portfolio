@@ -34,6 +34,13 @@ export interface Colors {
 			border: string
 		},
 	},
+	shadowbox: {
+		container: {
+			background: string,
+			border: string,
+			boxshadow: string,
+		}
+	}
 	// white: string
 	// lightGray: string
 	// gray: string

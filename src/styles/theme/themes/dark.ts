@@ -32,12 +32,13 @@ const darkTheme = {
 				border: "#000000",
 			},
 		},
-		headerBackground: "#222222fa",
-		headerText: "#FFF",
-		headerTextHovered: "#FFF",
-		headerTextActive: "#FFF",
-		headerBorder: "#000000",
-		text: "#000000",
+		shadowbox: {
+			container: {
+				background: "#00000086",
+				border: "#000000",
+				boxshadow: "#000000",
+			}
+		},
 		// white: "#dddddd",
 		// lightGray: "#aaaaaa",
 		// gray: "#888888",
