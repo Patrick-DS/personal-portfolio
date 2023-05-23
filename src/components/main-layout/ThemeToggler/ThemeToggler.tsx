@@ -1,4 +1,6 @@
+"use client"
 // Third-party imports
+import type { FC } from "react"
 import Image from "next/image"
 
 // Global imports
@@ -11,15 +13,19 @@ import lightThemeLogo from "./icons/light-theme-logo.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
+interface ThemeTogglerProps {
+	onTogglerClick: () => void
+}
+
 /**
  * @function ThemeToggler
  * @category Components
  * @subcategory Main Layout
  * @description Button used to toggle the theme used on the website when clicked.
  */
-const ThemeToggler = () => {
+const ThemeToggler: FC<ThemeTogglerProps> = ({ onTogglerClick }) => {
 	// Hooks
-	const {selectedThemeName, toggleTheme} = useThemeManager()
+	const { selectedThemeName } = useThemeManager()
 
 	// Variables
 	const themeLogo = {
@@ -29,17 +35,17 @@ const ThemeToggler = () => {
 
 	// Props
 	const themeLogoImageProps = {
-		src: themeLogo, 
+		src: themeLogo,
 		width: 24,
 		height: 24,
 	}
 
 	return (
 		<Image
-			onClick={toggleTheme}
+			onClick={onTogglerClick}
 			alt="Theme toggler icon"
 			{...themeLogoImageProps}
-		/>	
+		/>
 	)
 }
 

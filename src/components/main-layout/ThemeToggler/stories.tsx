@@ -21,7 +21,7 @@ const StyledBackground = styled.div`
 	height: 100vh;
 
 	/* Background */
-	background-color: ${({theme}) => theme.colors.headerBackground}; 
+	background-color: ${({ theme }) => theme.colors.headerBackground}; 
 	background-position: center;
 	background-repeat: no-repeat;
 	object-fit: cover;
@@ -30,7 +30,7 @@ const StyledBackground = styled.div`
 export const Default = () => (
 	<>
 		<StyledBackground />
-		<ThemeToggler />
+		<ThemeToggler onTogglerClick={() => { console.log("CLICKED") }} />
 	</>
 )
 
