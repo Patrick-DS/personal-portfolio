@@ -11,7 +11,7 @@ import type { ThemeManagerContextType } from "./types"
 
 const defaultThemeManager: ThemeManagerContextType = {
 	selectedThemeName: ThemeNames.LIGHT,
-	selectTheme: (themeName: ThemeNames) => {}
+	toggleTheme: () => {}
 }
 
 /**

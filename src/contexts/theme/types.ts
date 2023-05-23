@@ -9,5 +9,5 @@ import { ThemeNames } from "@/styles";
 
 export interface ThemeManagerContextType {
 	selectedThemeName: ThemeNames
-	selectTheme: (themeName: ThemeNames) => void
+	toggleTheme: () => void
 }

@@ -20,15 +20,9 @@ import lightThemeLogo from "./light-theme-logo.png"
  */
 const ThemeToggler = () => {
 	// Hooks
-	const {selectedThemeName, selectTheme} = useThemeManager()
+	const {selectedThemeName, toggleTheme} = useThemeManager()
 
 	// Variables
-	const toggleTheme = () => selectTheme(
-		selectedThemeName === ThemeNames.LIGHT 
-		? ThemeNames.DARK 
-		: ThemeNames.LIGHT
-	)
-
 	const themeLogo = {
 		[ThemeNames.LIGHT]: darkThemeLogo,
 		[ThemeNames.DARK]: lightThemeLogo,

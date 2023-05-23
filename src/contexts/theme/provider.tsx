@@ -32,7 +32,11 @@ const CustomThemeProvider: FC<CustomThemeProvider> = ({
     const providerProps = {
         value: {
             selectedThemeName,
-			selectTheme: (themeName: ThemeNames) => setThemeName(themeName), 
+			toggleTheme: () => setThemeName(
+				selectedThemeName === ThemeNames.LIGHT 
+				? ThemeNames.DARK 
+				: ThemeNames.LIGHT
+			),
         }
     }
 
