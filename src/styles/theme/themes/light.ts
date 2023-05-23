@@ -10,16 +10,33 @@ import { ThemeNames } from "./types"
 const lightTheme = {
 	themeName: ThemeNames.LIGHT,
 	colors: {
-		headerBackground: "#ffffffea",
-		headerText: "#000",
-		headerTextHovered: "#000",
-		headerTextActive: "#000",
-		text: "#000000",
-		white: "#222222",
-		lightGray: "#666666",
-		gray: "#888888",
-		darkGray: "#dddddd",
-		black: "#ffffff",
+		header: {
+			text: {
+				default: "#000000",
+				hovered: "#000000",
+				active: "#000000",
+			},
+			container: {
+				background: "#FFFFFFEA",
+				border: "#FFFFFF",
+			},
+		},
+		footer: {
+			text: {
+				default: "#000000",
+				hovered: "#000000",
+				active: "#000000",
+			},
+			container: {
+				background: "#FFFFFFEA",
+				border: "#FFFFFF",
+			},
+		},
+		// white: "#222222",
+		// lightGray: "#666666",
+		// gray: "#888888",
+		// darkGray: "#dddddd",
+		// black: "#ffffff",
 	},
 }
 

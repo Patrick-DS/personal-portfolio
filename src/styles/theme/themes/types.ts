@@ -12,14 +12,31 @@ export enum ThemeNames {
 }
 
 export interface Colors {
-	headerText: string
-	headerTextHovered: string
-	headerTextActive: string
-	headerBackground: string
-	text: string
-	white: string
-	lightGray: string
-	gray: string
-	darkGray: string
-	black: string
+	header: {
+		text: {
+			default: string
+			hovered: string
+			active: string
+		},
+		container: {
+			background: string
+			border: string
+		},
+	},
+	footer: {
+		text: {
+			default: string
+			hovered: string
+			active: string
+		},
+		container: {
+			background: string
+			border: string
+		},
+	},
+	// white: string
+	// lightGray: string
+	// gray: string
+	// darkGray: string
+	// black: string
 }

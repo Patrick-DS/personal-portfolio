@@ -21,11 +21,11 @@ export const NavBar = styled.header`
 	padding: 0px 15px;
 
 	/* Color */
-	background: ${({ theme }) => theme.colors.headerBackground};
+	background: ${({ theme }) => theme.colors.header.container.background};
 
 	/* Border */
-	border-bottom: 1px solid ${({ theme }) => theme.colors.black};
-	box-shadow: 0px 0px 10px 5px ${({ theme }) => theme.colors.black};
+	border-bottom: 1px solid ${({ theme }) => theme.colors.header.container.border};
+	box-shadow: 0px 0px 10px 2px ${({ theme }) => theme.colors.header.container.border};
 `
 
 interface StyledLinkProps {
@@ -40,13 +40,13 @@ export const NavItem = styled.span<StyledLinkProps>`
 	position: relative;
 	justify-content: center;
 	align-items: center;
-	${({paddingX}) => paddingX ? `padding: 0px ${paddingX}` : ""};
+	${({ paddingX }) => paddingX ? `padding: 0px ${paddingX}` : ""};
 
 	/* Dimensions */
 	height: 100%;
 
 	/* Color */
-	color: ${({ theme }) => theme.colors.headerText};
+	color: ${({ theme }) => theme.colors.header.text.default};
 	${({ theme }) => theme.devices.availableOnDesktopOnly}
 `
 
@@ -66,11 +66,11 @@ export const StyledLink = styled(Link)`
 	&:link,
 	&:visited,
 	&:active {
-		color: ${({ theme }) => theme.colors.headerTextActive} !important;
+		color: ${({ theme }) => theme.colors.header.text.active} !important;
 	}
 
 	&:hover {
-		color: ${({ theme }) => theme.colors.headerTextHovered};
+		color: ${({ theme }) => theme.colors.header.text.hovered};
 	}
 
 	/* Text */

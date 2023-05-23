@@ -21,7 +21,7 @@ const StyledBackground = styled.div`
 	height: 100vh;
 
 	/* Background */
-	background-color: ${({ theme }) => theme.colors.headerBackground}; 
+	background-color: ${({ theme }) => theme.colors.header.container.background}; 
 	background-position: center;
 	background-repeat: no-repeat;
 	object-fit: cover;

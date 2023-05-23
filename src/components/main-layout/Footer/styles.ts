@@ -21,11 +21,11 @@ export const NavBar = styled.footer`
 	padding: 0px 15px;
 
 	/* Color */
-	background: ${({ theme }) => theme.colors.headerBackground};
+	background: ${({ theme }) => theme.colors.footer.container.background};
 
 	/* Border */
-	border-top: 1px solid ${({ theme }) => theme.colors.black};
-	box-shadow: 0px 0px 5px 2px ${({ theme }) => theme.colors.black};
+	border-top: 1px solid ${({ theme }) => theme.colors.footer.container.border};
+	box-shadow: 0px 0px 10px 2px ${({ theme }) => theme.colors.footer.container.border};
 `
 
 interface NavItemProps {
@@ -46,7 +46,7 @@ export const NavItem = styled.span<NavItemProps>`
 	height: 100%;
 
 	/* Color */
-	color: ${({ theme }) => theme.colors.headerText};
+	color: ${({ theme }) => theme.colors.footer.text.default};
 	${({ theme }) => theme.devices.availableOnDesktopOnly}
 `
 
