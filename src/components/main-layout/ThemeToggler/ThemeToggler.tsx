@@ -4,6 +4,7 @@ import { useTheme } from "styled-components"
 
 // Global imports
 import { ThemeNames } from "@/styles"
+import { useThemeManager } from "@/contexts"
 
 // Local imports
 import darkThemeLogo from "./dark-theme-logo.png"
@@ -19,15 +20,19 @@ import lightThemeLogo from "./light-theme-logo.png"
  */
 const ThemeToggler = () => {
 	// Hooks
-	const theme = useTheme()
+	const {selectedThemeName, selectTheme} = useThemeManager()
 
 	// Variables
-	const themeName = theme?.themeName || ThemeNames.LIGHT
+	const toggleTheme = () => selectTheme(
+		selectedThemeName === ThemeNames.LIGHT 
+		? ThemeNames.DARK 
+		: ThemeNames.LIGHT
+	)
 
 	const themeLogo = {
 		[ThemeNames.LIGHT]: darkThemeLogo,
 		[ThemeNames.DARK]: lightThemeLogo,
-	}[themeName]
+	}[selectedThemeName]
 
 	// Props
 	const themeLogoImageProps = {
@@ -38,7 +43,7 @@ const ThemeToggler = () => {
 
 	return (
 		<Image
-			onClick={() => console.log(themeLogo)}
+			onClick={toggleTheme}
 			alt="Theme toggler icon"
 			{...themeLogoImageProps}
 		/>	
