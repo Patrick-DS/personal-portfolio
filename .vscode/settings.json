@@ -4,7 +4,6 @@
 	"editor.tabSize": 4,
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.renderWhitespace": "none",
 	"[javascript]": {
 		"editor.tabSize": 4
