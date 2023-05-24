@@ -35,7 +35,6 @@ const Background = () => {
 	const styledBackgroundProps = {
 		src: websiteBackground[themeName],
 		alt: "Decorative background",
-		fill: true,
 	}
 
 	return (
