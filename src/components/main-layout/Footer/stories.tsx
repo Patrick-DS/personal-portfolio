@@ -2,7 +2,7 @@
 import type { Meta } from "@storybook/react"
 
 // Global imports
-import { backgroundDecorator } from "@/components/main-layout/Background/stories"
+import { backgroundDecorator } from "@/components/main-layout"
 
 // Local imports
 import Footer from "./Footer"
