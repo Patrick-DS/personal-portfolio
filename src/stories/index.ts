@@ -1,0 +1,1 @@
+export { FontDecorator } from "./decorators"

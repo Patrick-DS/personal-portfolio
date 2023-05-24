@@ -5,6 +5,7 @@ import { withThemeFromJSXProvider } from "@storybook/addon-styling"
 // Global imports
 import { ThemeProvider } from "styled-components"
 import { GlobalStyles, themes, ThemeNames } from "@/styles"
+import { FontDecorator } from "@/stories"
 
 // Local imports
 
@@ -17,6 +18,7 @@ export const decorators = [
 		defaultTheme: ThemeNames.LIGHT,
 		Provider: ThemeProvider,
 	}),
+	FontDecorator,
 ]
 
 const preview: Preview = {
