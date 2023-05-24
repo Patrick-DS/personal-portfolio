@@ -30,7 +30,7 @@ export const NavBar = styled.header`
 
 interface StyledLinkProps {
 	direction: "left" | "right"
-	paddingX?: string
+	$paddingX?: string
 }
 
 export const NavItem = styled.span<StyledLinkProps>`
@@ -40,7 +40,7 @@ export const NavItem = styled.span<StyledLinkProps>`
 	position: relative;
 	justify-content: center;
 	align-items: center;
-	${({ paddingX }) => paddingX ? `padding: 0px ${paddingX}` : ""};
+	${({ $paddingX }) => $paddingX ? `padding: 0px ${$paddingX}` : ""};
 
 	/* Dimensions */
 	height: 100%;

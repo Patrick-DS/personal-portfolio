@@ -24,7 +24,7 @@ const Header: FC<{}> = () => {
 
 	return (
 		<NavBar>
-			<NavItem direction="right" paddingX="10px">
+			<NavItem direction="right" $paddingX="10px">
 				<ThemeToggler onTogglerClick={toggleTheme} />
 			</NavItem>
 			{headerContent.map(({ itemId, direction, href, displayText }) => (
