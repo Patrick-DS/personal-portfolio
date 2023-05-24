@@ -1,5 +1,6 @@
 // Third-party imports
 import styled from "styled-components"
+import BlogCard from "../BlogCard"
 
 // Global imports
 
@@ -8,10 +9,30 @@ import styled from "styled-components"
 ////////////////////////////////////////////////////////////////////////////////
 
 export const BlogContainer = styled.div`
-	width: 100%;
-	display: grid;
-	margin-top: 100px;
+	/* Positioning */
+	display: flex;
+	flex-direction: column;
 	gap: 50px;
+
+	/* Dimensions */
+	width: 100%;
+	padding: 0 5%;
+	min-height: ${({ theme }) => (
+		`calc(100vh - ${theme.dimensions.header.height
+		} - ${theme.dimensions.footer.height
+		})`
+	)};
+`
+
+export const HeadlineContainer = styled(BlogCard)`
+	/* Positioning */
+	display: grid;
+	gap: 20px;
+
+	/* Dimensions */
+	width: 100%;
+	max-height: 225px;
+	margin-bottom: 50px;
 `
 
 export const BlogTitle = styled.h1`

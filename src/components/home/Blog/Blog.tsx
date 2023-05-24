@@ -5,7 +5,7 @@ import type { FC } from "react"
 
 // Local imports
 import BlogCard from "../BlogCard"
-import { BlogContainer, BlogTitle, BlogSubtitle } from "./styles"
+import { BlogContainer, BlogTitle, BlogSubtitle, HeadlineContainer } from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -21,13 +21,20 @@ interface BlogProps {
  */
 const Blog: FC<BlogProps> = ({ children }) => (
 	<BlogContainer>
-		<BlogCard>
+		<HeadlineContainer>
 			<BlogTitle>Patrick Da Silva</BlogTitle>
 			<BlogSubtitle>Your reference in software, cloud and machine learning</BlogSubtitle>
-		</BlogCard>
-		<BlogCard>
-			{children}
-		</BlogCard>
+		</HeadlineContainer>
+		{children ? (
+			<>
+				<BlogCard>
+					{children}
+				</BlogCard>
+				<BlogCard>
+					{children}
+				</BlogCard>
+			</>
+		) : null}
 	</BlogContainer>
 )
 
