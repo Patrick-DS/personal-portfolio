@@ -5,7 +5,7 @@ import { withThemeFromJSXProvider } from "@storybook/addon-styling"
 // Global imports
 import { ThemeProvider } from "styled-components"
 import { GlobalStyles, themes, ThemeNames } from "@/styles"
-import { FontDecorator } from "@/stories"
+import { FontDecorator, CenteringDecorator } from "@/stories"
 
 // Local imports
 
@@ -19,11 +19,12 @@ export const decorators = [
 		Provider: ThemeProvider,
 	}),
 	FontDecorator,
+	CenteringDecorator,
 ]
 
 const preview: Preview = {
 	parameters: {
-		layout: "centered",
+		layout: "fullscreen",
 		actions: { argTypesRegex: "^on[A-Z].*" },
 		controls: {
 			matchers: {
