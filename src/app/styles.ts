@@ -17,6 +17,11 @@ export const StyledMain = styled.main`
 	width: 100%;
 	max-width: 1200px;
 	height: 100%;
-	min-height: 100vh;
+	min-height: ${({ theme }) => (
+		`calc(100vh - ${theme.dimensions.header.height
+		} - ${theme.dimensions.footer.height
+		})`
+	)};
 	margin: ${({ theme }) => theme.dimensions.header.height} auto ${({ theme }) => theme.dimensions.footer.height} auto;
+	padding: 100px 0px;
 `
