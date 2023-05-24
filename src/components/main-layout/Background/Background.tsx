@@ -8,8 +8,8 @@ import { ThemeNames } from "@/styles"
 
 // Local imports
 import { StyledBackground } from "./styles"
-import websiteBackgroundLight from "./website-background-light.jpg"
-import websiteBackgroundDark from "./website-background-dark.jpg"
+import websiteBackgroundLight from "./background-images/website-background-light.jpg"
+import websiteBackgroundDark from "./background-images/website-background-dark.jpg"
 
 ////////////////////////////////////////////////////////////////////////////////
 
