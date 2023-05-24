@@ -2,6 +2,7 @@
 import styled from "styled-components"
 
 // Global imports
+import { onWidthLessThan } from "@/styles"
 
 // Local imports
 
@@ -24,4 +25,20 @@ export const StyledMain = styled.main`
 	)};
 	margin: ${({ theme }) => theme.dimensions.header.height} auto ${({ theme }) => theme.dimensions.footer.height} auto;
 	padding: 100px 0px;
+
+	@media ${onWidthLessThan("large")} {
+		padding: 80px 0px;
+	}
+	
+	@media ${onWidthLessThan("medium")} {
+		padding: 60px 0px;
+	}
+
+	@media ${onWidthLessThan("small")} {
+		padding: 40px 0px;
+	}
+
+	@media ${onWidthLessThan("mini")} {
+		padding: 20px 0px;
+	}
 `
