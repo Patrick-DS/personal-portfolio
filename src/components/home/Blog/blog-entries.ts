@@ -13,12 +13,12 @@ export enum BlogEntryType {
 }
 
 interface ComponentBlogEntry {
-	type: BlogEntryType.COMPONENT,
+	type: BlogEntryType,
 	data: () => string,
 }
 
 interface TextBlogEntry {
-	type: BlogEntryType.TEXT,
+	type: BlogEntryType,
 	data: string
 }
 
