@@ -39,3 +39,11 @@ export const ContentLink = styled(Link)`
 export const BlogText = styled.span`
 	white-space: pre-wrap;
 `
+
+export const StyledList = styled.ul`
+	padding: 1rem 0px 1rem 20px;
+	
+	li:not(:last-child) { 
+		margin-bottom: 10px;  
+	}
+`

@@ -4,7 +4,7 @@ import type { ReactNode } from "react"
 // Global imports
 
 // Local imports
-import { ContentLink, BlogText } from "./styles"
+import { ContentLink, BlogText, StyledList } from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -93,21 +93,36 @@ It's still reasonably simple to learn so far though. I like the idea of being ab
 		header: "Update",
 		date: "25.04.22",
 		content: {
-			type: BlogEntryType.TEXT,
-			data: `
-						I recently decided to join a company as a full-time employee called Polar Squad! I've visited their offices today and I really liked it!
+			type: BlogEntryType.COMPONENT,
+			data: () => (
+				<>
+					<BlogText>{`I recently decided to join a company as a full-time employee called `}</BlogText>
+					<ContentLink href="https://polarsquad.com">Polar Squad</ContentLink>
+					<BlogText>{`! I've visited their offices today and I really liked it!
 
-						They really swear by two things I've noticed strongly so far: honesty and trust. Everybody is relaxed about everything around everybody because they all trust each other. That's something I hadn't seen in a long time. No work tension whatsoever! I'm hoping it's gonna stay like that. Fingers crossed!
+They really swear by two things I've noticed strongly so far: honesty and trust. Everybody is relaxed about everything around everybody because they all trust each other. That's something I hadn't seen in a long time. No work tension whatsoever! I'm hoping it's gonna stay like that. Fingers crossed!
 
-						To all recruiters out there I've interacted with so far: things that made me sign with them is (so you can tell your clients from my experience if you want to... or whatever!):
+To all recruiters out there I've interacted with so far: things that made me sign with them is (so you can tell your clients from my experience if you want to... or whatever!):`}</BlogText>
 
-						- They noticed my talent upfront, I didn't have to go through hoops to prove myself. Working as a CTO for two years, trying to build another company before that, when listening to me talk about my work experience they knew I knew what I was doing from hearing me talk. They also followed on my LinkedIn content to see what I was busy with.
-						- They told me upfront they don't like overtime and bonuses as a concept. The whole idea is to release the pressure from the employee so they can focus on just working. So taking that into account, I knew my time and work was gonna be valued properly. That's something most companies tend to outright ignore. No artificial tension is being created here.
-						- They gave me an offer -fast-. Two interviews and woop the contract. It's not that I needed a job fast, I had time, it's that showing no hesitation also shows respect.
-						- They showed me that they treat their employees with dignity and respect. A lot of employers say it but their voice feels tense while expressing it and their body language says otherwise. It gave me a very different vibe.
+					<StyledList>
+						<li>
+							<BlogText>{`They noticed my talent upfront, I didn't have to go through hoops to prove myself. Working as a CTO for two years, trying to build another company before that, when listening to me talk about my work experience they knew I knew what I was doing from hearing me talk. They also followed on my LinkedIn content to see what I was busy with.`}</BlogText>
+						</li>
 
-						These things aligned with me, so that's what I chose!
-						`,
+						<li>
+							<BlogText>{`They told me upfront they don't like overtime and bonuses as a concept. The whole idea is to release the pressure from the employee so they can focus on just working. So taking that into account, I knew my time and work was gonna be valued properly. That's something most companies tend to outright ignore. No artificial tension is being created here.`}</BlogText>
+						</li>
+						<li>
+							<BlogText>{`They gave me an offer -fast-. Two interviews and woop! A contract. It's not that I needed a job fast, I had time, it's that showing no hesitation also shows respect.`}</BlogText>
+						</li>
+						<li>
+							<BlogText>{`They showed me that they treat their employees with dignity and respect. A lot of employers say it but their voice feels tense while expressing it and their body language says otherwise. It gave me a very different vibe.`}</BlogText>
+						</li>
+					</StyledList>
+
+					<BlogText>{`These things aligned with me, so that's what I chose!`}</BlogText>
+				</>
+			),
 		},
 	},
 	{
