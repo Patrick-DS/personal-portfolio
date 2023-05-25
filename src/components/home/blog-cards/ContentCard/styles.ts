@@ -48,7 +48,7 @@ export const DateDisplay = styled.h4`
 	text-align: center;
 `
 
-export const Content = styled.p`
+export const Content = styled.div`
 	/* Dimensions */
 	width: 100%;
 	

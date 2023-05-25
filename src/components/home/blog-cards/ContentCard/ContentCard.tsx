@@ -1,5 +1,5 @@
 // Third-party imports
-import type { FC } from "react"
+import type { FC, ReactNode } from "react"
 
 // Global imports
 
@@ -11,7 +11,8 @@ import { ContentCardContainer, ContentTitle, DateDisplay, Content } from "./styl
 interface ContentCardProps {
 	header: string
 	date: string
-	content: string
+	content?: string
+	children?: ReactNode
 }
 
 /**
@@ -24,12 +25,13 @@ const ContentCard: FC<ContentCardProps> = ({
 	header,
 	date,
 	content,
+	children,
 }) => (
 	<ContentCardContainer>
 		<ContentTitle>{header}</ContentTitle>
 		<hr />
 		<DateDisplay>{date}</DateDisplay>
-		<Content>{content}</Content>
+		<Content>{content || children}</Content>
 	</ContentCardContainer>
 )
 

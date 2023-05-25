@@ -1,12 +1,13 @@
 // Third-party imports
-import type { FC } from "react"
+import { createElement } from "react"
+import type { FC, ReactNode } from "react"
 
 // Global imports
 
 // Local imports
 import { HeadlineCard, ContentCard } from "../blog-cards"
 import { BlogContainer } from "./styles"
-import blogEntries from "./blog-entries"
+import blogEntries, { BlogEntryType } from "./blog-entries"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -26,8 +27,14 @@ const Blog: FC<BlogProps> = ({ children }) => (
 			title="Patrick Da Silva"
 			subtitle="Your reference in software, cloud and machine learning"
 		/>
-		{blogEntries.map(({ itemId, ...contentCardProps }) => (
-			<ContentCard key={itemId} {...contentCardProps} />
+		{blogEntries.map(({ itemId, header, date, content: { type, data } }) => (
+			type === BlogEntryType.TEXT ? (
+				<ContentCard key={itemId} header={header} date={date} content={data as string} />
+			) : type === BlogEntryType.COMPONENT ? (
+				<ContentCard key={itemId} header={header} date={date} content="">
+					{createElement(data as any)}
+				</ContentCard>
+			) : null
 		))}
 	</BlogContainer>
 )

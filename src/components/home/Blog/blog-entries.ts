@@ -1,4 +1,5 @@
 // Third-party imports
+import type { ReactNode } from "react"
 
 // Global imports
 
@@ -6,11 +7,26 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
+export enum BlogEntryType {
+	TEXT = "text",
+	COMPONENT = "component",
+}
+
+interface ComponentBlogEntry {
+	type: BlogEntryType.COMPONENT,
+	data: ReactNode,
+}
+
+interface TextBlogEntry {
+	type: BlogEntryType.TEXT,
+	data: string
+}
+
 interface BlogEntryProps {
 	itemId: number
 	header: string
 	date: string
-	content: string
+	content: TextBlogEntry | ComponentBlogEntry
 }
 
 const blogEntries: BlogEntryProps[] = [
@@ -18,144 +34,178 @@ const blogEntries: BlogEntryProps[] = [
 		itemId: 1,
 		header: "Update",
 		date: "29.11.21",
-		content: `
-		\"Fake news, truth, beliefs and biases\" : my latest article on Medium! 
-		https://lnkd.in/dTCXdNMp
-		
-		I was trying to write more technical content before, but I realized that it doesn't really motivate me to write; instead, it feels like work and brings me down. I wanted to start writing something a bit more refreshing for me, sharing my views on the world and hopefully spark some discussions. Feel free to let me know what you think in the comments!
-		`,
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
+			\"Fake news, truth, beliefs and biases\" : my latest article on Medium! 
+			https://lnkd.in/dTCXdNMp
+			
+			I was trying to write more technical content before, but I realized that it doesn't really motivate me to write; instead, it feels like work and brings me down. I wanted to start writing something a bit more refreshing for me, sharing my views on the world and hopefully spark some discussions. Feel free to let me know what you think in the comments!
+			`,
+		},
 	},
 	{
 		itemId: 2,
 		header: "Update",
 		date: "30.02.22",
-		content: `Yesterday, I announced to my colleagues at Staiy that my chapter with them as their CTO is coming to an end. We went through so much together, it's hard to believe it's coming to an end! I made so many friends along the way, and you all know who you are, so I'll just thank the founders Chiara Latini, Adrian Leue and Alessandro Nora for bringing me along this amazing journey into the sustainable fashion ecosystem, I've had the most insane ride with you guys!
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
+				Yesterday, I announced to my colleagues at Staiy that my chapter with them as their CTO is coming to an end. We went through so much together, it's hard to believe it's coming to an end! I made so many friends along the way, and you all know who you are, so I'll just thank the founders Chiara Latini, Adrian Leue and Alessandro Nora for bringing me along this amazing journey into the sustainable fashion ecosystem, I've had the most insane ride with you guys!
 
-		I'm looking forward to going back to the reason I succeeded in the industry in the first place, which is to solve complex problems leading a team using things such as web infrastructure, data science, machine learning, DevOps, cloud computing, and constantly growing technologies. Of particular interest are the fields of sustainability, language-related topics (translation, education, chatbots, etc.), or 3D-modelling/CAD software, but I would be open to jump into a new industry if the opportunity were interesting.`,
+				I'm looking forward to going back to the reason I succeeded in the industry in the first place, which is to solve complex problems leading a team using things such as web infrastructure, data science, machine learning, DevOps, cloud computing, and constantly growing technologies. Of particular interest are the fields of sustainability, language-related topics (translation, education, chatbots, etc.), or 3D-modelling/CAD software, but I would be open to jump into a new industry if the opportunity were interesting.
+			`,
+		},
 	},
 	{
 		itemId: 3,
 		header: "Update",
 		date: "15.03.22",
-		content: `
-		I decided to take a month off to relax from my very exciting but also intense times at Staiy, that were preceeded with also very intense times trying to build my own company in a startup incubator, for a big total of 4 years of craziness. I was long overdue for a good break!
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
+				I decided to take a month off to relax from my very exciting but also intense times at Staiy, that were preceeded with also very intense times trying to build my own company in a startup incubator, for a big total of 4 years of craziness. I was long overdue for a good break!
 
-		I still enjoy programming even to relax, it's the stress of the deadlines and the pressure of performance that stressed me out, combined with very little holiday over a very long period. So to enjoy my time off, I decided to have a look at Apache Spark and Scala, one of the most popular tools / languages when it comes to big data (big data = data that is too large to be *processed* on one computer for memory reasons, not storage).
+				I still enjoy programming even to relax, it's the stress of the deadlines and the pressure of performance that stressed me out, combined with very little holiday over a very long period. So to enjoy my time off, I decided to have a look at Apache Spark and Scala, one of the most popular tools / languages when it comes to big data (big data = data that is too large to be *processed* on one computer for memory reasons, not storage).
 
-		Boy was I disappointed when I learned Scala is very close to Java, and that Apache Spark is based on Scala. Now I have to learn one language based on another language I'm not very familiar with. I've only used Java once while trying to toy around with a Minecraft mod, and Minecraft modding is not really like programming, you mostly fill in JSON files to get Minecraft to do what you want it to do. Nothing against Java per se, but it would have been nice to not have to go so far out of my comfort zone.
+				Boy was I disappointed when I learned Scala is very close to Java, and that Apache Spark is based on Scala. Now I have to learn one language based on another language I'm not very familiar with. I've only used Java once while trying to toy around with a Minecraft mod, and Minecraft modding is not really like programming, you mostly fill in JSON files to get Minecraft to do what you want it to do. Nothing against Java per se, but it would have been nice to not have to go so far out of my comfort zone.
 
-		It's still reasonably simple to learn so far though. I like the idea of being able to make programs run on multiple computers working within a cluster!
-		`,
+				It's still reasonably simple to learn so far though. I like the idea of being able to make programs run on multiple computers working within a cluster!
+			`,
+		},
 	},
 	{
 		itemId: 4,
 		header: "Update",
 		date: "25.04.22",
-		content: `
-		I recently decided to join a company as a full-time employee called Polar Squad! I've visited their offices today and I really liked it!
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
+				I recently decided to join a company as a full-time employee called Polar Squad! I've visited their offices today and I really liked it!
 
-		They really swear by two things I've noticed strongly so far: honesty and trust. Everybody is relaxed about everything around everybody because they all trust each other. That's something I hadn't seen in a long time. No work tension whatsoever! I'm hoping it's gonna stay like that. Fingers crossed!
+				They really swear by two things I've noticed strongly so far: honesty and trust. Everybody is relaxed about everything around everybody because they all trust each other. That's something I hadn't seen in a long time. No work tension whatsoever! I'm hoping it's gonna stay like that. Fingers crossed!
 
-		To all recruiters out there I've interacted with so far: things that made me sign with them is (so you can tell your clients from my experience if you want to... or whatever!):
+				To all recruiters out there I've interacted with so far: things that made me sign with them is (so you can tell your clients from my experience if you want to... or whatever!):
 
-		- They noticed my talent upfront, I didn't have to go through hoops to prove myself. Working as a CTO for two years, trying to build another company before that, when listening to me talk about my work experience they knew I knew what I was doing from hearing me talk. They also followed on my LinkedIn content to see what I was busy with.
-		- They told me upfront they don't like overtime and bonuses as a concept. The whole idea is to release the pressure from the employee so they can focus on just working. So taking that into account, I knew my time and work was gonna be valued properly. That's something most companies tend to outright ignore. No artificial tension is being created here.
-		- They gave me an offer -fast-. Two interviews and woop the contract. It's not that I needed a job fast, I had time, it's that showing no hesitation also shows respect.
-		- They showed me that they treat their employees with dignity and respect. A lot of employers say it but their voice feels tense while expressing it and their body language says otherwise. It gave me a very different vibe.
+				- They noticed my talent upfront, I didn't have to go through hoops to prove myself. Working as a CTO for two years, trying to build another company before that, when listening to me talk about my work experience they knew I knew what I was doing from hearing me talk. They also followed on my LinkedIn content to see what I was busy with.
+				- They told me upfront they don't like overtime and bonuses as a concept. The whole idea is to release the pressure from the employee so they can focus on just working. So taking that into account, I knew my time and work was gonna be valued properly. That's something most companies tend to outright ignore. No artificial tension is being created here.
+				- They gave me an offer -fast-. Two interviews and woop the contract. It's not that I needed a job fast, I had time, it's that showing no hesitation also shows respect.
+				- They showed me that they treat their employees with dignity and respect. A lot of employers say it but their voice feels tense while expressing it and their body language says otherwise. It gave me a very different vibe.
 
-		These things aligned with me, so that's what I chose!
-		`,
+				These things aligned with me, so that's what I chose!
+			`,
+		},
 	},
 	{
 		itemId: 5,
 		header: "Update",
 		date: "15.05.22",
-		content: `
-		I joined only two weeks ago, and my office is the most welcoming place in the world. Home-office is also respected, you can work as flexibly as you want. If there was a word meaning the complete opposite to the word "bullshit", it would be Polar Squad.
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
+				I joined only two weeks ago, and my office is the most welcoming place in the world. Home-office is also respected, you can work as flexibly as you want. If there was a word meaning the complete opposite to the word "bullshit", it would be Polar Squad.
 
-		- You have talent in DevOps?
-		- (Computer) networking, system administration, Docker, K8s, Terraform, AWS/GCP/Azure, these are things you'd like to work with?
-		- You have strong communication skills?
-		- You believe strongly in human values like respect and honesty?
+				- You have talent in DevOps?
+				- (Computer) networking, system administration, Docker, K8s, Terraform, AWS/GCP/Azure, these are things you'd like to work with?
+				- You have strong communication skills?
+				- You believe strongly in human values like respect and honesty?
 
-		These are things that made me join Polar Squad. Let me know if you're interested, I'll put you in touch!
-		`,
+				These are things that made me join Polar Squad. Let me know if you're interested, I'll put you in touch!
+			`,
+		},
 	},
 	{
 		itemId: 6,
 		header: "Update",
 		date: "19.05.22",
-		content: `
-		It's going to be much harder in the coming weeks in the area of tech to find a job as thousands of candidates flooded the tech market.
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
+				It's going to be much harder in the coming weeks in the area of tech to find a job as thousands of candidates flooded the tech market.
 
-		Candidates should remember, that even though the demand vs offer theory means they will suffer from the high offering for companies in their job search, they should still negotiate because their worth as competent human beings didn't change.
+				Candidates should remember, that even though the demand vs offer theory means they will suffer from the high offering for companies in their job search, they should still negotiate because their worth as competent human beings didn't change.
 
-		Companies should remember, these people just lost their jobs. This is not a period of "easy hiring", this is the time to be empathetic and improve your hiring process.
-		`,
+				Companies should remember, these people just lost their jobs. This is not a period of "easy hiring", this is the time to be empathetic and improve your hiring process.
+			`,
+		},
 	},
 	{
 		itemId: 7,
 		header: "Update",
 		date: "19.05.22",
-		content: `
-		Ever wondered what DevOps is actually about ? I sure did!
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
+				Ever wondered what DevOps is actually about ? I sure did!
 
-		It's with that question that I went on to discuss with my colleagues to figure out what Polar Squad is doing in the DevOps community. Why DevOps? How is it different from system administration? Who needs DevOps and why? These are the kinds of topics I investigated and this Medium article summarizes my findings.
+				It's with that question that I went on to discuss with my colleagues to figure out what Polar Squad is doing in the DevOps community. Why DevOps? How is it different from system administration? Who needs DevOps and why? These are the kinds of topics I investigated and this Medium article summarizes my findings.
 
-		Get in touch with [David Thalmeier](https://www.linkedin.com/in/ACoAACjaheQB2vrZGh-JblQcbrlDx_MEjRBazug) if your organization needs support in the DevOps area!
+				Get in touch with [David Thalmeier](https://www.linkedin.com/in/ACoAACjaheQB2vrZGh-JblQcbrlDx_MEjRBazug) if your organization needs support in the DevOps area!
 
-		https://patrickdasilva.medium.com/a-birds-eye-view-on-the-world-of-devops-42118bf3ebf0
-		`,
+				https://patrickdasilva.medium.com/a-birds-eye-view-on-the-world-of-devops-42118bf3ebf0
+			`,
+		},
 	},
 	{
 		itemId: 8,
 		header: "Update",
 		date: "19.05.22",
-		content: `
-		I don't know how many of you can relate to this coming from IT.
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
+				I don't know how many of you can relate to this coming from IT.
 
-		For every job I started since I worked in IT, I had experience with about 10 to 20% of the skills required for the job (which is unusual after some years in the sector, you usually get hired for experience). I learned what I had to learn to get the job done, and then solved problems. Once the problems were solved, I would either find new problems within the same company, or move on with another. The next company had interesting problems, but very little skillset overlap between my skills and the requirements. So I moved on and learned more things, and the pattern kept going.
+				For every job I started since I worked in IT, I had experience with about 10 to 20% of the skills required for the job (which is unusual after some years in the sector, you usually get hired for experience). I learned what I had to learn to get the job done, and then solved problems. Once the problems were solved, I would either find new problems within the same company, or move on with another. The next company had interesting problems, but very little skillset overlap between my skills and the requirements. So I moved on and learned more things, and the pattern kept going.
 
-		So now I have 1 year experience in this, 2 years experience in that, but I've been working for five years and for my current job, I had again very little experience in the things I'm trying to do. But I'm hoping that the same will happen again: I'll solve problems, learn what I have to learn and become valuable.
+				So now I have 1 year experience in this, 2 years experience in that, but I've been working for five years and for my current job, I had again very little experience in the things I'm trying to do. But I'm hoping that the same will happen again: I'll solve problems, learn what I have to learn and become valuable.
 
-		I'm glad that Polar Squad took a shot at me and gives me the room to grow in the space of DevOps, but for instance when building my personal brand on LinkedIn, I'm constantly thinking: should I focus on DevOps? Should I write about my frontend experience? Backend experience? Machine learning experience? Mathematics & Academia?
+				I'm glad that Polar Squad took a shot at me and gives me the room to grow in the space of DevOps, but for instance when building my personal brand on LinkedIn, I'm constantly thinking: should I focus on DevOps? Should I write about my frontend experience? Backend experience? Machine learning experience? Mathematics & Academia?
 
-		I think about a bunch of things all the time, and I get the annoying feeling that if I talk about whatever I want, I'm going to be too spread out and lose my audience. But then again, if I focus on a specific topic, people get a very narrow picture of who I am, making my personal brand unnatural and uncomfortable to myself, so I end up writing much less.
+				I think about a bunch of things all the time, and I get the annoying feeling that if I talk about whatever I want, I'm going to be too spread out and lose my audience. But then again, if I focus on a specific topic, people get a very narrow picture of who I am, making my personal brand unnatural and uncomfortable to myself, so I end up writing much less.
 
-		I'm open and happy to hear about any wisdom on this! 
-		`,
+				I'm open and happy to hear about any wisdom on this! 
+			`,
+		},
 	},
 	{
 		itemId: 9,
 		header: "Update",
 		date: "03.09.22",
-		content: `
-		🎉 I just reached 2, 500 followers! 🎉
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
+				🎉 I just reached 2, 500 followers! 🎉
 
-		A few months ago, I thought to myself that I'd try to understand how LinkedIn works and expand my reach to spread my message which I thought was relevant. What I was learning at [Polar Squad](https://www.linkedin.com/company/polarsquad/) was refreshing but also liberating and empowering, so I felt like I had something to say and started to build an audience.
+				A few months ago, I thought to myself that I'd try to understand how LinkedIn works and expand my reach to spread my message which I thought was relevant. What I was learning at [Polar Squad](https://www.linkedin.com/company/polarsquad/) was refreshing but also liberating and empowering, so I felt like I had something to say and started to build an audience.
 
-		Fastforward to today, and this audience is still growing! I wanted to thank the people who are interacting with my content regularly, and give a short introduction to what I do to my latest followers:
+				Fastforward to today, and this audience is still growing! I wanted to thank the people who are interacting with my content regularly, and give a short introduction to what I do to my latest followers:
 
-		👉 I'm a DevOps consultant at [Polar Squad](https://www.linkedin.com/company/polarsquad/). That means that me and my colleagues can help you with anything related to #devops , which includes of course infrastructure and automation (on-premise or in the cloud), but also with culture, lean, measurement and monitoring, and #haring and documentation problems. The whole thing is abbreviated as CALMS which is a philosophy that I'm quite fond of! If you or your company needs support with any of those topics, please contact me!
+				👉 I'm a DevOps consultant at [Polar Squad](https://www.linkedin.com/company/polarsquad/). That means that me and my colleagues can help you with anything related to #devops , which includes of course infrastructure and automation (on-premise or in the cloud), but also with culture, lean, measurement and monitoring, and #haring and documentation problems. The whole thing is abbreviated as CALMS which is a philosophy that I'm quite fond of! If you or your company needs support with any of those topics, please contact me!
 
-		👉 I have a mathematics background and I've been wearing many different hats in IT: Data Scientist, Machine Learning Engineer, database administrator, system administrator, frontend developer, backend developer, tech lead, CTO, now DevOps consultant. So when it comes to technical topics, I'm pretty well - rounded! But more importantly, anything you wanna discuss, I'm down! Feel free to reach out.
+				👉 I have a mathematics background and I've been wearing many different hats in IT: Data Scientist, Machine Learning Engineer, database administrator, system administrator, frontend developer, backend developer, tech lead, CTO, now DevOps consultant. So when it comes to technical topics, I'm pretty well - rounded! But more importantly, anything you wanna discuss, I'm down! Feel free to reach out.
 
-		👉 I'm happy to discuss with you about anything related to your tech career! I'll support you in anyway I can; finding a new job, debugging code, defining your learning journey, anything.I've already had quite a few meetings on Google Meet with complete strangers from all around the world just for the sake of helping out, and I'll keep doing it!
-		`,
+				👉 I'm happy to discuss with you about anything related to your tech career! I'll support you in anyway I can; finding a new job, debugging code, defining your learning journey, anything.I've already had quite a few meetings on Google Meet with complete strangers from all around the world just for the sake of helping out, and I'll keep doing it!
+			`,
+		},
 	},
 	{
 		itemId: 10,
 		header: "Update",
 		date: "07.09.22",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		Recently I joined [Joe Bignell](https://www.linkedin.com/in/ACoAAAQTN4QBkOVMEL0LitOlR1Bxd_kXRwMH1hc) in his [DevOps For Everyone](https://www.linkedin.com/company/devops-for-everyone/) podcast! Check it out if you want to hear more about the philosophy behind DevOps that we have at [Polar Squad](https://www.linkedin.com/company/polarsquad/)!
 		`,
+		},
 	},
 	{
 		itemId: 11,
 		header: "Update",
 		date: "10.10.22",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		I'm flying to Helsinki today!
 
 		Looking forward to work with my colleagues from [Polar Squad](https://www.linkedin.com/company/polarsquad/)'s Helsinki office!
@@ -166,24 +216,28 @@ const blogEntries: BlogEntryProps[] = [
 
 		Nähdään pian!
 		`,
+		},
 	},
 	{
-		itemId: 11,
+		itemId: 12,
 		header: "Update",
 		date: "20.10.22",
-		content: `
-		Our co-founder at [Polar Squad](https://www.linkedin.com/company/polarsquad/), [Teemu Korpela](https://www.linkedin.com/in/ACoAAAxghSYB5xbgHJUBGQDJ3MljRfiPIIQMcF0), once said to me:
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
+				Our co-founder at [Polar Squad](https://www.linkedin.com/company/polarsquad/), [Teemu Korpela](https://www.linkedin.com/in/ACoAAAxghSYB5xbgHJUBGQDJ3MljRfiPIIQMcF0), once said to me:
 
-		"DevOps is a philosophy about how to do things. You can even do DevOps in the kitchen if you want."
+				"DevOps is a philosophy about how to do things. You can even do DevOps in the kitchen if you want."
 
-		That sentence really resonated with me. Once I understood what DevOps was about (and its five pillars, summarized by #CALMS), a lot of the things I did gained a framework for expression. It's one of the reasons I'm so vocal on LinkedIn about DevOps.
+				That sentence really resonated with me. Once I understood what DevOps was about (and its five pillars, summarized by #CALMS), a lot of the things I did gained a framework for expression. It's one of the reasons I'm so vocal on LinkedIn about DevOps.
 
-		I wanna push that to the next level and start talking about applying DevOps to other stuff. I'm currently in Finland until December, so I'm going to talk here about applying DevOps to learning languages, in this case Finnish. I'm hoping it gets people to understand what DevOps is really about and makes them better at #engineering
+				I wanna push that to the next level and start talking about applying DevOps to other stuff. I'm currently in Finland until December, so I'm going to talk here about applying DevOps to learning languages, in this case Finnish. I'm hoping it gets people to understand what DevOps is really about and makes them better at #engineering
 
-		Now I'm not gonna bore you with the inner workings of the Finnish language as that will make me lose over half my following! But I'm going to inspire my posts from my current learning strategies and showcase how the same philosophy could also apply to you when doing anything, including learning a spoken language (or say, a programming language!).
+				Now I'm not gonna bore you with the inner workings of the Finnish language as that will make me lose over half my following! But I'm going to inspire my posts from my current learning strategies and showcase how the same philosophy could also apply to you when doing anything, including learning a spoken language (or say, a programming language!).
 
-		Lots of cool content incoming, so hit that 🔔 to get notified and let's start doing some DevOps! 
-		`,
+				Lots of cool content incoming, so hit that 🔔 to get notified and let's start doing some DevOps! 
+			`,
+		},
 	},
 	// PART 1
 	// 	DevOps applied to learning Finnish: Part 1!
@@ -286,10 +340,12 @@ const blogEntries: BlogEntryProps[] = [
 
 	// See you in the next posts!
 	{
-		itemId: 12,
+		itemId: 13,
 		header: "Update",
 		date: "03.11.22",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		Agility is what all the tech companies are trying to achieve.
 
 		Kubernetes, Docker, Terraform, CI / CD pipelines...these are tools to get there.You may or may not need some of them, or you might need them only at certain stages of your company.
@@ -307,12 +363,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		A bit like when you're building a house, you want a stable, secure, comfortable and affordable house; you don't "want" hammers, nails and screwdrivers.
 		`,
+		},
 	},
 	{
-		itemId: 13,
+		itemId: 14,
 		header: "Update",
 		date: "12.11.22",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		I've been pretty vocal about DevOps in the last few months, but this is a relatively new chapter in my career. A few years ago, I was heavily invested into NLP, the subfield of machine learning focused on text data and languages.
 
 		Recently, someone thought funny that they found this old video (see link in the comments) where I'm reviewing a marketing service my business partner at the time Tomás Ignacio Moyano and I received from the very talented Alexis Rondeau! It felt good to see how much I've changed since, but also how at the core, my ideals haven't changed.
@@ -323,12 +382,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		What qualities do you think give you an edge in the field of software?
 		`,
+		},
 	},
 	{
-		itemId: 13,
+		itemId: 15,
 		header: "Update",
 		date: "14.11.22",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		I will be speaking at [RELEX Solutions](https://www.linkedin.com/company/relexsolutions/)' Helsinki Data Science meetup! I'd love to see you there, and for those who are not in Helsinki, it'll be live-streamed! I'll put the link up when it's available.
 
 		MLOps, what is it, really?
@@ -337,12 +399,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		As always, the devil is in the details. I'm hoping to see you there!
 		`,
+		},
 	},
 	{
-		itemId: 14,
+		itemId: 16,
 		header: "Update",
 		date: "13.12.22",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		"Tech is easy, people are hard."
 
 		I love this quote from one of our former colleagues.
@@ -367,12 +432,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		I wish I had something like this in my previous companies! 
 		`,
+		},
 	},
 	{
-		itemId: 15,
+		itemId: 17,
 		header: "Update",
 		date: "14.12.22",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		My colleague Janne Sinivirta at Polar Squad took the time to write an amazingly well-written blog post about pull requests!
 
 		I love how he goes to the heart of the reasoning behind the idea, the philosophy that comes with it, and its consequences with pros and cons.
@@ -390,12 +458,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		There's no unique way of doing things, but if it works well, why change it if you can't find better?
 		`,
+		},
 	},
 	{
-		itemId: 16,
+		itemId: 18,
 		header: "Update",
 		date: "20.12.22",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		As people gain experience in tech, I've noticed they tend to stop wanting to do the technical, manual, tedious work and move to wanting to solve social, cultural and business problems instead.
 
 		I think it's because after a while, it gets tiring to notice that by ignoring the cultural side of things and focusing on technology, you're missing out on the bigger picture and can't see where the really hard problems are.
@@ -408,12 +479,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		So you get your hands dirty every now and then, but you focus more on the people and business requirements than on the code.
 		`,
+		},
 	},
 	{
-		itemId: 17,
+		itemId: 19,
 		header: "Update",
 		date: "09.01.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		Starting next week, I will start documenting my journey of learning Kubernetes and Terraform. I think it's relevant to discuss what it's about, how to use it, but more importantly -why- to use it. These tools are simple in theory but are incredibly detailed and complicated to master because there's a lot to take into account when maintaining them.
 
 		So far I like that they abstract away a lot of pains that I had during my career as a developer. I will try to point those out, as well as how to solve it at different scales of a company.
@@ -422,12 +496,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		There's always room for more learning! Stay tuned for the next updates.
 		`,
+		},
 	},
 	{
-		itemId: 18,
+		itemId: 20,
 		header: "Update",
 		date: "14.01.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		The first thing I bumped into when beginning with Kubernetes is pods.
 
 		Kubernetes pods are the basic unit of abstraction when using Kubernetes. They are the ones running the processes that are needed in order for your software to function.
@@ -448,12 +525,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		That's what I understood about pods at the high level. Any comments on that? I'm open to discussion.
 		`,
+		},
 	},
 	{
-		itemId: 18,
+		itemId: 21,
 		header: "Update",
 		date: "14.01.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		When I came across deployments for the first time, I couldn't believe how such a simple idea could have saved me hundreds of hours of debugging if I had this for myself.
 
 		The idea of a deployment is to maintain a set of identically configured pods running.
@@ -466,12 +546,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		How many hours have I wasted in previous companies manually reconfiguring and restarting my servers.If only I had had a way to manage my configuration and my server's state!
 		`,
+		},
 	},
 	{
-		itemId: 19,
+		itemId: 22,
 		header: "Update",
 		date: "07.03.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		I haven't posted in a while since I was called in sick for over 2 months. An eye problem that took forever to diagnose. So even though I was commenting here and there, I wasn't officially working.I started working again yesterday, which feels pretty good.I missed Polar Squad!
 
 		Today was a big milestone for me.Personal post time - I usually stick to DevOps, but not today.That can wait until tomorrow!
@@ -492,12 +575,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		Around the first week of January I was fully on the diet, and 6 weeks later, I lost 6 kgs.One kilo a week! And of course I'll keep going. I had been doing sports, going to the gym and cooking at home hopelessly for the better part of the last 5 years and weight just kept piling up. Today I'm below 100 kg for the first time since I can't remember, at least 5+ years. So I'm definitely grateful for that.Thanks Matthew!
 		`,
+		},
 	},
 	{
-		itemId: 20,
+		itemId: 23,
 		header: "Update",
 		date: "17.03.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		I'm restarting my series of posts on my Kubernetes learning journey! It's good to be back, and with it comes getting my hands dirty on the cloud.
 
 		Kubernetes sounds really complicated from the outside, but it's actually trying to keep things so simple. One of the concepts that makes me feel that way is when trying to solve the problem of assigning tasks like running containers (or more correctly, running pods) to nodes in your Kubernetes cluster. What we want at the end of the day is that Kubernetes takes care of it, but it might be that certain containers have certain pre-requisites about which nodes they should or shouldn't be on, or certain nodes should be reserved for certain tasks.
@@ -506,12 +592,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		Stay tuned for more on this series about Kubernetes!
 		`,
+		},
 	},
 	{
-		itemId: 21,
+		itemId: 24,
 		header: "Update",
 		date: "18.03.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		The Kubernetes series continues!
 
 		In my previous post, we discussed taints and tolerations, which prevents certains pods from being placed on undesired nodes.
@@ -524,12 +613,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		[insert image here]
 		`,
+		},
 	},
 	{
-		itemId: 22,
+		itemId: 25,
 		header: "Update",
 		date: "20.03.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		I've recently passed the CKAD (Certified Kubernetes Application Developer) certificate exam!
 
 		I have to say, getting ready for that exam definitely made me learn a lot. If any of you are considering getting serious about Kubernetes, try passing that exam, and also consider the CKA after (which is what I plan to do next)!
@@ -540,24 +632,30 @@ const blogEntries: BlogEntryProps[] = [
 
 		[insert image here]
 		`,
+		},
 	},
 	{
-		itemId: 23,
+		itemId: 26,
 		header: "Update",
 		date: "24.03.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		In my previous posts about Kubernetes, we discussed taints and tolerations, and together with node selectors and node affinity, one can have control over pod placement on nodes. This is all good and useful, but it requires work from a DevOps engineer and is manual labor.
 
 		The next-gen pod placement tool is already here! At Polar Squad, we wrote a white paper about cloud cost optimization and we talk about Spot by NetApp, a product for optimizing resources usage with Kubernetes. You get to rely on a very powerful feature from cloud providers called "spot instances", which are short-lived nodes that come at a fraction of the price. If Kubernetes can manage the short-lived nodes by keeping the pods alive across those nodes, spot instances can bring real cost savings, but they are a bit harder to handle with code, so Spot is a machine-learning based tool that does precisely that: study the workload on your pods to determine what kind of spot instances they can handle with the goal of achieving reliability and cost optimization at the same time.
 
 		I also really like their pricing model: Spot's revenue comes by taking a cut on the savings you made, effectively bringing no additional financial cost to your company. Sounds like a dream come true! Spot by Netapp is probably the coolest application of AI-Ops that I know of, i.e. machine-learning applied to optimizing DevOps-related processes.
 		`,
+		},
 	},
 	{
-		itemId: 24,
+		itemId: 27,
 		header: "Update",
 		date: "07.04.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		I'm starting a project with Kubernetes (link to the GitHub repository in the first comment)!
 
 		It's a toy project, where I'm going to build a very minimal frontend, backend, and database, but my goal will be to rely on Kubernetes features to make it happen.
@@ -568,12 +666,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		I'm happy to hear about your own experience and others among yourselves who are learning about DevOps in public! Share in the comments!
 		`,
+		},
 	},
 	{
-		itemId: 25,
+		itemId: 28,
 		header: "Update",
 		date: "12.04.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		I had a good networking fight today while working on my Kubernetes project.
 		
 		So, the main feature that I wanted of my project is that I have a K8s deployment that I can scale up and down in terms of number of pods, and each pod has a server (a little API, in this case written with NestJS) that generates its own random identifier on startup. They would then register those identifiers in a database, and a cronjob would select one identifier at random, and then contact one of the servers at random. If the server has the identifier in the request, it would respond successfully, otherwise it would log in the request that it saw it, but it would "ping pong" it to another random server, and this ping pong continues until the server corresponding to the request receives that request, and then I would log the journey of the request.
@@ -590,12 +691,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		I'll post again when I'll have something to say about setting up the ELK stack!
 		`,
+		},
 	},
 	{
-		itemId: 26,
+		itemId: 29,
 		header: "Update",
 		date: "19.04.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		I have been fighting for the better part of last week and yesterday with the ELK stack. Setting up ELK in Minikube is really using up my patience!
 
 		Don't get me wrong, I have figured out at this point that setting up ELK in Minikube is not the best idea. For starters, there's an issue if I try to spin up multiple nodes in my Minikube cluster, because Elasticsearch relies on StatefulSets (to store the data!) that are not getting configured properly when using Minikube's VMs. I don't wanna fight with the Helm chart to make that work... I'll use one node for now, we'll see what I feel like doing later!
@@ -606,24 +710,30 @@ const blogEntries: BlogEntryProps[] = [
 
 		Link to the repo in the comments! If you have a look, let me know what you think! It's not much for now, I'm trying to configure the Helm charts I pulled from the Elastic repository at artifacthub.io!
 		`,
+		},
 	},
 	{
-		itemId: 27,
+		itemId: 30,
 		header: "Update",
 		date: "21.04.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		Recently I had a great conversation with [Matthew Ehrlich 👨‍💻](https://www.linkedin.com/in/ACoAACkDxJoBuTwnVft0hkQae_lS7FUN7EB18JY) and [Eric Winkelspecht](https://www.linkedin.com/in/ACoAAB9xWvMB9OrhK1Fhc5Js5A8097KOhtZktSI) on their [Self-Taught Devs](https://www.linkedin.com/company/self-taught-devs/) podcast, talking about my personal journey out of academia and into self-taught software development.
 
 		They are really good interviewers! Very professional and fun to talk with. If you haven't had a listen at their podcast, it definitely contains a few gems! Check them out on Spotify. We discussed things like how beginning in the industry looks like, challenges one wouldn't expect when beginning, and how the philosophy of DevOps now drives everything that I do, at work and outside of work.
 
 		Link to the podcast: [click here](https://podcasters.spotify.com/pod/show/self-taught-devs)
 		`,
+		},
 	},
 	{
-		itemId: 28,
+		itemId: 31,
 		header: "Update",
 		date: "23.04.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		Yesterday, I had a great conversation with my colleagues on deep-diving in my Kubernetes setup for using ELK!
 
 		There's a lot I don't know about networking. A lot of times, I feel like I don't know how to debug a problem that I have, but it turns out that the way to debug things properly is to "just know" how to do it, which can turn out to be extremely frustrating. So it was great to get a tour of my current setup and break it together with my colleagues that had more experience with it!
@@ -634,12 +744,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		Thank you guys [Alexander Ivanov](https://www.linkedin.com/in/ACoAAALndUUBKBQpvMH-Y7L1t-H42CLbJlN41AQ), [Adrian Antunez](https://www.linkedin.com/in/ACoAAArL4tcB9x0ERSpVtqqPGJqftHwDuwwwWPY) and [Jose Sánchez del Valle](https://www.linkedin.com/in/ACoAAAjdh6wBswtKNAYtnS3l6uxSXpYwH9EF03Y) for joining our session! It was fun. Let's do something similar soon!
 		`,
+		},
 	},
 	{
-		itemId: 29,
+		itemId: 32,
 		header: "Update",
 		date: "27.04.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		[Polar Squad](https://www.linkedin.com/company/polarsquad/)'s [DevOps self-assessment](https://polarsquad.com/devops-self-assessment) is here! 🎉
 
 		My colleague [Balázs Szakmáry](https://www.linkedin.com/in/ACoAAANJSEgBcGVi39jtIBTvl-1w650q5QbTNl4) and I both had the same idea at different times, so when we realized it, we teamed up and got it done. I'm so happy we can take initiative at Polar Squad and make things like this happen!
@@ -648,12 +761,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		I'm also very eager to hear about your current situation! If you think you could improve your DevOps practices, let me know and we'll see what we can do to help you!
 		`,
+		},
 	},
 	{
-		itemId: 30,
+		itemId: 33,
 		header: "Update",
 		date: "01.05.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		Last week marked the beginning of my second year at [Polar Squad](https://www.linkedin.com/company/polarsquad/)! 🔥 🚀 (and my birthday!)
 
 		I think I could summarize that year for me in one word: #growth
@@ -668,12 +784,15 @@ const blogEntries: BlogEntryProps[] = [
 
 		Have a nice weekend everybody!
 		`,
+		},
 	},
 	{
-		itemId: 30,
+		itemId: 34,
 		header: "Update",
 		date: "01.05.23",
-		content: `
+		content: {
+			type: BlogEntryType.TEXT,
+			data: `
 		I couldn't stand seeing such a motivated person trying to change careers for so long and work so hard and well, without satisfying results. I had to do something!
 
 		Most of you don't know this, but when I left academia, it took me 13 months to find my first job.
@@ -697,8 +816,8 @@ const blogEntries: BlogEntryProps[] = [
 
 		Matthew's based in the US, so if anybody in my network has an oppprtunity for a frontend developer, just get in touch with him and Eric. They both deserve a chance big time!
 		`,
+		},
 	},
-
 ].reverse()
 
 export default blogEntries
