@@ -130,17 +130,43 @@ To all recruiters out there I've interacted with so far: things that made me sig
 		header: "Update",
 		date: "15.05.22",
 		content: {
-			type: BlogEntryType.TEXT,
-			data: `
-						I joined only two weeks ago, and my office is the most welcoming place in the world. Home-office is also respected, you can work as flexibly as you want. If there was a word meaning the complete opposite to the word "bullshit", it would be Polar Squad.
-
-						- You have talent in DevOps?
-						- (Computer) networking, system administration, Docker, K8s, Terraform, AWS/GCP/Azure, these are things you'd like to work with?
-						- You have strong communication skills?
-						- You believe strongly in human values like respect and honesty?
-
-						These are things that made me join Polar Squad. Let me know if you're interested, I'll put you in touch!
-						`,
+			type: BlogEntryType.COMPONENT,
+			data: () => (
+				<>
+					<BlogText>
+						{`I joined only two weeks ago, and my office is the most welcoming place in the world. Home-office is also respected, you can work as flexibly as you want. If there was a word meaning the complete opposite to the word "bullshit", it would be Polar Squad.`}
+					</BlogText>
+					<StyledList>
+						<li>
+							<BlogText>
+								{`You have talent in DevOps?`}
+							</BlogText>
+						</li>
+						<li>
+							<BlogText>
+								{`(Computer) networking, system administration, Docker, K8s, Terraform, AWS/GCP/Azure, these are things you'd like to work with?`}
+							</BlogText>
+						</li>
+						<li>
+							<BlogText>
+								{`You have strong communication skills?`}
+							</BlogText>
+						</li>
+						<li>
+							<BlogText>
+								{`You believe strongly in human values like respect and honesty?`}
+							</BlogText>
+						</li>
+					</StyledList>
+					<BlogText>
+						{`These are things that made me join `}
+					</BlogText>
+					<ContentLink href="https://polarsquad.com/careers">Polar Squad</ContentLink>
+					<BlogText>
+						{`. Let me know if you're interested, I'll put you in touch!`}
+					</BlogText>
+				</>
+			),
 		},
 	},
 	{
@@ -150,12 +176,12 @@ To all recruiters out there I've interacted with so far: things that made me sig
 		content: {
 			type: BlogEntryType.TEXT,
 			data: `
-						It's going to be much harder in the coming weeks in the area of tech to find a job as thousands of candidates flooded the tech market.
+				It's going to be much harder in the coming weeks in the area of tech to find a job as thousands of candidates flooded the tech market.
 
-						Candidates should remember, that even though the demand vs offer theory means they will suffer from the high offering for companies in their job search, they should still negotiate because their worth as competent human beings didn't change.
+				Candidates should remember, that even though the demand vs offer theory means they will suffer from the high offering for companies in their job search, they should still negotiate because their worth as competent human beings didn't change.
 
-						Companies should remember, these people just lost their jobs. This is not a period of "easy hiring", this is the time to be empathetic and improve your hiring process.
-						`,
+				Companies should remember, these people just lost their jobs. This is not a period of "easy hiring", this is the time to be empathetic and improve your hiring process.
+			`,
 		},
 	},
 	{
@@ -163,16 +189,28 @@ To all recruiters out there I've interacted with so far: things that made me sig
 		header: "Update",
 		date: "19.05.22",
 		content: {
-			type: BlogEntryType.TEXT,
-			data: `
-						Ever wondered what DevOps is actually about ? I sure did!
+			type: BlogEntryType.COMPONENT,
+			data: () => (
+				<>
+					<BlogText>
+						{`Ever wondered what DevOps is actually about ? I sure did!
 
-						It's with that question that I went on to discuss with my colleagues to figure out what Polar Squad is doing in the DevOps community. Why DevOps? How is it different from system administration? Who needs DevOps and why? These are the kinds of topics I investigated and this Medium article summarizes my findings.
+It's with that question that I went on to discuss with my colleagues to figure out what Polar Squad is doing in the DevOps community. Why DevOps? How is it different from system administration? Who needs DevOps and why? These are the kinds of topics I investigated and `}
+					</BlogText>
+					<ContentLink href="https://patrickdasilva.medium.com/a-birds-eye-view-on-the-world-of-devops-42118bf3ebf0">this Medium article I wrote</ContentLink>
+					<BlogText>
+						{` summarizes my findings.
+						
+Get in touch with `}
+					</BlogText>
+					<ContentLink href="https://www.linkedin.com/in/ACoAACjaheQB2vrZGh-JblQcbrlDx_MEjRBazug">David Thalmeier</ContentLink>
+					<BlogText>
+						{` if your organization needs support in the DevOps area!`}
+					</BlogText>
 
-						Get in touch with [David Thalmeier](https://www.linkedin.com/in/ACoAACjaheQB2vrZGh-JblQcbrlDx_MEjRBazug) if your organization needs support in the DevOps area!
 
-						https://patrickdasilva.medium.com/a-birds-eye-view-on-the-world-of-devops-42118bf3ebf0
-						`,
+				</>
+			),
 		},
 	},
 	{

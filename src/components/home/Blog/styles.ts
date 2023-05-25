@@ -24,7 +24,7 @@ export const BlogContainer = styled.div`
 	)};
 `
 
-export const ContentLink = styled(Link)`
+export const ContentLink = styled(Link).attrs(() => ({ target: "_blank" }))`
 	&:link,
 	&:visited,
 	&:active {
