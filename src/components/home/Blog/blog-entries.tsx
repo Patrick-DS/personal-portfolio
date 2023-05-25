@@ -33,7 +33,7 @@ interface BlogEntryProps {
 const blogEntries: BlogEntryProps[] = [
 	{
 		itemId: 1,
-		header: "Update",
+		header: "New article on Medium!",
 		date: "29.11.21",
 		content: {
 			type: BlogEntryType.COMPONENT,
@@ -49,7 +49,7 @@ I was trying to write more technical content before, but I realized that it does
 	},
 	{
 		itemId: 2,
-		header: "Update",
+		header: "Job update",
 		date: "30.02.22",
 		content: {
 			type: BlogEntryType.COMPONENT,
@@ -68,7 +68,7 @@ I'm looking forward to going back to the reason I succeeded in the industry in t
 	},
 	{
 		itemId: 3,
-		header: "Update",
+		header: "Break",
 		date: "15.03.22",
 		content: {
 			type: BlogEntryType.COMPONENT,
@@ -90,7 +90,7 @@ It's still reasonably simple to learn so far though. I like the idea of being ab
 	},
 	{
 		itemId: 4,
-		header: "Update",
+		header: "Polar Squad Update",
 		date: "25.04.22",
 		content: {
 			type: BlogEntryType.COMPONENT,
@@ -127,7 +127,7 @@ To all recruiters out there I've interacted with so far: things that made me sig
 	},
 	{
 		itemId: 5,
-		header: "Update",
+		header: "Polar Squad Update",
 		date: "15.05.22",
 		content: {
 			type: BlogEntryType.COMPONENT,
@@ -171,7 +171,7 @@ To all recruiters out there I've interacted with so far: things that made me sig
 	},
 	{
 		itemId: 6,
-		header: "Update",
+		header: "Comment about layoffs",
 		date: "19.05.22",
 		content: {
 			type: BlogEntryType.TEXT,
@@ -186,7 +186,7 @@ To all recruiters out there I've interacted with so far: things that made me sig
 	},
 	{
 		itemId: 7,
-		header: "Update",
+		header: "What is DevOps?",
 		date: "19.05.22",
 		content: {
 			type: BlogEntryType.COMPONENT,
