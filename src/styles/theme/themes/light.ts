@@ -42,6 +42,13 @@ const lightTheme = {
 				boxshadow: "#FFFFFF",
 			}
 		},
+		blog: {
+			text: {
+				default: "#000000",
+				hovered: "#000000",
+				active: "#000000",
+			}
+		},
 		// white: "#222222",
 		// lightGray: "#666666",
 		// gray: "#888888",

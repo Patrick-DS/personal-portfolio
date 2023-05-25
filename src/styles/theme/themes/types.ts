@@ -43,6 +43,13 @@ export interface Colors {
 			border: string,
 			boxshadow: string,
 		}
+	},
+	blog: {
+		text: {
+			default: string
+			hovered: string
+			active: string
+		},
 	}
 	// white: string
 	// lightGray: string

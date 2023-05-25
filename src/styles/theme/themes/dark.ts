@@ -42,6 +42,13 @@ const darkTheme = {
 				boxshadow: "#000000",
 			}
 		},
+		blog: {
+			text: {
+				default: "#FFFFFF",
+				hovered: "#FFFFFF",
+				active: "#FFFFFF",
+			},
+		},
 		// white: "#dddddd",
 		// lightGray: "#aaaaaa",
 		// gray: "#888888",

@@ -1,5 +1,6 @@
 // Third-party imports
 import styled from "styled-components"
+import Link from "next/link"
 
 // Global imports
 
@@ -21,4 +22,16 @@ export const BlogContainer = styled.div`
 		} - ${theme.dimensions.footer.height
 		})`
 	)};
+`
+
+export const ContentLink = styled(Link)`
+	&:link,
+	&:visited,
+	&:active {
+		color: ${({ theme }) => theme.colors.blog.text.active} !important;
+	}
+
+	&:hover {
+		color: ${({ theme }) => theme.colors.blog.text.hovered};
+	}
 `

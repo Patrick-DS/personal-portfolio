@@ -4,6 +4,7 @@ import type { ReactNode } from "react"
 // Global imports
 
 // Local imports
+import { ContentLink } from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -14,7 +15,7 @@ export enum BlogEntryType {
 
 interface ComponentBlogEntry {
 	type: BlogEntryType,
-	data: () => string,
+	data: () => ReactNode,
 }
 
 interface TextBlogEntry {
@@ -35,13 +36,15 @@ const blogEntries: BlogEntryProps[] = [
 		header: "Update",
 		date: "29.11.21",
 		content: {
-			type: BlogEntryType.TEXT,
-			data: `
-			\"Fake news, truth, beliefs and biases\" : my latest article on Medium! 
-			https://lnkd.in/dTCXdNMp
-			
-			I was trying to write more technical content before, but I realized that it doesn't really motivate me to write; instead, it feels like work and brings me down. I wanted to start writing something a bit more refreshing for me, sharing my views on the world and hopefully spark some discussions. Feel free to let me know what you think in the comments!
-			`,
+			type: BlogEntryType.COMPONENT,
+			data: () => (
+				<>
+					<ContentLink href="https://patrickdasilva.medium.com/fake-news-truth-beliefs-and-biases-e3529c86eb3e">{`\"Fake news, truth, beliefs and biases\"`}</ContentLink>
+					<span style={{ whiteSpace: "pre-wrap" }}>{`: my latest article on Medium!
+
+I was trying to write more technical content before, but I realized that it doesn't really motivate me to write; instead, it feels like work and brings me down. I wanted to start writing something a bit more refreshing for me, sharing my views on the world and hopefully spark some discussions. Feel free to let me know what you think on Medium in the comments!`}</span>
+				</>
+			),
 		},
 	},
 	{
