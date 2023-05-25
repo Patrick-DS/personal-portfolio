@@ -15,7 +15,6 @@ export const HeadlineContainer = styled(BlogCardContainer)`
 
 	/* Dimensions */
 	width: 100%;
-	max-height: 225px;
 	margin-bottom: 50px;
 `
 

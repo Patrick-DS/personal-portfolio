@@ -12,7 +12,7 @@ export const BlogCardContainer = styled(ShadowBox)`
 	/* Dimensions */
 	width: 100%;
 	min-height: 150px;	
-	padding: 20px 5%;
+	padding: 30px 5%;
 
 	/* Text */
 	color: ${({ theme }) => theme.colors.shadowbox.text.default};
