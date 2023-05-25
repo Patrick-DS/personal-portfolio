@@ -35,3 +35,7 @@ export const ContentLink = styled(Link)`
 		color: ${({ theme }) => theme.colors.blog.text.hovered};
 	}
 `
+
+export const BlogText = styled.span`
+	white-space: pre-wrap;
+`

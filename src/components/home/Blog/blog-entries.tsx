@@ -4,7 +4,7 @@ import type { ReactNode } from "react"
 // Global imports
 
 // Local imports
-import { ContentLink } from "./styles"
+import { ContentLink, BlogText } from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -40,9 +40,9 @@ const blogEntries: BlogEntryProps[] = [
 			data: () => (
 				<>
 					<ContentLink href="https://patrickdasilva.medium.com/fake-news-truth-beliefs-and-biases-e3529c86eb3e">{`\"Fake news, truth, beliefs and biases\"`}</ContentLink>
-					<span style={{ whiteSpace: "pre-wrap" }}>{`: my latest article on Medium!
+					<BlogText>{`: my latest article on Medium!
 
-I was trying to write more technical content before, but I realized that it doesn't really motivate me to write; instead, it feels like work and brings me down. I wanted to start writing something a bit more refreshing for me, sharing my views on the world and hopefully spark some discussions. Feel free to let me know what you think on Medium in the comments!`}</span>
+I was trying to write more technical content before, but I realized that it doesn't really motivate me to write; instead, it feels like work and brings me down. I wanted to start writing something a bit more refreshing for me, sharing my views on the world and hopefully spark some discussions. Feel free to let me know what you think on Medium in the comments!`}</BlogText>
 				</>
 			),
 		},
@@ -52,12 +52,18 @@ I was trying to write more technical content before, but I realized that it does
 		header: "Update",
 		date: "30.02.22",
 		content: {
-			type: BlogEntryType.TEXT,
-			data: `
-				Yesterday, I announced to my colleagues at Staiy that my chapter with them as their CTO is coming to an end. We went through so much together, it's hard to believe it's coming to an end! I made so many friends along the way, and you all know who you are, so I'll just thank the founders Chiara Latini, Adrian Leue and Alessandro Nora for bringing me along this amazing journey into the sustainable fashion ecosystem, I've had the most insane ride with you guys!
-
-				I'm looking forward to going back to the reason I succeeded in the industry in the first place, which is to solve complex problems leading a team using things such as web infrastructure, data science, machine learning, DevOps, cloud computing, and constantly growing technologies. Of particular interest are the fields of sustainability, language-related topics (translation, education, chatbots, etc.), or 3D-modelling/CAD software, but I would be open to jump into a new industry if the opportunity were interesting.
-			`,
+			type: BlogEntryType.COMPONENT,
+			data: () => (
+				<BlogText>
+					{`Yesterday, I announced to my colleagues at Staiy that my chapter with them as their CTO is coming to an end. We went through so much together, it's hard to believe it's coming to an end! I made so many friends along the way, and you all know who you are, so I'll just thank the founders `}<ContentLink href="https://www.linkedin.com/in/chiara-latini/">Chiara Latini</ContentLink>
+					{`, `}
+					<ContentLink href="https://www.linkedin.com/in/adrian-leue-49002a136/">Adrian Leue</ContentLink>
+					{` and `}
+					<ContentLink href="https://www.linkedin.com/in/alessandronora/">Alessandro Nora</ContentLink>{` for bringing me along this amazing journey into the sustainable fashion ecosystem, I've had the most insane ride with you guys!
+					
+I'm looking forward to going back to the reason I succeeded in the industry in the first place, which is to solve complex problems leading a team using things such as web infrastructure, data science, machine learning, DevOps, cloud computing, and constantly growing technologies. Of particular interest are the fields of sustainability, language-related topics (translation, education, chatbots, etc.), or 3D-modelling/CAD software, but I would be open to jump into a new industry if the opportunity were interesting.`}
+				</BlogText>
+			),
 		},
 	},
 	{
