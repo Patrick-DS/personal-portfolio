@@ -193,7 +193,7 @@ To all recruiters out there I've interacted with so far: things that made me sig
 			data: () => (
 				<>
 					<BlogText>
-						{`Ever wondered what DevOps is actually about ? I sure did!
+						{`Ever wondered what DevOps is actually about? I sure did!
 
 It's with that question that I went on to discuss with my colleagues to figure out what Polar Squad is doing in the DevOps community. Why DevOps? How is it different from system administration? Who needs DevOps and why? These are the kinds of topics I investigated and `}
 					</BlogText>
@@ -207,8 +207,6 @@ Get in touch with `}
 					<BlogText>
 						{` if your organization needs support in the DevOps area!`}
 					</BlogText>
-
-
 				</>
 			),
 		},
@@ -218,20 +216,22 @@ Get in touch with `}
 		header: "Update",
 		date: "19.05.22",
 		content: {
-			type: BlogEntryType.TEXT,
-			data: `
-						I don't know how many of you can relate to this coming from IT.
+			type: BlogEntryType.COMPONENT,
+			data: () => (
+				<BlogText>
+					{`I don't know how many of you can relate to this coming from IT.
+				
+For every job I started since I worked in IT, I had experience with about 10 to 20% of the skills required for the job (which is unusual after some years in the sector, you usually get hired for experience). I learned what I had to learn to get the job done, and then solved problems. Once the problems were solved, I would either find new problems within the same company, or move on with another. The next company had interesting problems, but very little skillset overlap between my skills and the requirements. So I moved on and learned more things, and the pattern kept going.
 
-						For every job I started since I worked in IT, I had experience with about 10 to 20% of the skills required for the job (which is unusual after some years in the sector, you usually get hired for experience). I learned what I had to learn to get the job done, and then solved problems. Once the problems were solved, I would either find new problems within the same company, or move on with another. The next company had interesting problems, but very little skillset overlap between my skills and the requirements. So I moved on and learned more things, and the pattern kept going.
+So now I have 1 year experience in this, 2 years experience in that, but I've been working for five years and for my current job, I had again very little experience in the things I'm trying to do. But I'm hoping that the same will happen again: I'll solve problems, learn what I have to learn and become valuable.
 
-						So now I have 1 year experience in this, 2 years experience in that, but I've been working for five years and for my current job, I had again very little experience in the things I'm trying to do. But I'm hoping that the same will happen again: I'll solve problems, learn what I have to learn and become valuable.
+I'm glad that Polar Squad took a shot at me and gives me the room to grow in the space of DevOps, but for instance when building my personal brand on LinkedIn, I'm constantly thinking: should I focus on DevOps? Should I write about my frontend experience? Backend experience? Machine learning experience? Mathematics & Academia?
 
-						I'm glad that Polar Squad took a shot at me and gives me the room to grow in the space of DevOps, but for instance when building my personal brand on LinkedIn, I'm constantly thinking: should I focus on DevOps? Should I write about my frontend experience? Backend experience? Machine learning experience? Mathematics & Academia?
+I think about a bunch of things all the time, and I get the annoying feeling that if I talk about whatever I want, I'm going to be too spread out and lose my audience. But then again, if I focus on a specific topic, people get a very narrow picture of who I am, making my personal brand unnatural and uncomfortable to myself, so I end up writing much less.
 
-						I think about a bunch of things all the time, and I get the annoying feeling that if I talk about whatever I want, I'm going to be too spread out and lose my audience. But then again, if I focus on a specific topic, people get a very narrow picture of who I am, making my personal brand unnatural and uncomfortable to myself, so I end up writing much less.
-
-						I'm open and happy to hear about any wisdom on this!
-						`,
+I'm open and happy to hear about any wisdom on this!`}
+				</BlogText>
+			),
 		},
 	},
 	{
@@ -239,20 +239,32 @@ Get in touch with `}
 		header: "Update",
 		date: "03.09.22",
 		content: {
-			type: BlogEntryType.TEXT,
-			data: `
-						🎉 I just reached 2, 500 followers! 🎉
+			type: BlogEntryType.COMPONENT,
+			data: () => (
+				<>
+					<BlogText>
+						{`🎉 I just reached 2, 500 followers! 🎉
 
-						A few months ago, I thought to myself that I'd try to understand how LinkedIn works and expand my reach to spread my message which I thought was relevant. What I was learning at [Polar Squad](https://www.linkedin.com/company/polarsquad/) was refreshing but also liberating and empowering, so I felt like I had something to say and started to build an audience.
+A few months ago, I thought to myself that I'd try to understand how LinkedIn works and expand my reach to spread my message which I thought was relevant. What I was learning at `}
+					</BlogText>
+					<ContentLink href="https://www.linkedin.com/company/polarsquad">Polar Squad</ContentLink>
+					<BlogText>
+						{` was refreshing but also liberating and empowering, so I felt like I had something to say and started to build an audience.
 
-						Fastforward to today, and this audience is still growing! I wanted to thank the people who are interacting with my content regularly, and give a short introduction to what I do to my latest followers:
+Fast-forward to today, and this audience is still growing! I wanted to thank the people who are interacting with my content regularly, and give a short introduction to what I do to my latest followers:
 
-						👉 I'm a DevOps consultant at [Polar Squad](https://www.linkedin.com/company/polarsquad/). That means that me and my colleagues can help you with anything related to #devops , which includes of course infrastructure and automation (on-premise or in the cloud), but also with culture, lean, measurement and monitoring, and #haring and documentation problems. The whole thing is abbreviated as CALMS which is a philosophy that I'm quite fond of! If you or your company needs support with any of those topics, please contact me!
+👉 I'm a DevOps consultant at `}
+					</BlogText>
+					<ContentLink href="https://www.linkedin.com/company/polarsquad">Polar Squad</ContentLink>
+					<BlogText>
+						{`. That means that me and my colleagues can help you with anything related to DevOps, which includes of course infrastructure and automation (on-premise or in the cloud), but also with culture, lean, measurement and monitoring, and sharing and documentation problems. The whole thing is abbreviated as CALMS which is a philosophy that I'm quite fond of! If you or your company needs support with any of those topics, please contact me!
 
-						👉 I have a mathematics background and I've been wearing many different hats in IT: Data Scientist, Machine Learning Engineer, database administrator, system administrator, frontend developer, backend developer, tech lead, CTO, now DevOps consultant. So when it comes to technical topics, I'm pretty well - rounded! But more importantly, anything you wanna discuss, I'm down! Feel free to reach out.
+👉 I have a mathematics background and I've been wearing many different hats in IT: Data Scientist, Machine Learning Engineer, database administrator, system administrator, frontend developer, backend developer, tech lead, CTO, now DevOps consultant. So when it comes to technical topics, I'm pretty well - rounded! But more importantly, anything you wanna discuss, I'm down! Feel free to reach out.
 
-						👉 I'm happy to discuss with you about anything related to your tech career! I'll support you in anyway I can; finding a new job, debugging code, defining your learning journey, anything.I've already had quite a few meetings on Google Meet with complete strangers from all around the world just for the sake of helping out, and I'll keep doing it!
-						`,
+👉 I'm happy to discuss with you about anything related to your tech career! I'll support you in anyway I can; finding a new job, debugging code, defining your learning journey, anything.I've already had quite a few meetings on Google Meet with complete strangers from all around the world just for the sake of helping out, and I'll keep doing it!`}
+					</BlogText>
+				</>
+			),
 		},
 	},
 	{
