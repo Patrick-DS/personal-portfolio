@@ -14,12 +14,6 @@ export const Default = () => (
 	<Blog />
 )
 
-export const WithChildren = () => (
-	<Blog>
-		<div style={{ width: "900px", height: "500px" }} />
-	</Blog>
-)
-
 const storyOptions: Meta<typeof Blog> = {
 	title: "Home/Blog",
 	component: Blog,
