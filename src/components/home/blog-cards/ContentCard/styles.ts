@@ -1,5 +1,6 @@
 // Third-party imports
 import styled from "styled-components"
+import Link from "next/link"
 
 // Global imports
 
@@ -59,8 +60,13 @@ export const Content = styled.div`
 	p {
 		padding-bottom: 20px;
 	}
+
 	ul { 
 		padding-left: 20px;
 		padding-bottom: 20px;
 	}
+`
+
+export const MarkdownLink = styled(Link)`
+	color: ${({ theme }) => theme.colors.shadowbox.text.default};
 `

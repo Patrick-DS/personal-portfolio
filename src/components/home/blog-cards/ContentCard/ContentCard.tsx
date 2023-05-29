@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown"
 // Global imports
 
 // Local imports
-import { ContentCardContainer, ContentTitle, DateDisplay, Content } from "./styles"
+import { ContentCardContainer, ContentTitle, DateDisplay, Content, MarkdownLink } from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -13,6 +13,14 @@ interface ContentCardProps {
 	header: string
 	date: string
 	content: string
+}
+
+const components = {
+	a: ({ href, children }: any) => (
+		<MarkdownLink href={href} target="_blank">
+			{children}
+		</MarkdownLink>
+	)
 }
 
 /**
@@ -32,7 +40,9 @@ const ContentCard: FC<ContentCardProps> = ({
 			<hr />
 			<DateDisplay>{date}</DateDisplay>
 			<Content>
-				<ReactMarkdown>
+				<ReactMarkdown
+					components={components}
+				>
 					{content}
 				</ReactMarkdown>
 			</Content>
