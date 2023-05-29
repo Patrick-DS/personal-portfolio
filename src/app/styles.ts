@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 // Global imports
 import { onWidthLessThan } from "@/styles"
+import { BlogCardContainer } from "@/components/generic/cards/styles"
 
 // Local imports
 
@@ -41,4 +42,18 @@ export const StyledMain = styled.main`
 	@media ${onWidthLessThan("mini")} {
 		padding: 20px 0px;
 	}
+`
+
+export const HomepageCardContainer = styled(BlogCardContainer)`
+	/* Positioning */
+
+	/* Dimensions */
+	width: 100%;
+`
+
+export const StyledGrid = styled.div`
+	display: grid;
+	grid-template-rows: repeat(1fr, 3);
+	width: 100%;
+	height: 500px;
 `
