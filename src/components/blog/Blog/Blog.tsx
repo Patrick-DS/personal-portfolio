@@ -4,15 +4,11 @@ import type { FC } from "react"
 // Global imports
 
 // Local imports
-import { HeadlineCard, ContentCard } from "../blog-cards"
+import { HeadlineCard, ContentCard } from "@/components/generic/cards"
 import { BlogContainer } from "./styles"
 import blogEntries from "./blog-entries"
 
 ////////////////////////////////////////////////////////////////////////////////
-
-interface BlogProps {
-	children?: any
-}
 
 /**
  * @function Blog
@@ -20,7 +16,7 @@ interface BlogProps {
  * @subcategory Home
  * @description Renders the blog content of the homepage.
  */
-const Blog: FC<BlogProps> = () => (
+const Blog: FC<{}> = () => (
 	<BlogContainer>
 		<HeadlineCard title="Personal blog" />
 		{blogEntries.map(({ itemId, ...contentCardProps }) => (

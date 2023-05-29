@@ -2,7 +2,7 @@
 // Third-party imports
 
 // Global imports
-import { Blog, BlogCard } from "@/components/home"
+import { Blog } from "@/components/blog"
 
 // Local imports
 import { StyledMain } from "./styles"
@@ -11,9 +11,7 @@ import { StyledMain } from "./styles"
 
 const Home = () => (
 	<StyledMain>
-		<Blog>
-			<div style={{ width: "900px", height: "500px" }} />
-		</Blog>
+		<Blog />
 	</StyledMain>
 )
 
