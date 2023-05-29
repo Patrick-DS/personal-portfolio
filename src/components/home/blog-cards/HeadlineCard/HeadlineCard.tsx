@@ -10,7 +10,7 @@ import { BlogTitle, BlogSubtitle, HeadlineContainer } from "./styles"
 
 interface HeadlineCardProps {
 	title: string
-	subtitle: string
+	subtitle?: string
 }
 
 /**
@@ -21,8 +21,12 @@ interface HeadlineCardProps {
  */
 const HeadlineCard: FC<HeadlineCardProps> = ({ title, subtitle }) => (
 	<HeadlineContainer>
-		<BlogTitle>Patrick Da Silva</BlogTitle>
-		<BlogSubtitle>Your reference in software, cloud and machine learning</BlogSubtitle>
+		<BlogTitle>{title}</BlogTitle>
+		{subtitle && (
+			<BlogSubtitle>
+				{subtitle}
+			</BlogSubtitle>
+		)}
 	</HeadlineContainer>
 )
 

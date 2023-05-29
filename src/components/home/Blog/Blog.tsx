@@ -20,12 +20,9 @@ interface BlogProps {
  * @subcategory Home
  * @description Renders the blog content of the homepage.
  */
-const Blog: FC<BlogProps> = ({ children }) => (
+const Blog: FC<BlogProps> = () => (
 	<BlogContainer>
-		<HeadlineCard
-			title="Patrick Da Silva"
-			subtitle="Your reference in software, cloud and machine learning"
-		/>
+		<HeadlineCard title="Personal blog" />
 		{blogEntries.map(({ itemId, ...contentCardProps }) => (
 			<ContentCard key={itemId} {...contentCardProps} />
 		))}
