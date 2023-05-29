@@ -6,7 +6,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-interface BlogEntryProps {
+export interface BlogEntryProps {
 	itemId: number
 	header: string
 	date: string
@@ -618,7 +618,7 @@ Have a nice weekend everybody!`,
 
 Most of you don't know this, but when I left academia, it took me 13 months to find my first job.
 
-13.
+Thirteen.
 
 That's a lot of months with no pay. But I didn't want to stay in academia anymore, and my passion for mathematics was holding me back from putting myself out there.
 
