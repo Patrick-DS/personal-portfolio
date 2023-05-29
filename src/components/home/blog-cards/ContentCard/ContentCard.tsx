@@ -1,5 +1,6 @@
 // Third-party imports
 import type { FC } from "react"
+import ReactMarkdown from "react-markdown"
 
 // Global imports
 
@@ -24,13 +25,19 @@ const ContentCard: FC<ContentCardProps> = ({
 	header,
 	date,
 	content,
-}) => (
-	<ContentCardContainer>
-		<ContentTitle>{header}</ContentTitle>
-		<hr />
-		<DateDisplay>{date}</DateDisplay>
-		<Content>{content}</Content>
-	</ContentCardContainer>
-)
+}) => {
+	return (
+		<ContentCardContainer>
+			<ContentTitle>{header}</ContentTitle>
+			<hr />
+			<DateDisplay>{date}</DateDisplay>
+			<Content>
+				<ReactMarkdown>
+					{content}
+				</ReactMarkdown>
+			</Content>
+		</ContentCardContainer>
+	)
+}
 
 export default ContentCard

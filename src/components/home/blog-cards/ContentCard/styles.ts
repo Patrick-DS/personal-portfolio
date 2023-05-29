@@ -55,4 +55,12 @@ export const Content = styled.div`
 	/* Text */
 	font-size: 18px;
 	font-weight: 400;
+	
+	p {
+		padding-bottom: 20px;
+	}
+	ul { 
+		padding-left: 20px;
+		padding-bottom: 20px;
+	}
 `
