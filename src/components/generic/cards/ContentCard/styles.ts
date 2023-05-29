@@ -16,7 +16,6 @@ export const ContentCardContainer = styled(BlogCardContainer)`
 
 	/* Dimensions */
 	width: 100%;
-	margin-bottom: 50px;
 `
 
 export const ContentTitle = styled.h3`
