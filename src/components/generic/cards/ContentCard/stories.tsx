@@ -4,11 +4,11 @@ import type { Meta, StoryObj } from "@storybook/react"
 // Global imports
 import { backgroundDecorator } from "@/components/main-layout/Background/stories"
 import { PageContentDecorator } from "@/stories"
+import blogEntries from "@/components/blog/Blog/blog-entries"
+import type { BlogEntryProps } from "@/components/blog/Blog/blog-entries"
 
 // Local imports
 import ContentCard from "./ContentCard"
-import blogEntries from "../../Blog/blog-entries"
-import type { BlogEntryProps } from "../../Blog/blog-entries"
 
 ////////////////////////////////////////////////////////////////////////////////
 
