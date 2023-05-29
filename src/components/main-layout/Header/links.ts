@@ -26,19 +26,25 @@ const headerContent: LinkProps[] = [
 		"direction": "right",
 		"href": routerPaths.contact,
 		"displayText": "Contact"
-	},	
+	},
 	{
 		"itemId": 3,
 		"direction": "right",
 		"href": routerPaths.cv,
 		"displayText": "CV"
-	},	
+	},
 	{
 		"itemId": 4,
 		"direction": "right",
 		"href": routerPaths.projects,
 		"displayText": "Projects"
 	},
+	{
+		"itemId": 5,
+		"direction": "right",
+		"href": routerPaths.blog,
+		"displayText": "Blog"
+	}
 ]
 
 export default headerContent
