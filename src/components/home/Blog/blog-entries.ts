@@ -561,10 +561,10 @@ If you have a look, let me know what you think! It's not much for now, I'm tryin
 		header: "Update",
 		date: "21.04.23",
 		content: `Recently I had a great conversation with [Matthew Ehrlich 👨‍💻](https://www.linkedin.com/in/ACoAACkDxJoBuTwnVft0hkQae_lS7FUN7EB18JY) and [Eric Winkelspecht](https://www.linkedin.com/in/ACoAAB9xWvMB9OrhK1Fhc5Js5A8097KOhtZktSI) on their [Self-Taught Devs](https://www.linkedin.com/company/self-taught-devs/) podcast, talking about my personal journey out of academia and into self-taught software development.
+		
+They are really good interviewers! Very professional and fun to talk with. If you haven't had a listen at their podcast, it definitely contains a few gems! Check them out on Spotify. We discussed things like how beginning in the industry looks like, challenges one wouldn't expect when beginning, and how the philosophy of DevOps now drives everything that I do, at work and outside of work.
 
-		They are really good interviewers! Very professional and fun to talk with. If you haven't had a listen at their podcast, it definitely contains a few gems! Check them out on Spotify. We discussed things like how beginning in the industry looks like, challenges one wouldn't expect when beginning, and how the philosophy of DevOps now drives everything that I do, at work and outside of work.
-
-		Link to the podcast: [click here](https://podcasters.spotify.com/pod/show/self-taught-devs)`,
+Link to the podcast: [click here](https://podcasters.spotify.com/pod/show/self-taught-devs)!`,
 	},
 	{
 		itemId: 28,
