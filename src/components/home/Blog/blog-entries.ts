@@ -16,7 +16,7 @@ export interface BlogEntryProps {
 const blogEntries: BlogEntryProps[] = [
 	{
 		itemId: 1,
-		header: "Update",
+		header: "New article on Medium!",
 		date: "29.11.21",
 		content: `\"Fake news, truth, beliefs and biases\" : my [latest article](https://patrickdasilva.medium.com/fake-news-truth-beliefs-and-biases-e3529c86eb3e) on Medium! 
 		
@@ -25,7 +25,7 @@ I was trying to write more technical content before, but I realized that it does
 	},
 	{
 		itemId: 2,
-		header: "Update",
+		header: "Job update",
 		date: "30.02.22",
 		content: `Yesterday, I announced to my colleagues at Staiy that my chapter with them as their CTO is coming to an end. We went through so much together, it's hard to believe it's coming to an end! I made so many friends along the way, and you all know who you are, so I'll just thank the founders Chiara Latini, Adrian Leue and Alessandro Nora for bringing me along this amazing journey into the sustainable fashion ecosystem, I've had the most insane ride with you guys!
 
@@ -33,7 +33,7 @@ I'm looking forward to going back to the reason I succeeded in the industry in t
 	},
 	{
 		itemId: 3,
-		header: "Update",
+		header: "Break",
 		date: "15.03.22",
 		content: `I decided to take a month off to relax from my very exciting but also intense times at Staiy, that were preceeded with also very intense times trying to build my own company in a startup incubator, for a big total of 4 years of craziness. I was long overdue for a good break!
 
@@ -46,7 +46,7 @@ It's still reasonably simple to learn so far though. I like the idea of being ab
 	},
 	{
 		itemId: 4,
-		header: "Update",
+		header: "Job update!",
 		date: "25.04.22",
 		content: `
 I recently decided to join a company as a full-time employee called Polar Squad! I've visited their offices today and I really liked it!
@@ -65,7 +65,7 @@ These things aligned with me, so that's what I chose!
 	},
 	{
 		itemId: 5,
-		header: "Update",
+		header: "Status update @ Polar Squad",
 		date: "15.05.22",
 		content: `I joined only two weeks ago, and my office is the most welcoming place in the world. Home-office is also respected, you can work as flexibly as you want. If there was a word meaning the complete opposite to the word "bullshit", it would be Polar Squad.
 
@@ -79,7 +79,7 @@ These are things that made me join Polar Squad. Let me know if you're interested
 	},
 	{
 		itemId: 6,
-		header: "Update",
+		header: "Personal comment",
 		date: "19.05.22",
 		content: `It's going to be much harder in the coming weeks in the area of tech to find a job as thousands of candidates flooded the tech market.
 
@@ -89,7 +89,7 @@ Companies should remember, these people just lost their jobs. This is not a peri
 	},
 	{
 		itemId: 7,
-		header: "Update",
+		header: "New article on Medium!",
 		date: "19.05.22",
 		content: `Ever wondered what DevOps is actually about ? I sure did!
 
@@ -100,7 +100,7 @@ Get in touch with [David Thalmeier](https://www.linkedin.com/in/ACoAACjaheQB2vrZ
 	},
 	{
 		itemId: 8,
-		header: "Update",
+		header: "Personal comment",
 		date: "19.05.22",
 		content: `I don't know how many of you can relate to this coming from IT.
 
@@ -134,7 +134,7 @@ Fastforward to today, and this audience is still growing! I wanted to thank the 
 	},
 	{
 		itemId: 10,
-		header: "Update",
+		header: "Podcast appearance",
 		date: "07.09.22",
 		content: `Recently I joined [Joe Bignell](https://www.linkedin.com/in/ACoAAAQTN4QBkOVMEL0LitOlR1Bxd_kXRwMH1hc) in his [DevOps For Everyone](https://www.linkedin.com/company/devops-for-everyone/) podcast! Check it out if you want to hear more about the philosophy behind DevOps that we have at [Polar Squad](https://www.linkedin.com/company/polarsquad/)!
 		`,
@@ -155,7 +155,7 @@ Nähdään pian!`,
 	},
 	{
 		itemId: 11,
-		header: "Update",
+		header: "Announcement",
 		date: "20.10.22",
 		content: `Our co-founder at [Polar Squad](https://www.linkedin.com/company/polarsquad/), [Teemu Korpela](https://www.linkedin.com/in/ACoAAAxghSYB5xbgHJUBGQDJ3MljRfiPIIQMcF0), once said to me:
 
@@ -178,7 +178,7 @@ Lots of cool content incoming, so hit that 🔔 to get notified and let's start 
 
 	// How to learn so fast ? Well, it takes a lot of consistent, regular effort.To be able to sustain that, the #culture aspect is super important.That's the actual magic: create the right environment for yourself to be able to sustain the effort.
 
-	// 👉🏻 I surround myself with people who are happy to see me learn.Knowing less than a hundred words will make me sound like I have the maturity of a 2 - year old, so the people I try to speak with have to be comfortable with that - and - make me comfortable looking like that.Otherwise I'll be feeling isolated and want to switch languages (in other words, give up).
+	// 👉🏻 I surround myself with people who are happy to see me learn. Knowing less than a hundred words will make me sound like I have the maturity of a 2 - year old, so the people I try to speak with have to be comfortable with that - and - make me comfortable looking like that.Otherwise I'll be feeling isolated and want to switch languages (in other words, give up).
 
 	// 👉🏻 I find places where I'm comfortable just sitting down and eavesdropping on conversations (without looking creepy!). My current trick is to just listen in on my colleagues' casual chit - chat in the office; I don't understand much, they don't mind since they do it out in the open anyway, but I'm at least practicing figuring out some of the words they're saying! Even if I learn just one word in a whole conversation, that's one word I didn't have before.When I was learning German, it was with a board game night; I could play the game without having to speak much, but I could listen to my friends playing and read the instructions on the games' things (cards, game board, instructions, etc.).
 
@@ -271,7 +271,7 @@ Lots of cool content incoming, so hit that 🔔 to get notified and let's start 
 	// See you in the next posts!
 	{
 		itemId: 12,
-		header: "Update",
+		header: "Personal comment",
 		date: "03.11.22",
 		content: `Agility is what all the tech companies are trying to achieve.
 
@@ -293,7 +293,7 @@ A bit like when you're building a house, you want a stable, secure, comfortable 
 	},
 	{
 		itemId: 13,
-		header: "Update",
+		header: "Personal comment",
 		date: "12.11.22",
 		content: `I've been pretty vocal about DevOps in the last few months, but this is a relatively new chapter in my career. A few years ago, I was heavily invested into NLP, the subfield of machine learning focused on text data and languages.
 
@@ -307,7 +307,7 @@ What qualities do you think give you an edge in the field of software?`,
 	},
 	{
 		itemId: 13,
-		header: "Update",
+		header: "Announcement",
 		date: "14.11.22",
 		content: `I will be speaking at [RELEX Solutions](https://www.linkedin.com/company/relexsolutions/)' Helsinki Data Science meetup! I'd love to see you there, and for those who are not in Helsinki, it'll be live-streamed! I'll put the link up when it's available.
 
@@ -319,7 +319,7 @@ As always, the devil is in the details. I'm hoping to see you there!`,
 	},
 	{
 		itemId: 14,
-		header: "Update",
+		header: "Personal comment",
 		date: "13.12.22",
 		content: `"Tech is easy, people are hard."
 
@@ -343,12 +343,11 @@ Just look at the business model of VCs for example: they try to find the best co
 
 That's why I love Polar Squad's DevOps assessment so much. It's a 360 overview of your software company's situation, but with a huge emphasis on people. Even if the problem is technical, the solutions we propose in our report take into account the team you've built, the objectives you have and the state of the product(s), among many other things. We also propose solutions on how we can help you apply the suggestions from the report on how to move forward with our report. A true problem-solver!
 
-I wish I had something like this in my previous companies! 
-		`,
+I wish I had something like this in my previous companies!`,
 	},
 	{
 		itemId: 15,
-		header: "Update",
+		header: "Polar Squad update",
 		date: "14.12.22",
 		content: `My colleague Janne Sinivirta at Polar Squad took the time to write an amazingly well-written blog post about pull requests!
 
@@ -369,7 +368,7 @@ There's no unique way of doing things, but if it works well, why change it if yo
 	},
 	{
 		itemId: 16,
-		header: "Update",
+		header: "Personal comment",
 		date: "20.12.22",
 		content: `As people gain experience in tech, I've noticed they tend to stop wanting to do the technical, manual, tedious work and move to wanting to solve social, cultural and business problems instead.
 
@@ -386,7 +385,7 @@ So you get your hands dirty every now and then, but you focus more on the people
 	},
 	{
 		itemId: 17,
-		header: "Update",
+		header: "Kubernetes series",
 		date: "09.01.23",
 		content: `Starting next week, I will start documenting my journey of learning Kubernetes and Terraform. I think it's relevant to discuss what it's about, how to use it, but more importantly -why- to use it. These tools are simple in theory but are incredibly detailed and complicated to master because there's a lot to take into account when maintaining them.
 
@@ -398,7 +397,7 @@ There's always room for more learning! Stay tuned for the next updates.`,
 	},
 	{
 		itemId: 18,
-		header: "Update",
+		header: "Kubernetes series",
 		date: "14.01.23",
 		content: `The first thing I bumped into when beginning with Kubernetes is pods.
 
@@ -422,7 +421,7 @@ That's what I understood about pods at the high level. Any comments on that? I'm
 	},
 	{
 		itemId: 18,
-		header: "Update",
+		header: "Kubernetes series",
 		date: "14.01.23",
 		content: `When I came across deployments for the first time, I couldn't believe how such a simple idea could have saved me hundreds of hours of debugging if I had this for myself.
 
@@ -438,11 +437,11 @@ How many hours have I wasted in previous companies manually reconfiguring and re
 	},
 	{
 		itemId: 19,
-		header: "Update",
+		header: "Personal update",
 		date: "07.03.23",
 		content: `I haven't posted in a while since I was called in sick for over 2 months. An eye problem that took forever to diagnose. So even though I was commenting here and there, I wasn't officially working.I started working again yesterday, which feels pretty good.I missed Polar Squad!
 
-Today was a big milestone for me.Personal post time - I usually stick to DevOps, but not today.That can wait until tomorrow!
+Today was a big milestone for me. Personal post time - I usually stick to DevOps, but not today.That can wait until tomorrow!
 
 During that time, since I had an eye problem that prevented me from looking at screens more than 5 minutes without headaches and itchy eyes, I couldn't work. But I felt just fine off screen, so I had to find something to do with my time.
 
@@ -458,7 +457,7 @@ Around the first week of January I was fully on the diet, and 6 weeks later, I l
 	},
 	{
 		itemId: 20,
-		header: "Update",
+		header: "Kubernetes series",
 		date: "17.03.23",
 		content: `I'm restarting my series of posts on my Kubernetes learning journey! It's good to be back, and with it comes getting my hands dirty on the cloud.
 
@@ -470,7 +469,7 @@ Stay tuned for more on this series about Kubernetes!`,
 	},
 	{
 		itemId: 21,
-		header: "Update",
+		header: "Kubernetes series",
 		date: "18.03.23",
 		content: `The Kubernetes series continues!
 
@@ -484,7 +483,7 @@ Have a nice day, and stay tuned!`,
 	},
 	{
 		itemId: 22,
-		header: "Update",
+		header: "Personal announcement",
 		date: "20.03.23",
 		content: `I've recently passed the CKAD (Certified Kubernetes Application Developer) certificate exam!
 
@@ -497,7 +496,7 @@ Let me know if you consider taking that certificate too, I'm happy to share insi
 	},
 	{
 		itemId: 23,
-		header: "Update",
+		header: "Kubernetes series",
 		date: "24.03.23",
 		content: `In my previous posts about Kubernetes, we discussed taints and tolerations, and together with node selectors and node affinity, one can have control over pod placement on nodes. This is all good and useful, but it requires work from a DevOps engineer and is manual labor.
 
@@ -507,7 +506,7 @@ I also really like their pricing model: Spot's revenue comes by taking a cut on 
 	},
 	{
 		itemId: 24,
-		header: "Update",
+		header: "Kubernetes series",
 		date: "07.04.23",
 		content: `I'm starting a project with Kubernetes!
 
@@ -522,10 +521,10 @@ I'm happy to hear about your own experience and others among yourselves who are 
 	},
 	{
 		itemId: 25,
-		header: "Update",
+		header: "Kubernetes series",
 		date: "12.04.23",
 		content: `I had a good networking fight today while working on my Kubernetes project.
-		
+
 So, the main feature that I wanted of my project is that I have a K8s deployment that I can scale up and down in terms of number of pods, and each pod has a server (a little API, in this case written with NestJS) that generates its own random identifier on startup. They would then register those identifiers in a database, and a cronjob would select one identifier at random, and then contact one of the servers at random. If the server has the identifier in the request, it would respond successfully, otherwise it would log in the request that it saw it, but it would "ping pong" it to another random server, and this ping pong continues until the server corresponding to the request receives that request, and then I would log the journey of the request.
 
 That's why I called it the "Kubernetes ping pong" project. Those servers ping-pong the request to each other until it stops. (I could use another way of stopping the ping-pong game, but that's the approach I chose so far.)
@@ -543,7 +542,7 @@ I'll post again when I'll have something to say about setting up the ELK stack!`
 	},
 	{
 		itemId: 26,
-		header: "Update",
+		header: "Kubernetes series",
 		date: "19.04.23",
 		content: `I have been fighting for the better part of last week and yesterday with the ELK stack. Setting up ELK in Minikube is really using up my patience!
 
@@ -558,7 +557,7 @@ If you have a look, let me know what you think! It's not much for now, I'm tryin
 	},
 	{
 		itemId: 27,
-		header: "Update",
+		header: "Podcast appearance",
 		date: "21.04.23",
 		content: `Recently I had a great conversation with [Matthew Ehrlich 👨‍💻](https://www.linkedin.com/in/ACoAACkDxJoBuTwnVft0hkQae_lS7FUN7EB18JY) and [Eric Winkelspecht](https://www.linkedin.com/in/ACoAAB9xWvMB9OrhK1Fhc5Js5A8097KOhtZktSI) on their [Self-Taught Devs](https://www.linkedin.com/company/self-taught-devs/) podcast, talking about my personal journey out of academia and into self-taught software development.
 		
@@ -568,7 +567,7 @@ Link to the podcast: [click here](https://podcasters.spotify.com/pod/show/self-t
 	},
 	{
 		itemId: 28,
-		header: "Update",
+		header: "Kubernetes series",
 		date: "23.04.23",
 		content: `Yesterday, I had a great conversation with my colleagues on deep-diving in my Kubernetes setup for using ELK!
 
@@ -582,7 +581,7 @@ Thank you guys [Alexander Ivanov](https://www.linkedin.com/in/ACoAAALndUUBKBQpvM
 	},
 	{
 		itemId: 29,
-		header: "Update",
+		header: "Announcement",
 		date: "27.04.23",
 		content: `[Polar Squad](https://www.linkedin.com/company/polarsquad/)'s [DevOps self-assessment](https://polarsquad.com/devops-self-assessment) is here! 🎉
 
@@ -594,7 +593,7 @@ I'm also very eager to hear about your current situation! If you think you could
 	},
 	{
 		itemId: 30,
-		header: "Update",
+		header: "Job update",
 		date: "01.05.23",
 		content: `Last week marked the beginning of my second year at [Polar Squad](https://www.linkedin.com/company/polarsquad/)! 🔥 🚀 (and my birthday!)
 
@@ -612,7 +611,7 @@ Have a nice weekend everybody!`,
 	},
 	{
 		itemId: 30,
-		header: "Update",
+		header: "Personal comment",
 		date: "01.05.23",
 		content: `I couldn't stand seeing such a motivated person trying to change careers for so long and work so hard and well, without satisfying results. I had to do something!
 
