@@ -22,6 +22,8 @@ import nestLogoDark from "./icons/dark/nest.png"
 import nestLogoLight from "./icons/light/nest.png"
 import tsLogoDark from "./icons/dark/ts.png"
 import tsLogoLight from "./icons/light/ts.png"
+import dockerLogoDark from "./icons/dark/docker.png"
+import dockerLogoLight from "./icons/light/docker.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -59,6 +61,11 @@ const images = {
 			width: ICON_SIZE,
 			height: ICON_SIZE,
 		},
+		{
+			src: dockerLogoDark,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
 	],
 	[ThemeNames.LIGHT]: [
 		{
@@ -88,6 +95,11 @@ const images = {
 		},
 		{
 			src: tsLogoLight,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
+		{
+			src: dockerLogoLight,
 			width: ICON_SIZE,
 			height: ICON_SIZE,
 		},
