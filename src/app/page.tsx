@@ -24,6 +24,10 @@ import tsLogoDark from "./icons/dark/ts.png"
 import tsLogoLight from "./icons/light/ts.png"
 import dockerLogoDark from "./icons/dark/docker.png"
 import dockerLogoLight from "./icons/light/docker.png"
+import firebaseLogoDark from "./icons/dark/firebase.png"
+import firebaseLogoLight from "./icons/light/firebase.png"
+import googleAnalyticsLogoDark from "./icons/dark/google-analytics.png"
+import googleAnalyticsLogoLight from "./icons/light/google-analytics.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -66,6 +70,16 @@ const images = {
 			width: ICON_SIZE,
 			height: ICON_SIZE,
 		},
+		{
+			src: firebaseLogoDark,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
+		{
+			src: googleAnalyticsLogoDark,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
 	],
 	[ThemeNames.LIGHT]: [
 		{
@@ -100,6 +114,16 @@ const images = {
 		},
 		{
 			src: dockerLogoLight,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
+		{
+			src: firebaseLogoLight,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
+		{
+			src: googleAnalyticsLogoLight,
 			width: ICON_SIZE,
 			height: ICON_SIZE,
 		},
