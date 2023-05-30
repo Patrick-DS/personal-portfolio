@@ -1,8 +1,10 @@
 "use client"
 // Third-party imports
 import Image from "next/image"
+import { useTheme } from "styled-components"
 
 // Global imports
+import { ThemeNames } from "@/styles"
 import { HeadlineCard } from "@/components/generic/cards"
 
 // Local imports
@@ -26,7 +28,7 @@ import tsLogoLight from "./icons/light/ts.png"
 const ICON_SIZE = 200
 
 const images = {
-	dark: [
+	[ThemeNames.DARK]: [
 		{
 			src: awsLogoDark,
 			width: ICON_SIZE,
@@ -58,7 +60,7 @@ const images = {
 			height: ICON_SIZE,
 		},
 	],
-	light: [
+	[ThemeNames.LIGHT]: [
 		{
 			src: awsLogoLight,
 			width: ICON_SIZE,
@@ -92,18 +94,26 @@ const images = {
 	]
 }
 
-const Home = () => (
-	<StyledMain>
-		<HeadlineCard title="Patrick Da Silva" subtitle="Your reference in software, cloud and machine learning" />
-		<HomepageCardContainer>
-			<p>{"I'm proficient in those technologies:"}</p>
-			<StyledGrid>
-				{images["dark"].map((logoProps, index) => (
-					<Image key={index} alt="Technology icon" {...logoProps} />
-				))}
-			</StyledGrid>
-		</HomepageCardContainer>
-	</StyledMain>
-)
+const Home = () => {
+	// Hooks
+	const theme = useTheme()
+
+	// Variables
+	const themeName = theme?.themeName || ThemeNames.LIGHT
+
+	return (
+		<StyledMain>
+			<HeadlineCard title="Patrick Da Silva" subtitle="Your reference in software, cloud and machine learning" />
+			<HomepageCardContainer>
+				<p>{"I'm proficient in those technologies:"}</p>
+				<StyledGrid>
+					{images[themeName].map((logoProps, index) => (
+						<Image key={index} alt="Technology icon" {...logoProps} />
+					))}
+				</StyledGrid>
+			</HomepageCardContainer>
+		</StyledMain>
+	)
+}
 
 export default Home
