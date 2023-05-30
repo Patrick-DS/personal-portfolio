@@ -28,6 +28,8 @@ import firebaseLogoDark from "./icons/dark/firebase.png"
 import firebaseLogoLight from "./icons/light/firebase.png"
 import googleAnalyticsLogoDark from "./icons/dark/google-analytics.png"
 import googleAnalyticsLogoLight from "./icons/light/google-analytics.png"
+import nextjsLogoDark from "./icons/dark/nextjs.png"
+import nextjsLogoLight from "./icons/light/nextjs.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -80,6 +82,11 @@ const images = {
 			width: ICON_SIZE,
 			height: ICON_SIZE,
 		},
+		{
+			src: nextjsLogoDark,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
 	],
 	[ThemeNames.LIGHT]: [
 		{
@@ -124,6 +131,11 @@ const images = {
 		},
 		{
 			src: googleAnalyticsLogoLight,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
+		{
+			src: nextjsLogoLight,
 			width: ICON_SIZE,
 			height: ICON_SIZE,
 		},
