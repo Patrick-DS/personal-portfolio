@@ -53,7 +53,23 @@ export const HomepageCardContainer = styled(BlogCardContainer)`
 
 export const StyledGrid = styled.div`
 	display: grid;
-	grid-template-rows: repeat(1fr, 3);
+	grid-template-columns: repeat(5, 1fr);
 	width: 100%;
 	height: 500px;
+
+	@media ${onWidthLessThan("large")} {
+		grid-template-columns: repeat(6, 1fr);
+	}
+	
+	@media ${onWidthLessThan("medium")} {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media ${onWidthLessThan("small")} {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media ${onWidthLessThan("mini")} {
+		grid-template-columns: repeat(2, 1fr);
+	}
 `
