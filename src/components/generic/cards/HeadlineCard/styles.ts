@@ -2,6 +2,7 @@
 import styled from "styled-components"
 
 // Global imports
+import { onWidthLessThan } from "@/styles"
 
 // Local imports
 import { BlogCardContainer } from "../styles"
@@ -16,6 +17,18 @@ export const HeadlineContainer = styled(BlogCardContainer)`
 	/* Dimensions */
 	width: 100%;
 	margin-bottom: 50px;
+
+	@media ${onWidthLessThan("large")} {
+		margin-bottom: 30px;
+	}
+
+	@media ${onWidthLessThan("medium")} {
+		margin-bottom: 20px;
+	}
+
+	@media ${onWidthLessThan("small")} {
+		margin-bottom: 0px;
+	}
 `
 
 export const BlogTitle = styled.h1`
@@ -23,7 +36,7 @@ export const BlogTitle = styled.h1`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	/* Dimensions */
 	width: 100%;
 
@@ -38,7 +51,7 @@ export const BlogSubtitle = styled.h2`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	/* Dimensions */
 	width: 100%;
 
