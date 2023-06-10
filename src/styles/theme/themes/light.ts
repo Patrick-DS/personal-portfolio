@@ -32,6 +32,16 @@ const lightTheme = {
 				border: "#FFFFFF",
 			},
 		},
+		shadowbox: {
+			text: {
+				default: "#000000",
+			},
+			container: {
+				background: "#FFFFFFCC",
+				border: "#FFFFFF",
+				boxshadow: "#FFFFFF",
+			}
+		},
 		// white: "#222222",
 		// lightGray: "#666666",
 		// gray: "#888888",

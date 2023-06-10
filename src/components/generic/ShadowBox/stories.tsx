@@ -5,15 +5,19 @@ import type { Meta } from "@storybook/react"
 import { backgroundDecorator } from "@/components/main-layout"
 
 // Local imports
-import Footer from "./Footer"
+import ShadowBox from "./ShadowBox"
 
 ////////////////////////////////////////////////////////////////////////////////
 
-export const Default = () => <Footer />
+export const Default = () => (
+	<ShadowBox>
+		<div style={{ width: "500px", height: "300px" }} />
+	</ShadowBox>
+)
 
-const storyOptions: Meta<typeof Footer> = {
-	title: "Layout/Footer",
-	component: Footer,
+const storyOptions: Meta<typeof ShadowBox> = {
+	title: "Layout/ShadowBox",
+	component: ShadowBox,
 	decorators: [backgroundDecorator]
 }
 

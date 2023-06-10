@@ -15,6 +15,7 @@ const routerPaths: RouterPaths = {
 	cv: "/cv",
 	projects: "/projects",
 	contact: "/contact",
+	blog: "/blog",
 }
 
 export default routerPaths

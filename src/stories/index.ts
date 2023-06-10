@@ -1,0 +1,1 @@
+export { FontDecorator, PageContentDecorator, CenteringDecorator } from "./decorators"
