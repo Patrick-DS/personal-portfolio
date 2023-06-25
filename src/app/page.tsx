@@ -32,6 +32,8 @@ import nextjsLogoDark from "./icons/dark/nextjs.png"
 import nextjsLogoLight from "./icons/light/nextjs.png"
 import kubernetesLogoDark from "./icons/dark/kubernetes.png"
 import kubernetesLogoLight from "./icons/light/kubernetes.png"
+import mongoLogoDark from "./icons/dark/mongo.png"
+import mongoLogoLight from "./icons/light/mongo.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -94,6 +96,11 @@ const images = {
 			width: ICON_SIZE,
 			height: ICON_SIZE,
 		},
+		{
+			src: mongoLogoDark,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
 	],
 	[ThemeNames.LIGHT]: [
 		{
@@ -148,6 +155,11 @@ const images = {
 		},
 		{
 			src: kubernetesLogoLight,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
+		{
+			src: mongoLogoLight,
 			width: ICON_SIZE,
 			height: ICON_SIZE,
 		},
