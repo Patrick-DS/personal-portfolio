@@ -30,6 +30,8 @@ import googleAnalyticsLogoDark from "./icons/dark/google-analytics.png"
 import googleAnalyticsLogoLight from "./icons/light/google-analytics.png"
 import nextjsLogoDark from "./icons/dark/nextjs.png"
 import nextjsLogoLight from "./icons/light/nextjs.png"
+import kubernetesLogoDark from "./icons/dark/kubernetes.png"
+import kubernetesLogoLight from "./icons/light/kubernetes.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -87,6 +89,11 @@ const images = {
 			width: ICON_SIZE,
 			height: ICON_SIZE,
 		},
+		{
+			src: kubernetesLogoDark,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
 	],
 	[ThemeNames.LIGHT]: [
 		{
@@ -139,7 +146,12 @@ const images = {
 			width: ICON_SIZE,
 			height: ICON_SIZE,
 		},
-	]
+		{
+			src: kubernetesLogoLight,
+			width: ICON_SIZE,
+			height: ICON_SIZE,
+		},
+	],
 }
 
 const Home = () => {
@@ -151,12 +163,19 @@ const Home = () => {
 
 	return (
 		<StyledMain>
-			<HeadlineCard title="Patrick Da Silva" subtitle="Your reference in software, cloud and machine learning" />
+			<HeadlineCard
+				title="Patrick Da Silva"
+				subtitle="Your reference in software, cloud and machine learning"
+			/>
 			<HomepageCardContainer>
 				<p>{"I'm proficient in those technologies:"}</p>
 				<StyledGrid>
 					{images[themeName].map((logoProps, index) => (
-						<Image key={index} alt="Technology icon" {...logoProps} />
+						<Image
+							key={index}
+							alt="Technology icon"
+							{...logoProps}
+						/>
 					))}
 				</StyledGrid>
 			</HomepageCardContainer>
