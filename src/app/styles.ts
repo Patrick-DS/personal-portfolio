@@ -14,23 +14,21 @@ export const StyledMain = styled.main`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
+
 	/* Dimensions */
 	width: 100%;
 	max-width: 1200px;
 	height: 100%;
-	min-height: ${({ theme }) => (
-		`calc(100vh - ${theme.dimensions.header.height
-		} - ${theme.dimensions.footer.height
-		})`
-	)};
-	margin: ${({ theme }) => theme.dimensions.header.height} auto ${({ theme }) => theme.dimensions.footer.height} auto;
+	min-height: ${({ theme }) =>
+		`calc(100vh - ${theme.dimensions.header.height} - ${theme.dimensions.footer.height})`};
+	margin: ${({ theme }) => theme.dimensions.header.height} auto
+		${({ theme }) => theme.dimensions.footer.height} auto;
 	padding: 100px 0px;
 
 	@media ${onWidthLessThan("large")} {
 		padding: 80px 0px;
 	}
-	
+
 	@media ${onWidthLessThan("medium")} {
 		padding: 60px 0px;
 	}
@@ -59,7 +57,7 @@ export const StyledGrid = styled.div`
 	@media ${onWidthLessThan("large")} {
 		grid-template-columns: repeat(6, 1fr);
 	}
-	
+
 	@media ${onWidthLessThan("medium")} {
 		grid-template-columns: repeat(4, 1fr);
 	}
