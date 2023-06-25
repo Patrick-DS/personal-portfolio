@@ -55,7 +55,6 @@ export const StyledGrid = styled.div`
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	width: 100%;
-	height: 500px;
 
 	@media ${onWidthLessThan("large")} {
 		grid-template-columns: repeat(6, 1fr);
