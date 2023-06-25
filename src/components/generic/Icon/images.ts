@@ -32,52 +32,67 @@ import mongoLogoLight from "./imageFiles/light/mongo.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
+export enum ImageNames {
+	AWS = "aws",
+	DJANGO = "django",
+	FLASK = "flask",
+	JS = "js",
+	NEST = "nest",
+	TS = "ts",
+	DOCKER = "docker",
+	FIREBASE = "firebase",
+	GOOGLE_ANALYTICS = "googleAnalytics",
+	NEXTJS = "nextjs",
+	KUBERNETES = "kubernetes",
+	MONGO = "mongo",
+}
+
 export const iconImages = {
-	aws: {
+	[ImageNames.AWS]: {
 		[ThemeNames.LIGHT]: awsLogoLight,
 		[ThemeNames.DARK]: awsLogoDark,
 	},
-	django: {
+	[ImageNames.DJANGO]: {
 		[ThemeNames.LIGHT]: djangoLogoLight,
 		[ThemeNames.DARK]: djangoLogoDark,
 	},
-	flask: {
+	[ImageNames.FLASK]: {
 		[ThemeNames.LIGHT]: flaskLogoLight,
 		[ThemeNames.DARK]: flaskLogoDark,
 	},
-	js: {
+	[ImageNames.JS]: {
 		[ThemeNames.LIGHT]: jsLogoLight,
 		[ThemeNames.DARK]: jsLogoDark,
 	},
-	nest: {
+	[ImageNames.NEST]: {
 		[ThemeNames.LIGHT]: nestLogoLight,
 		[ThemeNames.DARK]: nestLogoDark,
 	},
-	ts: {
+	[ImageNames.TS]: {
 		[ThemeNames.LIGHT]: tsLogoLight,
 		[ThemeNames.DARK]: tsLogoDark,
 	},
-	docker: {
+	[ImageNames.DOCKER]: {
 		[ThemeNames.LIGHT]: dockerLogoLight,
 		[ThemeNames.DARK]: dockerLogoDark,
 	},
-	firebase: {
+	[ImageNames.FIREBASE]: {
 		[ThemeNames.LIGHT]: firebaseLogoLight,
 		[ThemeNames.DARK]: firebaseLogoDark,
 	},
-	googleAnalytics: {
+	[ImageNames.GOOGLE_ANALYTICS]: {
 		[ThemeNames.LIGHT]: googleAnalyticsLogoLight,
 		[ThemeNames.DARK]: googleAnalyticsLogoDark,
 	},
-	nextjs: {
+	[ImageNames.NEXTJS]: {
 		[ThemeNames.LIGHT]: nextjsLogoLight,
 		[ThemeNames.DARK]: nextjsLogoDark,
 	},
-	kubernetes: {
+	[ImageNames.KUBERNETES]: {
 		[ThemeNames.LIGHT]: kubernetesLogoLight,
 		[ThemeNames.DARK]: kubernetesLogoDark,
 	},
-	mongo: {
+	[ImageNames.MONGO]: {
 		[ThemeNames.LIGHT]: mongoLogoLight,
 		[ThemeNames.DARK]: mongoLogoDark,
 	},

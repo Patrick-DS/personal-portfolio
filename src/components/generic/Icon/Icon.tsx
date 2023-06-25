@@ -8,12 +8,12 @@ import { useTheme } from "styled-components"
 import { ThemeNames } from "@/styles"
 
 // Local imports
-import { iconImages } from "./images"
+import { iconImages, ImageNames } from "./images"
 
 ////////////////////////////////////////////////////////////////////////////////
 
 interface IconProps {
-	imageName: string // keyof typeof iconImages
+	imageName: ImageNames
 	alt?: string
 	width: number
 	height: number
