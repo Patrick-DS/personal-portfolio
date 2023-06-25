@@ -4,8 +4,9 @@ import Image from "next/image"
 import { useTheme } from "styled-components"
 
 // Global imports
-import { ThemeNames } from "@/styles"
+import { Icon } from "@/components/generic"
 import { HeadlineCard } from "@/components/generic/cards"
+import { ThemeNames } from "@/styles"
 
 // Local imports
 import { StyledMain, HomepageCardContainer, StyledGrid } from "./styles"
@@ -182,11 +183,26 @@ const Home = () => {
 			<HomepageCardContainer>
 				<p>{"I'm proficient in those technologies:"}</p>
 				<StyledGrid>
-					{images[themeName].map((logoProps, index) => (
-						<Image
-							key={index}
+					{[
+						"aws",
+						"django",
+						"flask",
+						"js",
+						"nest",
+						"ts",
+						"docker",
+						"firebase",
+						"googleAnalytics",
+						"nextjs",
+						"kubernetes",
+						"mongo",
+					].map(imageName => (
+						<Icon
+							key={imageName}
+							imageName={imageName}
 							alt="Technology icon"
-							{...logoProps}
+							width={ICON_SIZE}
+							height={ICON_SIZE}
 						/>
 					))}
 				</StyledGrid>
