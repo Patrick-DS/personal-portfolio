@@ -47,7 +47,12 @@ export const HomepageCardContainer = styled(BlogCardContainer)`
 
 	/* Dimensions */
 	width: 100%;
+	text-align: center;
+
+	font-size: 30px;
 `
+
+export const TechnologiesGridHeader = styled.p``
 
 export const StyledGrid = styled.div`
 	display: grid;

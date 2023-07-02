@@ -1,15 +1,17 @@
 "use client"
 // Third-party imports
-import Image from "next/image"
-import { useTheme } from "styled-components"
 
 // Global imports
 import { Icon, ImageNames } from "@/components/generic"
 import { HeadlineCard } from "@/components/generic/cards"
-import { ThemeNames } from "@/styles"
 
 // Local imports
-import { StyledMain, HomepageCardContainer, StyledGrid } from "./styles"
+import {
+	StyledMain,
+	HomepageCardContainer,
+	StyledGrid,
+	TechnologiesGridHeader,
+} from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -22,24 +24,26 @@ const Home = () => (
 			subtitle="Your reference in software, cloud and machine learning"
 		/>
 		<HomepageCardContainer>
-			<p>{"I'm proficient in those technologies:"}</p>
+			<TechnologiesGridHeader>
+				I'm proficient in many technologies, including the following:
+			</TechnologiesGridHeader>
 			<StyledGrid>
 				{[
 					ImageNames.AWS,
+					ImageNames.DOCKER,
+					ImageNames.KUBERNETES,
+					ImageNames.GOOGLE_CLOUD,
+					ImageNames.FIREBASE,
+					ImageNames.JS,
+					ImageNames.TS,
+					ImageNames.NEXTJS,
+					ImageNames.NEST,
+					ImageNames.MONGO,
+					ImageNames.PYTHON,
 					ImageNames.DJANGO,
 					ImageNames.FLASK,
-					ImageNames.JS,
-					ImageNames.NEST,
-					ImageNames.TS,
-					ImageNames.DOCKER,
-					ImageNames.FIREBASE,
 					ImageNames.GOOGLE_ANALYTICS,
-					ImageNames.NEXTJS,
-					ImageNames.KUBERNETES,
-					ImageNames.MONGO,
 					ImageNames.REDIS,
-					ImageNames.GOOGLE_CLOUD,
-					ImageNames.PYTHON,
 				].map(imageName => (
 					<Icon
 						key={imageName}
