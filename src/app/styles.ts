@@ -86,21 +86,27 @@ export const StyledGrid = styled.div`
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	width: 100%;
+	gap: 0px 5%;
+	padding: 30px 0 0 0;
 
 	@media ${onWidthLessThan("large")} {
 		grid-template-columns: repeat(5, 1fr);
+		padding-top: 24px;
 	}
 
 	@media ${onWidthLessThan("medium")} {
 		grid-template-columns: repeat(4, 1fr);
+		padding-top: 20px;
 	}
 
 	@media ${onWidthLessThan("small")} {
 		grid-template-columns: repeat(3, 1fr);
+		padding-top: 18px;
 	}
 
 	@media ${onWidthLessThan("mini")} {
 		grid-template-columns: repeat(2, 1fr);
+		padding-top: 16px;
 	}
 
 	img {
