@@ -37,6 +37,7 @@ const Home = () => (
 					ImageNames.NEXTJS,
 					ImageNames.KUBERNETES,
 					ImageNames.MONGO,
+					ImageNames.REDIS,
 				].map(imageName => (
 					<Icon
 						key={imageName}

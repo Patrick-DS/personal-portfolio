@@ -29,6 +29,8 @@ import kubernetesLogoDark from "./imageFiles/dark/kubernetes.png"
 import kubernetesLogoLight from "./imageFiles/light/kubernetes.png"
 import mongoLogoDark from "./imageFiles/dark/mongo.png"
 import mongoLogoLight from "./imageFiles/light/mongo.png"
+import redisLogoDark from "./imageFiles/dark/redis.png"
+import redisLogoLight from "./imageFiles/light/redis.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -45,6 +47,7 @@ export enum ImageNames {
 	NEXTJS = "nextjs",
 	KUBERNETES = "kubernetes",
 	MONGO = "mongo",
+	REDIS = "redis",
 }
 
 export const iconImages = {
@@ -95,5 +98,9 @@ export const iconImages = {
 	[ImageNames.MONGO]: {
 		[ThemeNames.LIGHT]: mongoLogoLight,
 		[ThemeNames.DARK]: mongoLogoDark,
+	},
+	[ImageNames.REDIS]: {
+		[ThemeNames.LIGHT]: redisLogoLight,
+		[ThemeNames.DARK]: redisLogoDark,
 	},
 }
