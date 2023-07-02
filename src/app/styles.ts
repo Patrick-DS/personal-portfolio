@@ -73,18 +73,24 @@ export const StyledGrid = styled.div`
 	width: 100%;
 
 	@media ${onWidthLessThan("large")} {
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 	}
 
 	@media ${onWidthLessThan("medium")} {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 	}
 
 	@media ${onWidthLessThan("small")} {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	@media ${onWidthLessThan("mini")} {
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	img {
+		// So that images are responsive
+		width: 100%;
+		height: auto;
 	}
 `
