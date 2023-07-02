@@ -39,6 +39,8 @@ import hellaLogoDark from "./imageFiles/dark/hella.png"
 import hellaLogoLight from "./imageFiles/light/hella.png"
 import beryllsLogoDark from "./imageFiles/dark/berylls.png"
 import beryllsLogoLight from "./imageFiles/light/berylls.png"
+import polarSquadLogoLight from "./imageFiles/dark/polar-squad.png"
+import polarSquadLogoDark from "./imageFiles/light/polar-squad.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -60,6 +62,7 @@ export enum ImageNames {
 	PYTHON = "python",
 	HELLA = "hella",
 	BERYLLS = "berylls",
+	POLAR_SQUAD = "polar-squad",
 }
 
 export const iconImages = {
@@ -130,5 +133,9 @@ export const iconImages = {
 	[ImageNames.BERYLLS]: {
 		[ThemeNames.LIGHT]: beryllsLogoLight,
 		[ThemeNames.DARK]: beryllsLogoDark,
+	},
+	[ImageNames.POLAR_SQUAD]: {
+		[ThemeNames.LIGHT]: polarSquadLogoLight,
+		[ThemeNames.DARK]: polarSquadLogoDark,
 	},
 }
