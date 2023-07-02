@@ -33,6 +33,8 @@ import redisLogoDark from "./imageFiles/dark/redis.png"
 import redisLogoLight from "./imageFiles/light/redis.png"
 import googleCloudLogoDark from "./imageFiles/dark/google-cloud.png"
 import googleCloudLogoLight from "./imageFiles/light/google-cloud.png"
+import pythonLogoDark from "./imageFiles/dark/python.png"
+import pythonLogoLight from "./imageFiles/light/python.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -51,6 +53,7 @@ export enum ImageNames {
 	MONGO = "mongo",
 	REDIS = "redis",
 	GOOGLE_CLOUD = "google-cloud",
+	PYTHON = "python",
 }
 
 export const iconImages = {
@@ -109,5 +112,9 @@ export const iconImages = {
 	[ImageNames.GOOGLE_CLOUD]: {
 		[ThemeNames.LIGHT]: googleCloudLogoLight,
 		[ThemeNames.DARK]: googleCloudLogoDark,
+	},
+	[ImageNames.PYTHON]: {
+		[ThemeNames.LIGHT]: pythonLogoLight,
+		[ThemeNames.DARK]: pythonLogoDark,
 	},
 }

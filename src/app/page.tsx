@@ -39,6 +39,7 @@ const Home = () => (
 					ImageNames.MONGO,
 					ImageNames.REDIS,
 					ImageNames.GOOGLE_CLOUD,
+					ImageNames.PYTHON,
 				].map(imageName => (
 					<Icon
 						key={imageName}
