@@ -19,15 +19,15 @@ export const HeadlineContainer = styled(BlogCardContainer)`
 	margin-bottom: 50px;
 
 	@media ${onWidthLessThan("large")} {
-		margin-bottom: 30px;
+		margin-bottom: 45px;
 	}
 
 	@media ${onWidthLessThan("medium")} {
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 	}
 
 	@media ${onWidthLessThan("small")} {
-		margin-bottom: 0px;
+		margin-bottom: 30px;
 	}
 `
 

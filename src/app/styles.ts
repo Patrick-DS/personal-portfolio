@@ -23,27 +23,40 @@ export const StyledMain = styled.main`
 		`calc(100vh - ${theme.dimensions.header.height} - ${theme.dimensions.footer.height})`};
 	margin: ${({ theme }) => theme.dimensions.header.height} auto
 		${({ theme }) => theme.dimensions.footer.height} auto;
-	padding: 100px 0px;
+	padding: 100px 50px;
 
 	@media ${onWidthLessThan("large")} {
-		padding: 80px 0px;
+		padding: 80px 45px;
 	}
 
 	@media ${onWidthLessThan("medium")} {
-		padding: 60px 0px;
+		padding: 60px 40px;
 	}
 
 	@media ${onWidthLessThan("small")} {
-		padding: 40px 0px;
+		padding: 40px 30px;
 	}
 
 	@media ${onWidthLessThan("mini")} {
-		padding: 20px 0px;
+		padding: 20px 20px;
 	}
 `
 
 export const HomepageCardContainer = styled(BlogCardContainer)`
 	/* Positioning */
+	margin-bottom: 50px;
+
+	@media ${onWidthLessThan("large")} {
+		margin-bottom: 45px;
+	}
+
+	@media ${onWidthLessThan("medium")} {
+		margin-bottom: 40px;
+	}
+
+	@media ${onWidthLessThan("small")} {
+		margin-bottom: 30px;
+	}
 
 	/* Dimensions */
 	width: 100%;
@@ -60,18 +73,18 @@ export const StyledGrid = styled.div`
 	width: 100%;
 
 	@media ${onWidthLessThan("large")} {
-		grid-template-columns: repeat(6, 1fr);
-	}
-
-	@media ${onWidthLessThan("medium")} {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-	@media ${onWidthLessThan("small")} {
+	@media ${onWidthLessThan("medium")} {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	@media ${onWidthLessThan("mini")} {
+	@media ${onWidthLessThan("small")} {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media ${onWidthLessThan("mini")} {
+		grid-template-columns: repeat(1, 1fr);
 	}
 `
