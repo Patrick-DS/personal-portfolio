@@ -38,6 +38,7 @@ const Home = () => (
 					ImageNames.KUBERNETES,
 					ImageNames.MONGO,
 					ImageNames.REDIS,
+					ImageNames.GOOGLE_CLOUD,
 				].map(imageName => (
 					<Icon
 						key={imageName}
