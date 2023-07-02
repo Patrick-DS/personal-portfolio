@@ -35,6 +35,10 @@ import googleCloudLogoDark from "./imageFiles/dark/google-cloud.png"
 import googleCloudLogoLight from "./imageFiles/light/google-cloud.png"
 import pythonLogoDark from "./imageFiles/dark/python.png"
 import pythonLogoLight from "./imageFiles/light/python.png"
+import hellaLogoDark from "./imageFiles/dark/hella.png"
+import hellaLogoLight from "./imageFiles/light/hella.png"
+import beryllsLogoDark from "./imageFiles/dark/berylls.png"
+import beryllsLogoLight from "./imageFiles/light/berylls.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -54,6 +58,8 @@ export enum ImageNames {
 	REDIS = "redis",
 	GOOGLE_CLOUD = "google-cloud",
 	PYTHON = "python",
+	HELLA = "hella",
+	BERYLLS = "berylls",
 }
 
 export const iconImages = {
@@ -116,5 +122,13 @@ export const iconImages = {
 	[ImageNames.PYTHON]: {
 		[ThemeNames.LIGHT]: pythonLogoLight,
 		[ThemeNames.DARK]: pythonLogoDark,
+	},
+	[ImageNames.HELLA]: {
+		[ThemeNames.LIGHT]: hellaLogoDark,
+		[ThemeNames.DARK]: hellaLogoLight,
+	},
+	[ImageNames.BERYLLS]: {
+		[ThemeNames.LIGHT]: beryllsLogoLight,
+		[ThemeNames.DARK]: beryllsLogoDark,
 	},
 }
