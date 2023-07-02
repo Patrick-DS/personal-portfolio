@@ -42,6 +42,21 @@ export const BlogTitle = styled.h1`
 
 	/* Text */
 	font-size: 36px;
+	@media ${onWidthLessThan("large")} {
+		font-size: 30px;
+	}
+
+	@media ${onWidthLessThan("medium")} {
+		font-size: 24px;
+	}
+
+	@media ${onWidthLessThan("small")} {
+		font-size: 22px;
+	}
+
+	@media ${onWidthLessThan("mini")} {
+		font-size: 20px;
+	}
 	font-weight: 400;
 	text-align: center;
 `
@@ -57,6 +72,21 @@ export const BlogSubtitle = styled.h2`
 
 	/* Text */
 	font-size: 30px;
+	@media ${onWidthLessThan("large")} {
+		font-size: 24px;
+	}
+
+	@media ${onWidthLessThan("medium")} {
+		font-size: 20px;
+	}
+
+	@media ${onWidthLessThan("small")} {
+		font-size: 18px;
+	}
+
+	@media ${onWidthLessThan("mini")} {
+		font-size: 16px;
+	}
 	font-weight: 400;
 	text-align: center;
 `

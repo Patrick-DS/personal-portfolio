@@ -63,6 +63,21 @@ export const HomepageCardContainer = styled(BlogCardContainer)`
 	text-align: center;
 
 	font-size: 30px;
+	@media ${onWidthLessThan("large")} {
+		font-size: 24px;
+	}
+
+	@media ${onWidthLessThan("medium")} {
+		font-size: 20px;
+	}
+
+	@media ${onWidthLessThan("small")} {
+		font-size: 18px;
+	}
+
+	@media ${onWidthLessThan("mini")} {
+		font-size: 16px;
+	}
 `
 
 export const TechnologiesGridHeader = styled.p``
