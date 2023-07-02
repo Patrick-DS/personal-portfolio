@@ -16,6 +16,42 @@ import {
 ////////////////////////////////////////////////////////////////////////////////
 
 const ICON_SIZE = 200
+const iconProps = (imageName: ImageNames) => ({
+	imageName,
+	alt: imageName,
+	width: ICON_SIZE,
+	height: ICON_SIZE,
+})
+
+const techImages = [
+	ImageNames.AWS,
+	ImageNames.DOCKER,
+	ImageNames.KUBERNETES,
+	ImageNames.GOOGLE_CLOUD,
+	ImageNames.FIREBASE,
+	ImageNames.JS,
+	ImageNames.TS,
+	ImageNames.NEXTJS,
+	ImageNames.NEST,
+	ImageNames.MONGO,
+	ImageNames.PYTHON,
+	ImageNames.DJANGO,
+	ImageNames.FLASK,
+	ImageNames.GOOGLE_ANALYTICS,
+	ImageNames.REDIS,
+]
+
+const companyImages = [
+	ImageNames.POLAR_SQUAD,
+	// ImageNames.SMARTLY,
+	// ImageNames.RECRIGHT,
+	// ImageNames.STAIY,
+	// ImageNames.TECHTILE,
+	// ImageNames.IMMORISE,
+	ImageNames.BERYLLS,
+	ImageNames.HELLA,
+	// ImageNames.EF,
+]
 
 const Home = () => (
 	<StyledMain>
@@ -28,30 +64,18 @@ const Home = () => (
 				I'm proficient in many technologies, including the following:
 			</TechnologiesGridHeader>
 			<StyledGrid>
-				{[
-					ImageNames.AWS,
-					ImageNames.DOCKER,
-					ImageNames.KUBERNETES,
-					ImageNames.GOOGLE_CLOUD,
-					ImageNames.FIREBASE,
-					ImageNames.JS,
-					ImageNames.TS,
-					ImageNames.NEXTJS,
-					ImageNames.NEST,
-					ImageNames.MONGO,
-					ImageNames.PYTHON,
-					ImageNames.DJANGO,
-					ImageNames.FLASK,
-					ImageNames.GOOGLE_ANALYTICS,
-					ImageNames.REDIS,
-				].map(imageName => (
-					<Icon
-						key={imageName}
-						imageName={imageName}
-						alt="Technology icon"
-						width={ICON_SIZE}
-						height={ICON_SIZE}
-					/>
+				{techImages.map(imageName => (
+					<Icon key={imageName} {...iconProps(imageName)} />
+				))}
+			</StyledGrid>
+		</HomepageCardContainer>
+		<HomepageCardContainer>
+			<TechnologiesGridHeader>
+				And I've worked with those companies:
+			</TechnologiesGridHeader>
+			<StyledGrid>
+				{companyImages.map(imageName => (
+					<Icon key={imageName} {...iconProps(imageName)} />
 				))}
 			</StyledGrid>
 		</HomepageCardContainer>
