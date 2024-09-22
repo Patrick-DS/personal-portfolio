@@ -11,6 +11,7 @@ import {
 	HomepageCardContainer,
 	StyledGrid,
 	TechnologiesGridHeader,
+	StyledLink,
 } from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -80,6 +81,20 @@ const Home = () => (
 					<Icon key={imageName} {...iconProps(imageName)} />
 				))}
 			</StyledGrid>
+		</HomepageCardContainer>
+		<HomepageCardContainer>
+			If you're trying to build something with software and need support:
+			<br />
+			<br />
+			<StyledLink href="/contact">let's get in touch</StyledLink>!
+			<br />
+			<br />
+			<br />
+			You can find my CV <StyledLink href="/cv">here</StyledLink>!
+			<br />
+			<br />
+			<br />
+			Looking forward to our collaboration!
 		</HomepageCardContainer>
 	</StyledMain>
 )

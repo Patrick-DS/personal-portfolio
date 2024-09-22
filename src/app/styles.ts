@@ -1,5 +1,6 @@
 // Third-party imports
 import styled from "styled-components"
+import Link from "next/link"
 
 // Global imports
 import { onWidthLessThan } from "@/styles"
@@ -113,5 +114,18 @@ export const StyledGrid = styled.div`
 		// So that images are responsive
 		width: 100%;
 		height: auto;
+	}
+`
+
+export const StyledLink = styled(Link)`
+	/* Color */
+	&:link,
+	&:visited,
+	&:active {
+		color: ${({ theme }) => theme.colors.header.text.active} !important;
+	}
+
+	&:hover {
+		color: ${({ theme }) => theme.colors.header.text.hovered};
 	}
 `
