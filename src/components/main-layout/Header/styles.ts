@@ -8,7 +8,7 @@ import Link from "next/link"
 
 ////////////////////////////////////////////////////////////////////////////////
 
-export const NavBar = styled.div`
+export const NavBar = styled.header`
 	/* Positioning */
 	position: fixed;
 	top: 0;
@@ -16,44 +16,63 @@ export const NavBar = styled.div`
 
 	/* Dimensions */
 	width: 100vw;
-	min-height: 50px;
-	height: 50px;
+	min-height: ${({ theme }) => theme.dimensions.header.height};
+	height: ${({ theme }) => theme.dimensions.header.height};
+	padding: 0px 15px;
 
 	/* Color */
-	background: ${({ theme }) => theme.colors.darkGray};
+	background: ${({ theme }) => theme.colors.header.container.background};
 
 	/* Border */
-	border-bottom: 1px solid ${({ theme }) => theme.colors.black};
-	box-shadow: 0px 0px 10px 5px ${({ theme }) => theme.colors.black};
+	border-bottom: 1px solid ${({ theme }) => theme.colors.header.container.border};
+	box-shadow: 0px 0px 10px 2px ${({ theme }) => theme.colors.header.container.border};
 `
 
-export const NavItem = styled.div<{ direction: any }>`
-	/* Positioning */
-	position: relative;
+interface StyledLinkProps {
+	direction: "left" | "right"
+	$paddingX?: string
+}
+
+export const NavItem = styled.span<StyledLinkProps>`
+	/* Positioning */	
 	float: ${({ direction }) => direction};
 	display: flex;
+	position: relative;
 	justify-content: center;
 	align-items: center;
-	padding: 0px 15px;
+	${({ $paddingX }) => $paddingX ? `padding: 0px ${$paddingX}` : ""};
 
 	/* Dimensions */
 	height: 100%;
-	min-width: 90px;
 
 	/* Color */
-	color: ${({ theme }) => theme.colors.gray};
+	color: ${({ theme }) => theme.colors.header.text.default};
 	${({ theme }) => theme.devices.availableOnDesktopOnly}
 `
 
 export const StyledLink = styled(Link)`
+	/* Positioning */
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 10px;
+
+	/* Dimensions */
+	width: 100%;
+	height: 100%;
+
 	/* Color */
 	&:link,
 	&:visited,
 	&:active {
-		color: ${({ theme }) => theme.colors.gray} !important;
+		color: ${({ theme }) => theme.colors.header.text.active} !important;
 	}
 
 	&:hover {
-		color: ${({ theme }) => theme.colors.white};
+		color: ${({ theme }) => theme.colors.header.text.hovered};
 	}
+
+	/* Text */
+	text-decoration: none;
 `

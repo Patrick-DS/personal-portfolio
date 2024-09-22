@@ -3,33 +3,39 @@
 import type { FC } from "react"
 
 // Global imports
-import { routerPaths } from "@/constants"
+import { ThemeToggler } from "@/components/main-layout"
+import { useThemeManager } from "@/contexts"
 
 // Local imports
+import headerContent from "./links"
 import { NavBar, NavItem, StyledLink } from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @function Header
- * @category Generic
+ * @category Components
+ * @subcategory Main Layout
  * @description The website's header for all pages.
  */
-const Header: FC<{}> = () => (
-	<NavBar>
-		<NavItem direction="left">
-			<StyledLink href={routerPaths.home}>Patrick Da Silva</StyledLink>
-		</NavItem>
-		<NavItem direction="right">
-			<StyledLink href={routerPaths.contact}>Contact</StyledLink>
-		</NavItem>
-		<NavItem direction="right">
-			<StyledLink href={routerPaths.cv}>CV</StyledLink>
-		</NavItem>
-		<NavItem direction="right">
-			<StyledLink href={routerPaths.projects}>Projects</StyledLink>
-		</NavItem>
-	</NavBar>
-)
+const Header: FC<{}> = () => {
+	// Hooks
+	const { toggleTheme } = useThemeManager()
+
+	return (
+		<NavBar>
+			<NavItem direction="right" $paddingX="10px">
+				<ThemeToggler onTogglerClick={toggleTheme} />
+			</NavItem>
+			{headerContent.map(({ itemId, direction, href, displayText }) => (
+				<NavItem key={itemId} direction={direction}>
+					<StyledLink href={href}>
+						{displayText}
+					</StyledLink>
+				</NavItem>
+			))}
+		</NavBar>
+	)
+}
 
 export default Header
