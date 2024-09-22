@@ -39,6 +39,13 @@ const CV = () => (
 				<StyledLink href={"/contact"}> contact me</StyledLink> and we
 				can discuss our future collaboration!
 			</CVPageContent>
+			<br />
+			<br />
+			<br />
+			<CVPageContent>
+				This <StyledLink href="/">website</StyledLink> was created by me
+				with NextJS! Try out the Light/Dark mode feature!
+			</CVPageContent>
 			<CVPageHomePageLink>
 				<StyledLink href={"/"}>{"> Home"}</StyledLink>
 			</CVPageHomePageLink>
