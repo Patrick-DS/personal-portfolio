@@ -61,6 +61,7 @@ const Home = () => (
 		/>
 		<HomepageCardContainer>
 			<TechnologiesGridHeader>
+				{/* eslint-disable-next-line react/no-unescaped-entities */}
 				I'm proficient in many technologies, including the following:
 			</TechnologiesGridHeader>
 			<StyledGrid>
@@ -71,6 +72,7 @@ const Home = () => (
 		</HomepageCardContainer>
 		<HomepageCardContainer>
 			<TechnologiesGridHeader>
+				{/* eslint-disable-next-line react/no-unescaped-entities */}
 				And I've worked with those companies:
 			</TechnologiesGridHeader>
 			<StyledGrid>
