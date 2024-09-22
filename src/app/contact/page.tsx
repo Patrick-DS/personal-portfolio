@@ -26,7 +26,10 @@ const Contact = () => (
 			<ContactMethodsList>
 				<li>
 					On LinkedIn (preferred):{" "}
-					<StyledLink href={"https://linkedin.com/in/dasilvapatrick"}>
+					<StyledLink
+						href={"https://linkedin.com/in/dasilvapatrick"}
+						target="_blank"
+					>
 						linkedin.com/in/dasilvapatrick
 					</StyledLink>
 				</li>
