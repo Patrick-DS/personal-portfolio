@@ -13,7 +13,7 @@ const darkTheme = {
 		header: {
 			text: {
 				default: "#FFFFFF",
-				hovered: "#FFFFFF",
+				hovered: "#000",
 				active: "#FFFFFF",
 			},
 			container: {
@@ -40,7 +40,7 @@ const darkTheme = {
 				background: "#00000086",
 				border: "#000000",
 				boxshadow: "#000000",
-			}
+			},
 		},
 		// white: "#dddddd",
 		// lightGray: "#aaaaaa",
