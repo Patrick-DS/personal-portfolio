@@ -83,9 +83,11 @@ const Home = () => (
 			</StyledGrid>
 		</HomepageCardContainer>
 		<HomepageCardContainer>
+			{/* eslint-disable-next-line react/no-unescaped-entities */}
 			If you're trying to build something with software and need support:
 			<br />
 			<br />
+			{/* eslint-disable-next-line react/no-unescaped-entities */}
 			<StyledLink href="/contact">let's get in touch</StyledLink>!
 			<br />
 			<br />
