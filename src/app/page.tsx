@@ -45,7 +45,7 @@ const companyImages = [
 	ImageNames.POLAR_SQUAD,
 	ImageNames.SMARTLY,
 	// ImageNames.RECRIGHT,
-	// ImageNames.STAIY,
+	ImageNames.STAIY,
 	// ImageNames.TECHTILE,
 	// ImageNames.IMMORISE,
 	ImageNames.BERYLLS,
