@@ -43,7 +43,7 @@ const techImages = [
 
 const companyImages = [
 	ImageNames.POLAR_SQUAD,
-	// ImageNames.SMARTLY,
+	ImageNames.SMARTLY,
 	// ImageNames.RECRIGHT,
 	// ImageNames.STAIY,
 	// ImageNames.TECHTILE,
