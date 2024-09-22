@@ -1,5 +1,6 @@
 // Third-party imports
 import styled from "styled-components"
+import Image from "next/image"
 
 // Global imports
 import { onWidthLessThan } from "@/styles"
@@ -89,4 +90,12 @@ export const BlogSubtitle = styled.h2`
 	}
 	font-weight: 400;
 	text-align: center;
+`
+
+export const ProfilePicture = styled(Image)`
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	border-bottom: 2px solid
+		${({ theme }) => theme.colors.shadowbox.container.border};
 `
