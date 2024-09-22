@@ -17,8 +17,8 @@ const lightTheme = {
 				active: "#000000",
 			},
 			container: {
-				background: "#FFFFFFEA",
-				border: "#FFFFFF",
+				background: "#DDDDDDFA",
+				border: "#DDDDDDFA",
 			},
 		},
 		footer: {
@@ -28,8 +28,8 @@ const lightTheme = {
 				active: "#000000",
 			},
 			container: {
-				background: "#FFFFFFEA",
-				border: "#FFFFFF",
+				background: "#DDDDDDEA",
+				border: "#DDDDDDFA",
 			},
 		},
 		shadowbox: {
@@ -37,10 +37,10 @@ const lightTheme = {
 				default: "#000000",
 			},
 			container: {
-				background: "#FFFFFFCC",
-				border: "#FFFFFF",
-				boxshadow: "#FFFFFF",
-			}
+				background: "#DDDDDDCA",
+				border: "#DDDDDDCA",
+				boxshadow: "#DDDDDDCA",
+			},
 		},
 		// white: "#222222",
 		// lightGray: "#666666",
