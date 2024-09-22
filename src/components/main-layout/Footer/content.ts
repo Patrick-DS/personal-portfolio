@@ -14,10 +14,15 @@ interface FooterItemProps {
 
 const headerContent: FooterItemProps[] = [
 	{
-		"itemId": 1,
-		"direction": "right",
-		"displayText": "Created by Patrick Da Silva"
-	}
+		itemId: 1,
+		direction: "right",
+		displayText: "Created by Patrick Da Silva",
+	},
+	{
+		itemId: 2,
+		direction: "left",
+		displayText: "Powered by Vercel",
+	},
 ]
 
 export default headerContent
