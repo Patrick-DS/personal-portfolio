@@ -22,7 +22,10 @@ const CV = () => (
 			<CVPageTitle>CV</CVPageTitle>
 			<CVPageHeadline>
 				You can click
-				<StyledLink href={"/CV - Patrick Da Silva (22.09.2024).pdf"}>
+				<StyledLink
+					href={"/CV - Patrick Da Silva (22.09.2024).pdf"}
+					target="_blank"
+				>
 					{" "}
 					here{" "}
 				</StyledLink>
