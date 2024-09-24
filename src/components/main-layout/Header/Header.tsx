@@ -70,7 +70,11 @@ const Header: FC<{}> = () => {
 				<MobileMenu isOpened={isMobileMenuOpened}>
 					{headerContent.map(
 						({ itemId, direction, href, displayText }) => (
-							<MobileNavItem key={itemId} direction={direction}>
+							<MobileNavItem
+								key={itemId}
+								direction={direction}
+								onClick={closeMobileMenu}
+							>
 								<StyledLink href={href}>
 									{displayText}
 								</StyledLink>
