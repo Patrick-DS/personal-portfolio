@@ -8,7 +8,8 @@ import { useThemeManager } from "@/contexts"
 
 // Local imports
 import headerContent from "./links"
-import { NavBar, DesktopNavItem, StyledLink } from "./styles"
+import { NavBar, DesktopNavItem, StyledLink, MobileBurgerMenu } from "./styles"
+import { Icon, ImageNames } from "@/components/generic"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -32,6 +33,18 @@ const Header: FC<{}> = () => {
 					<StyledLink href={href}>{displayText}</StyledLink>
 				</DesktopNavItem>
 			))}
+			<MobileBurgerMenu>
+				<Icon
+					imageName={ImageNames.BURGER_MENU}
+					alt={ImageNames.BURGER_MENU}
+					width={64}
+					height={64}
+					style={{
+						width: "auto",
+						height: "75%",
+					}}
+				/>
+			</MobileBurgerMenu>
 		</NavBar>
 	)
 }

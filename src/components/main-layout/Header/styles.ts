@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Link from "next/link"
 
 // Global imports
+import { onWidthLessThan } from "@/styles"
 
 // Local imports
 
@@ -19,6 +20,10 @@ export const NavBar = styled.header`
 	min-height: ${({ theme }) => theme.dimensions.header.height};
 	height: ${({ theme }) => theme.dimensions.header.height};
 	padding: 0px 15px;
+
+	@media ${onWidthLessThan("medium")} {
+		padding: 0;
+	}
 
 	/* Color */
 	background: ${({ theme }) => theme.colors.header.container.background};
@@ -50,6 +55,23 @@ export const DesktopNavItem = styled.span<StyledLinkProps>`
 	/* Color */
 	color: ${({ theme }) => theme.colors.header.text.default};
 	${({ theme }) => theme.devices.availableOnDesktopOnly}
+`
+
+export const MobileBurgerMenu = styled.div`
+	/* Positioning */
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Dimensions */
+	height: 100%;
+	width: auto;
+
+	/* Content */
+	padding: 10px 10px 10px 15px;
+
+	${({ theme }) => theme.devices.availableOnMobileOnly}
 `
 
 export const StyledLink = styled(Link)`

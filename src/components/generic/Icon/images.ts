@@ -45,10 +45,13 @@ import smartlyLogoDark from "./imageFiles/dark/smartly.png"
 import smartlyLogoLight from "./imageFiles/light/smartly.png"
 import staiyLogoDark from "./imageFiles/dark/staiy.png"
 import staiyLogoLight from "./imageFiles/light/staiy.png"
+import burgerMenuDark from "./imageFiles/dark/burger-menu.png"
+import burgerMenuLight from "./imageFiles/light/burger-menu.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
 export enum ImageNames {
+	BURGER_MENU = "burger-menu"
 	AWS = "aws",
 	DJANGO = "django",
 	FLASK = "flask",
@@ -151,5 +154,9 @@ export const iconImages = {
 	[ImageNames.STAIY]: {
 		[ThemeNames.LIGHT]: staiyLogoLight,
 		[ThemeNames.DARK]: staiyLogoDark,
+	},
+	[ImageNames.BURGER_MENU]: {
+		[ThemeNames.LIGHT]: burgerMenuLight,
+		[ThemeNames.DARK]: burgerMenuDark,
 	},
 }
