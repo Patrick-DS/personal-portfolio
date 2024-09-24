@@ -51,7 +51,7 @@ import burgerMenuLight from "./imageFiles/light/burger-menu.png"
 ////////////////////////////////////////////////////////////////////////////////
 
 export enum ImageNames {
-	BURGER_MENU = "burger-menu"
+	BURGER_MENU = "burger-menu",
 	AWS = "aws",
 	DJANGO = "django",
 	FLASK = "flask",
