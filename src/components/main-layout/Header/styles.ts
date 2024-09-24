@@ -24,8 +24,10 @@ export const NavBar = styled.header`
 	background: ${({ theme }) => theme.colors.header.container.background};
 
 	/* Border */
-	border-bottom: 1px solid ${({ theme }) => theme.colors.header.container.border};
-	box-shadow: 0px 0px 10px 2px ${({ theme }) => theme.colors.header.container.border};
+	border-bottom: 1px solid
+		${({ theme }) => theme.colors.header.container.border};
+	box-shadow: 0px 0px 10px 2px
+		${({ theme }) => theme.colors.header.container.border};
 `
 
 interface StyledLinkProps {
@@ -33,14 +35,14 @@ interface StyledLinkProps {
 	$paddingX?: string
 }
 
-export const NavItem = styled.span<StyledLinkProps>`
-	/* Positioning */	
+export const DesktopNavItem = styled.span<StyledLinkProps>`
+	/* Positioning */
 	float: ${({ direction }) => direction};
 	display: flex;
 	position: relative;
 	justify-content: center;
 	align-items: center;
-	${({ $paddingX }) => $paddingX ? `padding: 0px ${$paddingX}` : ""};
+	${({ $paddingX }) => ($paddingX ? `padding: 0px ${$paddingX}` : "")};
 
 	/* Dimensions */
 	height: 100%;

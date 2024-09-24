@@ -8,7 +8,7 @@ import { useThemeManager } from "@/contexts"
 
 // Local imports
 import headerContent from "./links"
-import { NavBar, NavItem, StyledLink } from "./styles"
+import { NavBar, DesktopNavItem, StyledLink } from "./styles"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -24,15 +24,13 @@ const Header: FC<{}> = () => {
 
 	return (
 		<NavBar>
-			<NavItem direction="right" $paddingX="10px">
+			<DesktopNavItem direction="right" $paddingX="10px">
 				<ThemeToggler onTogglerClick={toggleTheme} />
-			</NavItem>
+			</DesktopNavItem>
 			{headerContent.map(({ itemId, direction, href, displayText }) => (
-				<NavItem key={itemId} direction={direction}>
-					<StyledLink href={href}>
-						{displayText}
-					</StyledLink>
-				</NavItem>
+				<DesktopNavItem key={itemId} direction={direction}>
+					<StyledLink href={href}>{displayText}</StyledLink>
+				</DesktopNavItem>
 			))}
 		</NavBar>
 	)
