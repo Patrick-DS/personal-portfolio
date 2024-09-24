@@ -13,6 +13,7 @@ export const NavBar = styled.footer`
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	z-index: 100;
 
 	/* Dimensions */
 	width: 100vw;
@@ -25,7 +26,8 @@ export const NavBar = styled.footer`
 
 	/* Border */
 	border-top: 1px solid ${({ theme }) => theme.colors.footer.container.border};
-	box-shadow: 0px 0px 10px 2px ${({ theme }) => theme.colors.footer.container.border};
+	box-shadow: 0px 0px 10px 2px
+		${({ theme }) => theme.colors.footer.container.border};
 `
 
 interface NavItemProps {
@@ -40,7 +42,7 @@ export const NavItem = styled.span<NavItemProps>`
 	justify-content: center;
 	align-items: center;
 	padding: 0px 15px;
-	
+
 	/* Dimensions */
 	min-width: 90px;
 	height: 100%;
@@ -49,4 +51,3 @@ export const NavItem = styled.span<NavItemProps>`
 	color: ${({ theme }) => theme.colors.footer.text.default};
 	${({ theme }) => theme.devices.availableOnDesktopOnly}
 `
-

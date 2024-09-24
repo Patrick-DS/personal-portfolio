@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Link from "next/link"
 
 // Global imports
+import { onWidthLessThan } from "@/styles"
 
 // Local imports
 
@@ -13,6 +14,7 @@ export const NavBar = styled.header`
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 100;
 
 	/* Dimensions */
 	width: 100vw;
@@ -20,12 +22,18 @@ export const NavBar = styled.header`
 	height: ${({ theme }) => theme.dimensions.header.height};
 	padding: 0px 15px;
 
+	@media ${onWidthLessThan("medium")} {
+		padding: 0;
+	}
+
 	/* Color */
 	background: ${({ theme }) => theme.colors.header.container.background};
 
 	/* Border */
-	border-bottom: 1px solid ${({ theme }) => theme.colors.header.container.border};
-	box-shadow: 0px 0px 10px 2px ${({ theme }) => theme.colors.header.container.border};
+	border-bottom: 1px solid
+		${({ theme }) => theme.colors.header.container.border};
+	box-shadow: 0px 0px 10px 2px
+		${({ theme }) => theme.colors.header.container.border};
 `
 
 interface StyledLinkProps {
@@ -33,14 +41,14 @@ interface StyledLinkProps {
 	$paddingX?: string
 }
 
-export const NavItem = styled.span<StyledLinkProps>`
-	/* Positioning */	
+export const DesktopNavItem = styled.span<StyledLinkProps>`
+	/* Positioning */
 	float: ${({ direction }) => direction};
 	display: flex;
 	position: relative;
 	justify-content: center;
 	align-items: center;
-	${({ $paddingX }) => $paddingX ? `padding: 0px ${$paddingX}` : ""};
+	${({ $paddingX }) => ($paddingX ? `padding: 0px ${$paddingX}` : "")};
 
 	/* Dimensions */
 	height: 100%;
@@ -48,6 +56,76 @@ export const NavItem = styled.span<StyledLinkProps>`
 	/* Color */
 	color: ${({ theme }) => theme.colors.header.text.default};
 	${({ theme }) => theme.devices.availableOnDesktopOnly}
+`
+
+export const MobileBurgerMenu = styled.div`
+	/* Positioning */
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Dimensions */
+	height: 100%;
+	width: auto;
+
+	/* Content */
+	padding: 10px 10px 10px 15px;
+
+	${({ theme }) => theme.devices.availableOnMobileOnly}
+`
+
+interface MobileMenuProps {
+	isOpened: boolean
+}
+
+export const MobileMenu = styled.div<MobileMenuProps>`
+	/* Positioning */
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	/* Positioning */
+	height: 100vh;
+	width: 300px;
+	z-index: 50;
+
+	/* Dimensions */
+	padding: 80px 20px;
+
+	/* Color */
+	background-color: ${({ theme }) =>
+		theme.colors.header.container.background};
+
+	/* Border */
+	border-bottom: 1px solid
+		${({ theme }) => theme.colors.header.container.border};
+	box-shadow: 0px 0px 10px 2px
+		${({ theme }) => theme.colors.header.container.border};
+
+	/* Animation */
+	transition: left 3s ease;
+	transform: ${({ isOpened }) =>
+		isOpened ? "translateX(0)" : "translateX(-310px)"};
+	top: 0;
+	/* left: 0; */
+`
+
+export const MobileNavItem = styled.span<StyledLinkProps>`
+	/* Positioning */
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	/* Dimensions */
+	height: 50px;
+
+	/* Color */
+	color: ${({ theme }) => theme.colors.header.text.default};
+	${({ theme }) => theme.devices.availableOnMobileOnly}
 `
 
 export const StyledLink = styled(Link)`
