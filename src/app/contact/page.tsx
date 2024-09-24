@@ -25,7 +25,7 @@ const Contact = () => (
 			</ContactPageHeadline>
 			<ContactMethodsList>
 				<li>
-					On LinkedIn (preferred):{" "}
+					On LinkedIn (preferred): <br />
 					<StyledLink
 						href={"https://linkedin.com/in/dasilvapatrick"}
 						target="_blank"
@@ -34,13 +34,13 @@ const Contact = () => (
 					</StyledLink>
 				</li>
 				<li>
-					By phone (fastest):{" "}
+					By phone (fastest): <br />
 					<StyledLink href={"tel:+358 5030 92383"}>
 						+358 5030 92383
 					</StyledLink>
 				</li>
 				<li>
-					By email:{" "}
+					By email: <br />
 					<StyledLink href={"mailto:patrick1dasilva@gmail.com"}>
 						patrick1dasilva@gmail.com
 					</StyledLink>

@@ -66,7 +66,7 @@ export const ContactPageHeadline = styled.h1`
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
-	margin: 30px;
+	padding: 30px;
 
 	/* Dimensions */
 	width: 100%;
@@ -156,7 +156,7 @@ export const ContactMethodsList = styled.ul`
 	text-align: left;
 
 	/* Margin */
-	margin: 0 20px;
+	padding: 0 0 0 20px;
 `
 
 export const StyledLink = styled(Link)`
