@@ -94,6 +94,9 @@ export const BlogSubtitle = styled.h2`
 
 export const ProfilePicture = styled(Image)`
 	display: flex;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
 	justify-content: center;
 	margin: 0 auto;
 	border-bottom: 2px solid
