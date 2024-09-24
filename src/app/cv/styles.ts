@@ -61,9 +61,9 @@ export const CVPageTitle = styled.h1`
 	text-align: center;
 `
 
-export const CVPageHeadline = styled.h1`
+export const CVPageHeadline = styled.p`
 	/* Positioning */
-	display: flex;
+	display: inline-block;
 	justify-content: center;
 	align-items: center;
 	margin: 30px 0;
@@ -94,10 +94,10 @@ export const CVPageHeadline = styled.h1`
 
 export const CVPageContent = styled.p`
 	/* Positioning */
-	display: flex;
+	display: inline-block;
 	justify-content: flex-start;
 	align-items: flex-start;
-	margin: 0 30px;
+	/* margin: 0 30px; */
 
 	/* Dimensions */
 	width: 100%;
@@ -191,7 +191,6 @@ export const CVMethodsList = styled.ul`
 `
 
 export const StyledLink = styled(Link)`
-	margin: 0px 8px;
 	/* Color */
 	&:link,
 	&:visited,
