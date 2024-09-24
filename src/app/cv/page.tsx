@@ -21,14 +21,13 @@ const CV = () => (
 		<CVPageCardContainer>
 			<CVPageTitle>CV</CVPageTitle>
 			<CVPageHeadline>
-				You can click
+				You can click{" "}
 				<StyledLink
 					href={"/CV - Patrick Da Silva (22.09.2024).pdf"}
 					target="_blank"
 				>
-					{" "}
-					here{" "}
-				</StyledLink>
+					here
+				</StyledLink>{" "}
 				to download my CV!
 			</CVPageHeadline>
 			<br />
@@ -38,9 +37,8 @@ const CV = () => (
 			</CVPageContent>
 			<br />
 			<CVPageContent>
-				Please
-				<StyledLink href={"/contact"}> contact me</StyledLink> and we
-				can discuss our future collaboration!
+				Please <StyledLink href={"/contact"}>contact me</StyledLink> and
+				we can discuss our future collaboration!
 			</CVPageContent>
 			<br />
 			<br />
