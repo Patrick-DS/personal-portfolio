@@ -67,7 +67,7 @@ const Header: FC<{}> = () => {
 				</MobileBurgerMenu>
 			</NavBar>
 			{isMobileMenuOpened && (
-				<MobileMenu>
+				<MobileMenu isOpened={isMobileMenuOpened}>
 					{headerContent.map(
 						({ itemId, direction, href, displayText }) => (
 							<MobileNavItem key={itemId} direction={direction}>

@@ -75,8 +75,13 @@ export const MobileBurgerMenu = styled.div`
 	${({ theme }) => theme.devices.availableOnMobileOnly}
 `
 
-export const MobileMenu = styled.div`
+interface MobileMenuProps {
+	isOpened: boolean
+}
+
+export const MobileMenu = styled.div<MobileMenuProps>`
 	/* Positioning */
+	position: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -88,7 +93,7 @@ export const MobileMenu = styled.div`
 	z-index: 50;
 
 	/* Dimensions */
-	padding: 50px 20px;
+	padding: 80px 20px;
 
 	/* Color */
 	background-color: ${({ theme }) =>
@@ -99,6 +104,13 @@ export const MobileMenu = styled.div`
 		${({ theme }) => theme.colors.header.container.border};
 	box-shadow: 0px 0px 10px 2px
 		${({ theme }) => theme.colors.header.container.border};
+
+	/* Animation */
+	transition: left 3s ease;
+	transform: ${({ isOpened }) =>
+		isOpened ? "translateX(0)" : "translateX(-310px)"};
+	top: 0;
+	/* left: 0; */
 `
 
 export const MobileNavItem = styled.span<StyledLinkProps>`
