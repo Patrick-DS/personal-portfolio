@@ -32,6 +32,12 @@ const darkTheme = {
 				border: "#000000",
 			},
 		},
+		mobileMenu: {
+			container: {
+				background: "#222222FA",
+				border: "#000000",
+			},
+		},
 		shadowbox: {
 			text: {
 				default: "#FFFFFF",

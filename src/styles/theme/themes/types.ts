@@ -17,31 +17,37 @@ export interface Colors {
 			default: string
 			hovered: string
 			active: string
-		},
+		}
 		container: {
 			background: string
 			border: string
-		},
-	},
+		}
+	}
+	mobileMenu: {
+		container: {
+			background: string
+			border: string
+		}
+	}
 	footer: {
 		text: {
 			default: string
 			hovered: string
 			active: string
-		},
+		}
 		container: {
 			background: string
 			border: string
-		},
-	},
+		}
+	}
 	shadowbox: {
 		text: {
-			default: string,
-		},
+			default: string
+		}
 		container: {
-			background: string,
-			border: string,
-			boxshadow: string,
+			background: string
+			border: string
+			boxshadow: string
 		}
 	}
 	// white: string

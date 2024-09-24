@@ -17,9 +17,16 @@ interface IconProps {
 	alt?: string
 	width: number
 	height: number
+	[key: string]: any
 }
 
-const Icon: FC<IconProps> = ({ imageName, alt = "", width, height }) => {
+const Icon: FC<IconProps> = ({
+	imageName,
+	alt = "",
+	width,
+	height,
+	...props
+}) => {
 	// Hooks
 	const theme = useTheme()
 
@@ -32,6 +39,7 @@ const Icon: FC<IconProps> = ({ imageName, alt = "", width, height }) => {
 			alt={alt}
 			width={width}
 			height={height}
+			{...props}
 		/>
 	)
 }
