@@ -14,6 +14,7 @@ export const NavBar = styled.header`
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 100;
 
 	/* Dimensions */
 	width: 100vw;
@@ -71,6 +72,47 @@ export const MobileBurgerMenu = styled.div`
 	/* Content */
 	padding: 10px 10px 10px 15px;
 
+	${({ theme }) => theme.devices.availableOnMobileOnly}
+`
+
+export const MobileMenu = styled.div`
+	/* Positioning */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	/* Positioning */
+	height: 100vh;
+	width: 300px;
+	z-index: 50;
+
+	/* Dimensions */
+	padding: 50px 20px;
+
+	/* Color */
+	background-color: ${({ theme }) =>
+		theme.colors.header.container.background};
+
+	/* Border */
+	border-bottom: 1px solid
+		${({ theme }) => theme.colors.header.container.border};
+	box-shadow: 0px 0px 10px 2px
+		${({ theme }) => theme.colors.header.container.border};
+`
+
+export const MobileNavItem = styled.span<StyledLinkProps>`
+	/* Positioning */
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	/* Dimensions */
+	height: 50px;
+
+	/* Color */
+	color: ${({ theme }) => theme.colors.header.text.default};
 	${({ theme }) => theme.devices.availableOnMobileOnly}
 `
 
