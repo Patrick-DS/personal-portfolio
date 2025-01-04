@@ -8,27 +8,32 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Operational workflow
 
-- First start by installing dependencies:
+-   First start by installing dependencies:
 
 ```bash
 yarn install
 ```
 
-- To run the development server, run the following:
+-   To run the development server, run the following:
+
 ```bash
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- To run the Storybook server to develop components, run the following:
+-   To run the Storybook server to develop components, run the following:
+
 ```bash
 yarn storybook
 ```
 
 Open [http://localhost:6006](http://localhost:6006) with your browser to see the result.
 
-- For optimal results during development, use VSCode as your IDE. If you don't, please make sure to use Prettier before each commit to avoid formatting discrepancies:
+-   For optimal results during development, use VSCode as your IDE. If you don't, please make sure to use Prettier before each commit to avoid formatting discrepancies:
+
 ```bash
 yarn prettier
 ```
+
+-   To deploy, push a branch. Each branch corresponds to an environment. Vercel will take care of building the website and updating the production environment. See [Vercel's webpage](https://vercel.com/patrick-da-silvas-projects/patrickds-personal-portfolio) (while logged in) to track deployments.
