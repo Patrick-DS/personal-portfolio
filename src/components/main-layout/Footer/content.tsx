@@ -15,6 +15,8 @@ interface FooterItemProps {
 	displayIcon?: ReactNode
 }
 
+const SPIRIT_LOGO_SIZE = 42
+
 const footerContent: FooterItemProps[] = [
 	{
 		itemId: 1,
@@ -25,7 +27,11 @@ const footerContent: FooterItemProps[] = [
 		itemId: 2,
 		direction: "left",
 		displayIcon: (
-			<Icon imageName={ImageNames.SPIRIT_LOGO} width={48} height={42} />
+			<Icon
+				imageName={ImageNames.SPIRIT_LOGO}
+				width={SPIRIT_LOGO_SIZE}
+				height={SPIRIT_LOGO_SIZE}
+			/>
 		),
 	},
 ]
