@@ -18,11 +18,14 @@ import { NavBar, NavItem } from "./styles"
  */
 const Footer = () => (
 	<NavBar>
-		{footerContent.map(({itemId, direction, displayText}) => (
-			<NavItem key={itemId} direction={direction}>
-				{displayText}
-			</NavItem>
-		))}
+		{footerContent.map(
+			({ itemId, direction, displayText, displayIcon }) => (
+				<NavItem key={itemId} direction={direction}>
+					{displayText}
+					{displayIcon}
+				</NavItem>
+			),
+		)}
 	</NavBar>
 )
 

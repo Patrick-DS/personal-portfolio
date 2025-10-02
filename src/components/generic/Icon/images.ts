@@ -47,6 +47,7 @@ import staiyLogoDark from "./imageFiles/dark/staiy.png"
 import staiyLogoLight from "./imageFiles/light/staiy.png"
 import burgerMenuDark from "./imageFiles/dark/burger-menu.png"
 import burgerMenuLight from "./imageFiles/light/burger-menu.png"
+import spiritLogo from "./imageFiles/spirit-logo.png"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -72,6 +73,7 @@ export enum ImageNames {
 	POLAR_SQUAD = "polar-squad",
 	SMARTLY = "smartly",
 	STAIY = "staiy",
+	SPIRIT_LOGO = "spirit-logo",
 }
 
 export const iconImages = {
@@ -158,5 +160,9 @@ export const iconImages = {
 	[ImageNames.BURGER_MENU]: {
 		[ThemeNames.LIGHT]: burgerMenuLight,
 		[ThemeNames.DARK]: burgerMenuDark,
+	},
+	[ImageNames.SPIRIT_LOGO]: {
+		[ThemeNames.LIGHT]: spiritLogo,
+		[ThemeNames.DARK]: spiritLogo,
 	},
 }
