@@ -1,6 +1,8 @@
 // Third-party imports
+import { type ReactNode } from "react"
 
 // Global imports
+import { Icon, ImageNames } from "@/components/generic"
 
 // Local imports
 
@@ -9,10 +11,11 @@
 interface FooterItemProps {
 	itemId: number
 	direction: "left" | "right"
-	displayText: string
+	displayText?: string
+	displayIcon?: ReactNode
 }
 
-const headerContent: FooterItemProps[] = [
+const footerContent: FooterItemProps[] = [
 	{
 		itemId: 1,
 		direction: "right",
@@ -21,8 +24,10 @@ const headerContent: FooterItemProps[] = [
 	{
 		itemId: 2,
 		direction: "left",
-		displayText: "Powered by Vercel",
+		displayIcon: (
+			<Icon imageName={ImageNames.SPIRIT_LOGO} width={48} height={42} />
+		),
 	},
 ]
 
-export default headerContent
+export default footerContent
