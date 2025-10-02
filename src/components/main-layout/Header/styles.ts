@@ -60,7 +60,22 @@ export const DesktopNavItem = styled.span<StyledLinkProps>`
 
 export const MobileBurgerMenu = styled.div`
 	/* Positioning */
-	float: left;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	/* Dimensions */
+	height: 100%;
+	width: auto;
+
+	/* Content */
+	padding: 0 10px 0 15px;
+
+	${({ theme }) => theme.devices.availableOnMobileOnly}
+`
+
+export const BurgerMenuContainer = styled.div`
+	/* Positioning */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -70,7 +85,22 @@ export const MobileBurgerMenu = styled.div`
 	width: auto;
 
 	/* Content */
-	padding: 10px 10px 10px 15px;
+	padding: 10px 0;
+
+	${({ theme }) => theme.devices.availableOnMobileOnly}
+`
+export const SpiritLogoContainer = styled.div`
+	/* Positioning */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Dimensions */
+	height: 100%;
+	width: auto;
+
+	/* Content */
+	padding: 2px 0;
 
 	${({ theme }) => theme.devices.availableOnMobileOnly}
 `

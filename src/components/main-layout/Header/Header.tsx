@@ -15,6 +15,8 @@ import {
 	MobileBurgerMenu,
 	MobileMenu,
 	MobileNavItem,
+	BurgerMenuContainer,
+	SpiritLogoContainer,
 } from "./styles"
 import { Icon, ImageNames } from "@/components/generic"
 
@@ -54,16 +56,30 @@ const Header: FC<{}> = () => {
 					),
 				)}
 				<MobileBurgerMenu onClick={toggleMobileMenu}>
-					<Icon
-						imageName={ImageNames.BURGER_MENU}
-						alt={ImageNames.BURGER_MENU}
-						width={64}
-						height={64}
-						style={{
-							width: "auto",
-							height: "75%",
-						}}
-					/>
+					<BurgerMenuContainer>
+						<Icon
+							imageName={ImageNames.BURGER_MENU}
+							alt={ImageNames.BURGER_MENU}
+							width={64}
+							height={64}
+							style={{
+								width: "auto",
+								height: "75%",
+							}}
+						/>
+					</BurgerMenuContainer>
+					<SpiritLogoContainer>
+						<Icon
+							imageName={ImageNames.SPIRIT_LOGO}
+							alt={ImageNames.SPIRIT_LOGO}
+							width={32}
+							height={32}
+							style={{
+								width: "auto",
+								height: "75%",
+							}}
+						/>
+					</SpiritLogoContainer>
 				</MobileBurgerMenu>
 			</NavBar>
 			{isMobileMenuOpened && (
